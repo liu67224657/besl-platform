@@ -1,0 +1,33 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section,input { margin: 0; padding: 0;font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;list-style: none;}
+a,strong,b,em,i,h1,h2,h3,h4,h5,h6{text-decoration: none;font-style: normal;font-weight: normal;}
+a{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+body, button, input, select, textarea {font: 14px/1.5 arial, "Hiragino Sans GB", \5b8b\4f53;}
+input, select, textarea {font-size: 100%;}
+.fl{float:left;}
+.fr{float:right;}
+.clearfix{zoom:1;}
+.clearfix:after{display:block; content:''; clear:both; line-height:0; visibility:hidden;}
+html{font-size: 62.5%;}
+body{font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;font-size: 16px;}
+
+#header{height: 31.5rem;}
+@media screen and (min-width: 415px) and (max-width: 1024px;){
+	
+}
+@media screen and (min-width: 1025px) and (max-width: 2048px;){
+	#header{height: 63rem;}
+}
+
+/* 下载样式 */
+.download{width: 100%;height:11rem;background:#fff;border-top: 1px solid #e4e4e4;position:fixed;bottom:0;left: 0;z-index:99;}
+.closeImg{width: 3rem;height: 3rem;position: absolute;top:4rem;left: 3rem;}
+.download dl{float: left;margin-top: 2rem;}
+.download dl dt{width: 7rem;height: 7rem;float: left;margin-right: 2rem;padding-left: 9rem;}
+.download dl dt img{width: 100%;height:100%;}
+.download dl dd{float: left;}
+.download dl dd h6{font-size: 2.2rem;line-height: 4rem;}
+.download dl dd h6 a{color: #1c1c1c;}
+.download dl dd p{color: #a0a0a0;font-size: 1.8rem;line-height: 3rem;}
+.downImg{width: 18rem;height: 7rem;background: #45b0f6;border-radius: 1rem; float: right;margin-right: 1.5rem;margin-top: 2rem;}
+.downImg img{width: 3rem;height: 3rem;float: left;padding: 20px 20px 0px 40px;}
+.downImg span{color: #fff;float: left;line-height: 7rem;font-size: 2.2rem;}

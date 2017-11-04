@@ -1,0 +1,169 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+body{
+	background: #fff;
+	font-size: 12px;
+	font-family: '宋体';
+}
+
+ul{list-style: none;}
+
+.wrap{
+	width: 100%;
+	position: relative;
+}
+
+.bg{
+	height: 100px;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+a{text-decoration: none;}
+a:hover{text-decoration: underline;}
+
+.bg-1{background-image: url(../images/cj2014/bg-1.jpg);}
+.bg-2{background-image: url(../images/cj2014/bg-2.jpg);}
+.bg-3{background-image: url(../images/cj2014/bg-3.jpg);}
+.bg-4{background-image: url(../images/cj2014/bg-4.jpg);}
+.bg-5{background-image: url(../images/cj2014/bg-5.jpg);}
+.bg-6{background-image: url(../images/cj2014/bg-6.jpg);}
+.bg-7{background-image: url(../images/cj2014/bg-7.jpg);}
+.bg-8{background-image: url(../images/cj2014/bg-8.jpg);}
+.bg-9{background-image: url(../images/cj2014/bg-9.jpg);}
+.bg-10{background-image: url(../images/cj2014/bg-10.jpg);}
+.bg-11{background-image: url(../images/cj2014/bg-11.jpg);}
+.bg-12{background-image: url(../images/cj2014/bg-12.jpg);}
+.bg-13{background-image: url(../images/cj2014/bg-13.jpg);}
+.bg-14{background-image: url(../images/cj2014/bg-14.jpg);}
+
+.contain{
+	width: 890px;
+	height: 1000px;
+	position: absolute;
+	left: 50%;
+	margin-left: -445px;
+	top: 0;
+}
+
+.goto{
+	display: block;
+	width: 106px;
+	height: 24px;
+	position: absolute;
+	right: 223px;
+	top: 82px;
+	text-indent: -999em;
+	overflow: hidden;
+}
+
+.dis{
+	width: 595px;
+	height: 280px;
+	position: absolute;
+	left: 20px;
+	top: 512px;
+}
+
+.dis p{
+	color: #fff;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+#winners{
+	width: 166px;
+	height: 224px;
+	position: absolute;
+	right: 34px;
+	top: 540px;
+	overflow: hidden;
+}
+
+#winners div{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#winners p{
+	height: 32px;
+	line-height: 32px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #000;
+	font-size: 16px;
+}
+
+#goods{
+	width: 800px;
+	height: 140px;
+	position: absolute;
+	left: 67px;
+	top: 840px;
+	overflow: hidden;
+}
+
+#goods ul{
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1000px;
+}
+
+#goods li{
+	float: left;
+	width: 166px;
+}
+
+#goods img{
+	display: block;
+	height: 140px;
+	width: 140px;
+}
+
+#Lottery-btn{
+	display: block;
+	width: 260px;
+	height: 72px;
+	background: url(../images/cj2014/btn.jpg);
+	position: absolute;
+	left: 50%;
+	top: 1030px;
+	margin-left: -130px;
+	text-indent: -999em;
+	overflow: hidden;
+}
+
+.link{
+	width: 920px;
+	height: 100px;
+	position: absolute;
+	left: -15px;
+	top: 1170px;
+	overflow: hidden;
+}
+.link div{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1000px;
+}
+.link img{
+	float: left;
+	width: 225px;
+	height: 100px;
+	margin-right: 7px;
+}
+
+/*尾部*/
+.footercon{overflow:hidden; background:#3b3b3b url(../img/footerbg.png) repeat-x;margin-top:15px;}
+.footer{width:960px;margin:0px auto;font-size:12px; text-align:center;padding:20px 0 10px 0;color:#fff;}
+.footer span,.footer a{margin:0px 10px;color:#fff;font-family:Arial, Helvetica, sans-serif}

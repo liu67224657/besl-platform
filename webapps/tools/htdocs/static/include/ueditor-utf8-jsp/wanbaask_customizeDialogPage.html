@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://static.joyme.com/js/jquery-1.9.1.min.js" language="javascript"></script>
+		<script src="http://static.joyme.com/js/plupload.full.min.js"></script>
+		<script src="http://static.joyme.com/js/qiniu.js"></script>
+		<script type="text/javascript" src="http://static.joyme.alpha/tools/ueditor1_4_3_3-utf8-jsp/dialogs/internal.js"></script>
+		<meta charset="UTF-8">
+		<title>图片上传</title>
+	</head>
+	<body>
+	<div class="tp-right" id="szlistBtn">
+		<img id="upImg" src="http://wikicdn.joyme.com/extensions/JComments/images/wik-nry-tuguize.jpg?v=0.1" />
+	</div>
+	</body>
+	<script>
+		var imgsrc="";
+		function getQiniuToken() {
+			$.ajax({
+				url: "http://api.joyme.com/comment/bean/json/check",
+				type: "post",
+				data: {profileid: '04ab281f67b10aeb03a1705a9807943f'},
+				dataType: "jsonp",
+				async: false,
+				jsonpCallback: "checkcallback",
+				success: function(req) {
+					var resMsg = req[0];
+					if(resMsg.uploadtoken != '') {
+						uptoken = resMsg.uploadtoken;
+						var Qiniu = new QiniuJsSDK();
+
+						var uploader = Qiniu.uploader({
+							runtimes: 'html5,flash,html4',
+							browse_button: 'upImg', //pltp
+							uptoken: uptoken,
+							domain: 'http://joymepic.joyme.com/',
+							container: 'szlistBtn',
+							max_file_size: '2mb',
+							flash_swf_url: '',
+							max_retries: 3,
+							dragdrop: false,
+							chunk_size: '4mb',
+							auto_start: true,
+							multi_selection: false,
+							filters: {
+								mime_types: [{
+									title: "Image files",
+									extensions: "jpg,jpeg,gif,png"
+								}]
+								// prevent_duplicates : true //不允许选取重复文件
+							},
+
+							init: {
+								'FilesAdded': function(up, files) {
+									//plupload.each(files, function(file){});
+								},
+								'BeforeUpload': function(up, file) {
+
+								},
+								'UploadProgress': function(up, file) {},
+								'FileUploaded': function(up, file, info) {
+									var domain = up.getOption('domain');
+									var res = JSON.parse(info);
+									var sourceLink = domain + res.key;
+									$('.tp-left').remove();
+									var imgHtml = '<div class="tp-left"><img src="' + sourceLink + '" width="171" height="129"><span></span></div>';
+									$('#upImg').before(imgHtml);
+									$('.tp-num>span').html('图片(1/1)');
+									$(':input[type="file"]').attr('disabled', true);
+									$('#upImg').hide();
+									imgsrc=sourceLink;
+									//alert(imgsrc)
+								},
+								'UploadComplete': function() {},
+								'Key': function(up, file) {
+									var myDate = new Date();
+									var ext = file.type.substr(file.type.indexOf('/') + 1);
+									var key =  'wanbaask/' + myDate.getFullYear() + '' + myDate.getMonth() + '/' + myDate.getDate() + '' + myDate.getTime() + '' + Math.round(Math.random() * 1000) + '.' + ext;
+									return key;
+								}
+							}
+						});
+					}
+				}
+			});
+		}
+		getQiniuToken();
+
+		dialog.onok = function(){
+			editor.execCommand('insertimage', {
+				src: imgsrc,
+				width:'100',
+				height:'100'
+			});
+		}
+	</script>
+</html>

@@ -1,0 +1,69 @@
+body{background:url(../images/body-bg.jpg) repeat;}
+a:hover{text-decoration:none;}
+/* common */
+#cj2013-topline{width:100%; height:8px; background:url(../images/topline.jpg) no-repeat center top;}
+#cj2013-content{width:100%; background:url(../images/content-bg.jpg) no-repeat center top;}
+#cj2013-banner{width:480px; height:88px; background:url(../images/banner.jpg) no-repeat; position:relative; top:-8px; margin:0px auto 2px;}
+.cj2013-box{width:478px; height:700px; margin:0 auto; border:1px solid #bcbcbc; background:#fff}
+
+.text-1{font-family:'microsoft yahei'; font-size:40px; line-height:40px; font-style:italic; color:#ff0000; position:absolute; left:260px; top:90px;}
+.text-2{font-family:'microsoft yahei'; font-size:40px; font-style:italic; color:#ff0000; position:absolute; left:130px; top:195px; background:url(../images/png-1.png) no-repeat right 6px; padding-right:86px;}
+.text-3{display:inline-block; position:absolute; left:0px; top:332px; width:100%; text-align:center;}
+.text-4{display:inline-block; width:400px; position:absolute; left:50%; top:400px; font-size:22px; line-height:36px; margin-left:-200px;}
+.text-5{display:inline-block; width:400px; position:absolute; left:50%; top:480px; font-size:22px; line-height:36px; margin-left:-200px;}
+.text-6{position:absolute; left:50px; top:600px; font-size:42px;}
+.text-7{position:absolute; left:210px; top:562px; font-size:106px; line-height:106px; color:#d60f00}
+.text-8{margin:0 34px; color:#5a5a5a; line-height:32px; font-size:24px; font-family:'microsoft yahei';}
+
+.img-1{position:absolute; left:36px; top:188px; width:80px; height:100px;}
+
+
+.cj2013-box-success{background:url(../images/cj2013-pic-1.jpg) no-repeat; position:relative; font-family:'黑体'; font-size:20px; color:#111}
+
+.cj2013-title{color:#8dc84a; font-family:'microsoft yahei'; font-style:italic; font-size:36px; font-weight:normal; padding:40px 0 26px; margin:0 22px; border-bottom:1px solid #e5e5e5}
+.cj2013-sub-title{color:#ef0000; padding:30px 0 10px; margin:0 34px; font-weight:normal; font-size:24px; font-family:'microsoft yahei'}
+
+
+.form-box{/*width:320px; margin:0 auto;*/ margin:0 80px; padding-top:50px;}
+.form-box p{padding-bottom:8px;}
+.input-text{/*width:310px; padding:12px 4px;*/ width:99%; padding:10px 0 10px 1%; border:1px solid #e3e3ea; border-radius:2px; border-top-color:#aaacb2; font-size:16px; color:#757575;}
+.input-submit{border:none; background:#ff8400; color:#fff; padding:20px 0; font-size:26px; border-radius:6px; margin-top:10px; display:block; width:100%; text-align:center; cursor:pointer; font-family:'microsoft yahei';}
+.input-error{color:#9d9c9c; font-size:16px; padding-bottom:8px; font-family:'microsoft yahei'}
+
+.platform-login-btn{padding-top:40px; margin:0 20px;}
+.platform-login-btn p{padding-bottom:20px;}
+.platform-login-btn a{display:block; height:64px; line-height:64px; color:#fff; font-size:24px; font-family:'microsoft yahei'; text-align:center; border-radius:4px}
+
+.blank10{height:10px; font-size:1px; overflow:hidden;}
+
+@media screen and (max-width:360px){
+	body{background:#fff}
+	#cj2013-topline{display:none;}
+	#cj2013-banner{display:none;}
+	#cj2013-content{background:none}
+	.blank10{display:none;}
+	.cj2013-box{width:356px;}
+	.form-box{margin:0 20px}
+	.text-8{font-size:18px; line-height:24px; margin:0 20px}
+	.cj2013-sub-title{margin:0 20px}
+	.cj2013-title{padding:16px 0 10px;}
+	.cj2013-box-success{background:url(../images/cj2013-pic-3.jpg) no-repeat;}
+	.img-1{left:36px;}
+	.text-1{font-size:32px; line-height:32px; left:202px; top:92px;}
+	.text-2{background:none; padding-right:0; font-size:32px; left:140px; top:174px;}
+	.text-3{text-align:left; top:306px}
+	.text-4, .text-5{width:310px; margin-left:-155px;}
+	.text-6{font-size:30px; left:108px; top:28px;}
+	.text-7{font-size:60px; line-height:60px; left:215px; top:8px;}
+}
+
+@media screen and (max-width:320px){
+	.cj2013-box{width:318px;}
+	.cj2013-box-success{background:url(../images/cj2013-pic-2.jpg) no-repeat;}
+	.img-1{left:28px;}
+	.text-1{font-size:32px; line-height:32px; left:178px; top:92px;}
+	.text-2{background:none; padding-right:0; font-size:32px; left:126px; top:174px;}
+	.text-6{font-size:30px; left:76px; top:28px;}
+	.text-7{font-size:60px; line-height:60px; left:182px; top:8px;}
+	/**/
+}

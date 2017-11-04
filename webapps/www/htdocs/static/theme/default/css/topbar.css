@@ -1,0 +1,73 @@
+#joyme-head-2013{font-size:12px; font-family:'microsoft yahei'; width:100%; height:47px; background:url(../img/joyme-head-2013.png) repeat left -45px; z-index:9999;top:0px;left:0px;}
+#joyme-logo{float:left; width:146px; height:44px; background:url(../img/joyme-head-2013.png) no-repeat left 0; margin:3px 26px 0 0px;}
+.head-2013-box{width:1000px; margin:0 auto; position:relative; z-index:2;}
+
+.head-2013-left{float:left; height:47px;}
+.head-2013-right{float:right; height:47px;}
+.head-2013-left span{float:left; /*background:url(../img/joyme-head-2013.png) no-repeat -156px -150px; padding-left:3px;*/ padding-left:1px; }
+.head-2013-left span a{display:inline-block; height:44px; line-height:46px; padding:0 16px; color:#fff; text-decoration:none; font-size:12px;}
+.head-2013-left span a:hover, .head-2013-left span a.hoverOn{background:#242424}
+.head-2013-left span a.on{height:47px; background:url(../img/joyme-head-2013.png) repeat-x left -101px}
+.head-2013-left em{background:url(../img/joyme-head-2013.png) no-repeat -87px -256px; padding-right:16px;}
+
+.search-new{float:left; width:151px; height:25px; background:url(../img/joyme-head-2013.png) no-repeat left -200px; margin:10px 8px 0 0; position:relative;}
+.search-new-textInput{width:112px; font-size:12px; padding:6px 0; background:transparent; border:none; position:absolute; left:9px; top:0;}
+.search-new-submit{width:17px; height:25px; position:absolute; right:10px; top:0; background:transparent; border:none; cursor:pointer}
+
+.unlogin, .logined{float:left;}
+.unlogin a{float:left; height:45px; line-height:44px; padding:0 8px; color:#fff; vertical-align:middle; text-decoration:none}
+.unlogin a:hover{background-color:#242424}
+.unlogin a.qq{width:18px; background-image:url(../img/joyme-head-2013.png); background-repeat:no-repeat; background-position:3px -295px}
+.unlogin a.renren{width:32px; background-image:url(../img/joyme-head-2013.png); background-repeat:no-repeat; background-position:-119px -295px}
+.unlogin a.weibo{width:20px; background-image:url(../img/joyme-head-2013.png); background-repeat:no-repeat; background-position:-60px -295px}
+
+.logined a{float:left; height:45px; line-height:45px; padding:0 10px; }
+.logined a:hover{background-color:#242424}
+
+.logined a.userArea{text-decoration:none; background-image:url(../img/joyme-head-2013.png); background-repeat:no-repeat; background-position:-98px -240px; padding:0 26px 0 10px;}
+.logined a.userArea img{width:33px; height:33px; margin-top:6px; vertical-align:inherit}
+.logined a.inviteFriend{color:#fff; text-decoration:none; background-image:url(../img/daohang.png); background-repeat:no-repeat; background-position:-262px 4px}
+.logined a.inviteFriend span{background:url(../img/daohang.png) no-repeat -23px -9px; padding-left:15px;}
+
+.search_sth{position:absolute;top:24px;left:0px;width:218px;font-size:12px; z-index:17500}
+.search_sth li,.wsearc li{line-height:24px;}
+.search_sth h3,.wsearcon h3{color:#494949;font-weight:normal;font-size:12px;padding:8px 12px 5px;}
+.search_sth li,.wsearc li {display:block;padding:0px 12px; line-height:25px;color:#494949;border:1px solid #fff;border-width:1px 0;background:#fff}
+.search_sth li.hover,.wsearc li.hover,.search_sth li:hover,.wsearc li:hover{text-decoration:none;background:#e6e6e6;border:1px solid #dedede;border-width:1px 0;background:#e6e6e6; cursor:pointer}
+.search_sth li b,.wsearc li b{color:#d24602;font-weight:normal}
+
+.searcht{height:11px;background:url(../img/st.png) no-repeat;_background:url(../img/st.gif) no-repeat;font-size:0px; }
+.searchc{background:url(../img/sc.png) repeat-y;_background:url(../img/sc.gif) repeat-y; position:relative;padding:0 7px 2px; }
+.searchc ul{list-style-type:none; list-style-image:none; margin:0; padding:0}
+.searchc li{list-style-type:none; list-style-image:none; margin:0;}
+.searchb{height:11px;background:url(../img/sb.png) no-repeat;_background:url(../img/sb.gif) no-repeat;font-size:0px;}
+
+.nav_item{width:86px; position:absolute; right:-25px; z-index:10}
+.itemt{height:11px;font-size:0px; overflow:hidden;background:url(../img/boket.png) no-repeat;_background:url(../img/boket.gif) no-repeat}
+.itemc{background:url(../img/bokec.png) repeat-y;padding:0 6px;_background:url(../img/bokec.gif) repeat-y;}
+.itemb{height:8px;background:url(../img/bokeb.png) no-repeat;font-size:0px;_background:url(../img/bokeb.gif) no-repeat}
+.itemc ul{list-style-type:none; list-style-image:none; margin:0; padding:0}
+.itemc li{list-style-type:none; list-style-image:none; margin:0; padding:0}
+.itemc li a{color:#494949; display:block;padding-left:10px;height:26px; line-height:26px;border:1px solid #fff;border-width:1px 0; text-decoration:none;}
+.itemc li a:hover{background:#e6e6e6;border:1px solid #dedede;border-width:1px 0; text-decoration:none;}
+.itemc li.first{border-bottom:1px solid #d5d5d5}
+
+#head,.navon, .comment .conmenthd, .conmentbd .conmenthd,  .unfold_btn01, .unfold_btn01,.coment_hd_title,.talk_icon,.edittool a,.pic_more a.talk_pic_link,.unfold_btn,.personface,.shadow,.discuss_area .corner,.rowcon,.tx,.preview li a.close,.informationtip a.close,.listicon .corner,.discusson .corner,.commenfacecon{background-image:url(../img/indexbg.png?20121019); background-repeat:no-repeat}
+
+.informationtip{width:198px; position:fixed; _position:absolute; z-index:10005}
+/*消息提示弹出框*/
+.tipst{height:11px;background:url(../img/tipst.png) no-repeat; line-height:0px;font-size:0px;}
+.tipsc{background:url(../img/tipsc.png) repeat-y; padding:5px 13px 5px 19px; line-height:22px;}
+.tipsb{height:11px;background:url(../img/tipsb.png) no-repeat; line-height:0px;}
+.tipsc p em{color:#d41111}
+#bc{padding-top:5px;}
+.informationtip{width:198px; position:fixed; _position:absolute; z-index:10005}
+.tipsc a.close{width:6px;height:5px;background:url(../img/indexbg.png) no-repeat -653px -101px;float:right;margin-top:10px;margin-right:5px; display:inline}
+input[type="text"], input[type="password"], textarea{outline-style:none}
+/*搜索提示框*/
+.pop{border:1px solid #a0a0a0; background:#fff;-moz-box-shadow:1px 1px 3px rgba(34, 25, 25, 0.2);-khtml-box-shadow:1px 1px 3px rgba(34, 25, 25, 0.2);-webkit-border-radius:1px 1px 3px rgba(34, 25, 25, 0.2);box-shadow:1px 1px 3px rgba(34, 25, 25, 0.2); }
+.pop{font-size:12px;position:relative; z-index:999;}
+.pop .hd{position:relative;height:30px;line-height:30px;padding:0 10px;background:#f4f4f4;color:#666666;border-bottom:1px solid #ececec;  }
+.pop .hd b,.pop .hd em{font-weight:bold; font-style: normal;}
+.publicuse {padding:18px 10px;}
+.publicuse p{text-align:center;color:#5b5b5b; line-height:20px;}

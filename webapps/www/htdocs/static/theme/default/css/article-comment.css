@@ -1,0 +1,93 @@
+.subpage-comment{width:980px; margin:10px auto 0; background:url(../img/subpage-comment-bg.gif) repeat-y left top}
+.subpage-left{width:670px; float:left;}
+.subpage-right{float:right; overflow:hidden; width:270px;}
+
+.subpage-right-ad{margin-bottom:10px;}
+
+.subpage-right-item{border:1px solid #ccc; margin-bottom:10px;}
+.subpage-right-item-title{background:#f0f0f0; border-bottom:1px solid #ccc; padding:10px; overflow:hidden}
+.subpage-right-item h2{float:left; border-left:2px solid #6d9a19; color:#6d9a19; padding-left:6px; font-size:16px; line-height:16px; font-family:'microsoft yahei'; font-weight:normal}
+.subpage-right-item a.more{float:right; margin-top:2px; color:#666}
+
+.corp-news{margin:10px; overflow:hidden}
+.corp-news img{display:block; margin-bottom:10px;}
+.corp-news li{line-height:30px; white-space:nowrap;}
+.corp-news a{color:#000; cursor:pointer}
+.corp-news a:hover{color:#55779E}
+
+.pic-show{padding-top:10px;}
+.pic-show li{width:110px; height:193px; float:left; margin-left:16px; white-space:nowrap; overflow:hidden}
+.pic-show li img{display:block; width:110px; height:164px; margin-bottom:4px;}
+.pic-show li a{color:#000; cursor:pointer}
+.pic-show li a:hover{color:#55779E}
+
+.game-infos{overflow:hidden}
+.game-infos ul{margin:-1px 10px 0;}
+.game-infos li{overflow:hidden; padding:15px 0 18px; border-top:1px dashed #dedee0}
+.game-infos img{float:left; margin-right:12px; border-radius:22px; box-shadow:0 2px 2px rgba(0, 0, 0, 0.4)}
+.game-infos h3{padding:4px 0 8px; font-size:14px; color:#000; font-family:'microsoft yahei'}
+.game-infos h3 a{color:#000;}
+.game-infos h3 a:hover{color:#55779E;}
+.game-infos p{overflow:hidden; padding-bottom:4px;}
+span.apple{float:left; margin-right:4px; width:14px; height:16px; background:url(../images/subpage.png) no-repeat left 0px; vertical-align:middle}
+span.android{float:left; margin-right:4px; width:14px; height:16px; background:url(../images/subpage.png) no-repeat -21px 0px; vertical-align:middle}
+.game-infos div{color:#666; line-height:18px;}
+
+.gift-center{overflow:hidden; padding-bottom:20px;}
+.gift-center ul{margin-left:10px; width:280px;}
+.gift-center li{width:72px; height:106px; line-height:18px; text-align:center; float:left; margin-right:16px; padding-top:14px;}
+.gift-center li img{margin-bottom:4px; box-shadow:0 2px 2px rgba(0, 0, 0, 0.4); border-radius:18px;}
+.gift-center a{color:#323232; cursor:pointer}
+.gift-center a:hover{color:#55779E}
+
+/* 热评top10 */
+.top10 li{height:34px; line-height:34px; border-bottom:1px solid #e7e7e7; overflow:hidden;}
+.top10 span{float:left; width:31px; height:16px; line-height:16px; background:url(../img/top10.png) no-repeat 0 -24px; color:#666; text-align:center; margin:9px 14px 0 12px}
+.top10 a{color:#000}
+.top10 a:hover{color:#55779E}
+.top10 li:first-child span{background-position:0 0; color:#fff}
+.top10 li:first-child+li span{background-position:0 0; color:#fff}
+.top10 li:first-child+li+li span{background-position:0 0; color:#fff}
+
+/* 添加评论框 */
+.commend-topical{font-family:'microsoft yahei'; font-size:24px; font-weight:normal; color:rgb(73,73,73); padding:0 0 16px}
+.fabucon{background:#f2f2f2; padding:0 20px 10px}
+.talk{width:auto}
+.talk_wrapper{width:auto; background:#fff}
+.fabucon .talk_text{width:98%; padding:0.8%;}
+.mygroup-title{height:40px; overflow:hidden}
+
+/* 评论排序 */
+.comment-sort{padding:20px 0 0; border-bottom:1px solid #c9c9c9; font-family:'microsoft yahei'; font-size:14px; color:#4d575d}
+.comment-sort a{color:#4d575d}
+.comment-sort-btn{position:relative; width:44px; margin-left:8px; padding-bottom:6px;}
+.comment-sort span{cursor:pointer;}
+.comment-sort em{display:inline-block; width:0; height:0; overflow:hidden; border-width:5px; border-style:solid; border-color:#A1A5A8 #fff #fff #fff; position:absolute; right:0px; top:6px;}
+.comment-sort-box{display:none; position:absolute; background:#fff; width:102px; border:2px solid #cbd2d6; left:-8px; top:16px; border-radius:4px;}
+.comment-sort-box a{display:block; height:34px; line-height:34px; padding:0 10px; position:relative}
+.comment-sort-box i{position:absolute; right:6px; top:0px; display:none; font-weight:bold;}
+.comment-sort-box a.current i{display:inline}
+.comment-sort-box a:hover{background:#f3f3f3; color:#55779E; text-decoration:none }
+.comment-sort-btn:hover .comment-sort-box{display:block;}
+
+.more-comment{padding:10px 0; text-align:right;}
+
+.publish_btn, .publishon,.publishloadbtn{ background-image:url(../img/pl.png)}
+#head,.navon, .comment .conmenthd, .conmentbd .conmenthd,  .unfold_btn01, .unfold_btn01,.coment_hd_title,.talk_icon,.edittool a,.pic_more a.talk_pic_link,.unfold_btn,.personface,.shadow,.discuss_area .corner,.rowcon,.tx,.preview li a.close,.informationtip a.close,.listicon .corner,.discusson .corner,.commenfacecon{background-image:url(../img/indexbg-2.png?20121019)}
+
+.dianzan{display:inline-block; width:15px; height:16px; line-height:900px; overflow:hidden; background:url(../img/dianzan.png) no-repeat; vertical-align:text-bottom; margin-right:4px;}
+
+.related{padding-top:6px;}
+
+.conmentcon img{vertical-align:middle}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+<ehcache>
+
+    <!-- Sets the path to the directory where cache .data files are created.
+
+         If the path is a Java System Property it is replaced by
+         its value in the running VM.
+
+         The following properties are translated:
+         user.home - User's home directory
+         user.dir - User's current working directory
+         java.io.tmpdir - Default temp file path -->
+    <!--<diskStore path="user.dir"/>-->
+    <diskStore path="ehcache.disk.store.dir"/>
+
+    <!--Default Cache configuration. These will applied to caches programmatically created through
+    the CacheManager.
+
+    The following attributes are required for defaultCache:
+
+    maxInMemory       - Sets the maximum number of objects that will be created in memory
+    eternal           - Sets whether elements are eternal. If eternal,  timeouts are ignored and the element
+                        is never expired.
+    timeToIdleSeconds - Sets the time to idle for an element before it expires.
+                        i.e. The maximum amount of time between accesses before an element expires
+                        Is only used if the element is not eternal.
+                        Optional attribute. A value of 0 means that an Element can idle for infinity
+    timeToLiveSeconds - Sets the time to live for an element before it expires.
+                        i.e. The maximum time between creation time and when an element expires.
+                        Is only used if the element is not eternal.
+    overflowToDisk    - Sets whether elements can overflow to disk when the in-memory cache
+                        has reached the maxInMemory limit.
+
+    -->
+    <!--<defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"
+            />-->
+
+    <!--<cache name="xxxCache"
+           maxElementsInMemory="300"
+           eternal="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="120"
+           overflowToDisk="true"
+            />-->
+
+    <!-- timeToLiveSeconds和timeToIdleSeconds，分别简称为ttl和tti。 在通常的解释中，前者表示一条缓存自创建时间起多少秒后失效，而后者表示一条缓存自最后读取或更新起多少秒失效
+ 在2个同时配置时可能时间计算就不那么简单了。 简单说来 任何一方为0，则以另一方时间为准。否则就以最短时间为准。
+
+ ehcache是这样计算失效时间的
+
+ 1 如果ttl不为0并且tti为0， 如果缓存未被读过，失效时间=ttl
+ 2 如果tti不为0，失效时间=tti+读取时间
+ 3 否则 失效时间=min(ttl, tti+读取时间)-->
+
+    <cache name="exampleCache"
+           maxElementsInMemory="300"
+           eternal="false"
+           timeToIdleSeconds="180"
+           timeToLiveSeconds="120"
+           overflowToDisk="true"
+            />
+
+    <!--adv publish cache-->
+    <cache name="advertisePublishCache"
+           maxElementsInMemory="300"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="600"
+           overflowToDisk="true"
+            />
+
+    <!--ip cache-->
+    <cache name="ipForbiddenCache"
+           maxElementsInMemory="300"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="300"
+           overflowToDisk="true"
+            />
+
+    <!--categoryPrivacy cache-->
+    <cache name="categoryPrivacyCache"
+           maxElementsInMemory="300"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="600"
+           overflowToDisk="true"
+            />
+
+</ehcache>

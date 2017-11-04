@@ -1,0 +1,291 @@
+#joyme-wrapper{ background:#fff;}
+.joyme-center.bt{ border-top:1px solid #F1F0F0; }
+/*footer Start*/
+.footer{ width:100%; height:113px; background: #242424; color:#cccccc; font-size:12px; }
+.footer-con{ padding-top:35px; width:960px; margin:0 auto; text-align:center; }
+.footer-con span,.footer-con a{ color:#ccc; margin:0 10px; }
+/*footer End*/
+/*标题*/
+.joyme-title{ height:24px; line-height:24px; padding:2px 0 8px; width:100%; border-bottom:2px solid #d7d7d7; }
+.joyme-title>span{ height:24px; font-size:24px; border-bottom:2px solid #3bcb09; color:#333; padding:0 0 8px; }
+.joyme-title>span b{ font-weight:normal; color:#3bcb09; }
+.joyme-title>a.joyme-title-more{ color:#999; height:24px; text-decoration:none; }
+.joyme-title>a:hover{ text-decoration:underline; }
+.joyme-title>p{ padding-left:20px; color:#555; height:24px; }
+.joyme-title>p a{ color:#555; padding-right:20px; text-decoration:none; }
+.joyme-title>p a:hover{ color:#f35050; text-decoration:underline; }
+.joyme-title a{color:#333 !important;float: right;}
+/*yh*/
+.joyme-center{ margin:20px auto; width:1078px; background:#fff;padding-bottom:20px;border:1px solid #F1F0F0; }
+/*导航下划线*/
+.joyme-header.bb{ border-bottom:1px solid #dededf; }
+/*yh  end*/
+.games-l,.games-r{ float:left; }
+.games-l{ width:780px; margin-right:20px; }
+.games-r{ width:260px; height:auto; margin-bottom:20px; }
+.games-l>div,.games-r>div{ margin-top:30px; }
+.games-l>div.mp{ margin-top:5px; }
+/*游戏分类*/
+.games-fl,.games-rm,.games-js,.games-lb,.games-jt,.games-sp,.games-zx{ margin-left:20px; width:760px; }
+.games-fl-list a:hover{color:#f35050;}
+.games-fl-list a:first-child:hover{color:#fff;}
+.games-fl-list dl{ overflow: hidden; font-size:14px; color:#555; background: url(../images/gamecollection/node.png) repeat-x left bottom; width:100%; padding-top:10px; position: relative; *zoom:1; }
+.games-fl-list dl:last-child{ background: none; }
+.games-fl-list dt{ width:70px; text-align: right; line-height: 20px; float: left; }
+.games-fl-list dd{ float: left; width:675px; overflow: hidden; *zoom:1; }
+.games-fl-list dd cite{ display: inline-block; display: block; padding:0 8px; height:40px; margin-bottom:10px; width:100px; float: left; cursor: pointer; }
+.games-fl-list dd cite img{ max-height:100%; width:100%; }
+.games-fl-list dd a,.games-fl-list dd cite.games-cite-all{ padding: 0 8px; font-size: 14px; color: #555; margin-right: 10px; height: 20px; line-height: 20px; *line-height: 18px; display: inline-block; margin:0 10px 10px 0; width:auto; }
+.games-fl-list dd a.active,.games-fl-list dd a:hover{ background:#3bcb09; color:#fff; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; -o-border-radius:5px; -ms-border-radius:5px; padding:0 8px;text-decoration: none; }
+/*游戏推荐*/
+.games-tj{ /*height:250px; */background:#f1f1f1; width:720px; margin-top:20px; padding:30px 20px 20px; margin-left:20px; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px; -o-border-radius:10px; -ms-border-radius:10px; }
+.games-tj-top{ padding-bottom:20px; }
+.games-tj-top dl{ float:left; width:310px; }
+.games-tj-top dl dt{ width:120px; height:120px; border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px; -o-border-radius:15px; -ms-border-radius:15px; overflow:hidden; float:left; margin-right:13px; }
+.games-tj-top dl dt a{ width:120px; height:120px; overflow: hidden; display: block; }
+.games-tj-top dl dt img{ width:100%; }
+.games-tj-top dl dd{ overflow: hidden; }
+.games-tj-top dl dd h3{ color:#333; font-size:20px; margin:0; padding:0; width:100%; overflow: hidden; height:25px; line-height:25px; margin-bottom:5px; }
+.games-tj-top dl dd>span{ display:block; color:#555; font-size:12px; width:100%; overflow: hidden; height:18px;margin-top:1px; }
+.games-tj-top dl dd p{ padding-top:3px;overflow: hidden; margin-top:3px;}
+.games-tj-top dl dd p a{ display:block;float: left; padding:0 10px; height:26px; line-height:26px; color:#fff; border-radius:15px; margin-right:5px; }
+.games-tj-top dl dd p a:hover{ text-decoration:none; }
+.games-tj-top dl dd p a.games-tj-lb{ background:#f35050; }
+.games-tj-top dl dd p a.games-tj-lb:hover{ background:#ec4444; }
+.games-tj-top dl dd p a.games-tj-wiki{ background:#257cc6; }
+.games-tj-top dl dd p a.games-tj-wiki:hover{ background:#1c74be; }
+.games-tj-like{ width:258px; height:113px; background:#fff; border:1px solid #e4e4e4; border-radius:10px; float:left; margin:0 10px; padding-top:5px}
+.games-tj-like>p{ height:20px; margin:10px 10px 0; padding-left:30px; position:relative; }
+.games-tj-like>p cite{ background-repeat:no-repeat; width:20px; height:20px; background-image:url(../images/gamecollection/face.png); position:absolute; left:0; top:0; }
+.games-tj-like>p.games-tj-like-t cite{ background-position:0 0; }
+.games-tj-like>p.games-tj-like-b cite{ background-position:0 -30px; }
+.games-tj-like>p span{ display:block; width:0; height:100%; }
+.games-tj-like>p.games-tj-like-t span{ background:#f57373; }
+.games-tj-like>p.games-tj-like-b span{ background:#5196d1; }
+.games-tj-like-btn{ margin:15px 0 0 42px; }
+.games-tj-like-btn b{ display:inline-block; width:68px; height:24px; line-height:24px; border:1px solid #d7d7d7; text-align:center; font-size:12px; font-weight:normal; border-radius:15px; margin-right:5px; cursor:pointer; }
+.games-tj-like-btn b.games-tj-like-btn1{ color:#f57070; }
+.games-tj-like-btn b.games-tj-like-btn2{ color:#257cc6; }
+.games-tj-like-btn b.games-tj-like-btn1:hover{ background:#f57070; color:#fff; border:1px solid #f57070; }
+.games-tj-like-btn b.games-tj-like-btn2:hover{ background:#257cc6; color:#fff; border:1px solid #257cc6; }
+.games-tj-er{ height:118px; width:128px; background:#fff; border:1px solid #e4e4e4; border-radius:10px; float:left; text-align:center; }
+.games-tj-er cite{ display:block; margin-top:8px; }
+.games-tj .joyme-tjsy{ border-top:1px solid #e4e4e4; overflow:hidden; width:720px;height:151px; }
+.joyme-tjsy ul li{ float: left; width:70px; margin:16px 74px 0 0; text-align: center; color:#000; }
+.joyme-tjsy ul li a{ color:#000; text-align: center; }
+.joyme-tjsy ul li a>cite{ display: block; width:70px; height:70px; overflow: hidden; -webkit-border-radius: 15px; -moz-border-radius: 15px; -ms-border-radius: 15px; -o-border-radius: 15px; border-radius: 15px; }
+.joyme-tjsy ul li a>span{ padding-top:5px; display: block; overflow: hidden; height:19px; }
+.joyme-tjsy ul li font{ display: block; margin:3px 0; }
+.joyme-tjsy ul li i{ font-style: normal; color:#f35050; }
+.joyme-tjsy .tjsy-wiki{ height:20px; line-height: 20px; color:#fff; border-radius: 15px; background: #257cc6; display: inline-block; padding:0 10px; float: none; }
+.joyme-tjsy .tjsy-wiki:hover{ background:#1c74be; text-decoration: none; color:#fff; }
+
+/*热门大作*/
+.games-rm.pb{ padding-bottom:40px; }
+.games-rm dl{ width:380px; margin:20px 0; overflow: hidden; height:122px; }
+.games-rm dl.mb{ margin-bottom:0; }
+.games-rm dl dd p a{ border:1px solid #d7d7d7; }
+.games-rm dl dd p a.games-tj-lb{ background:#fff; color:#f35050; }
+.games-rm dl dd p a.games-tj-wiki{ background:#fff; color:#257cc6; }
+.games-rm dl dd p a.games-tj-xz{ background:#fff; color:#3bcb09; }
+.games-rm dl dd p a.games-tj-lb:hover{ background:#f35050; color:#fff; border:1px solid #f35050; }
+.games-rm dl dd p a.games-tj-wiki:hover{ background:#257cc6; color:#fff; border:1px solid #257cc6; }
+.games-rm dl dd p a.games-tj-xz:hover{ background:#3bcb09; color:#fff; border:1px solid #3bcb09; }
+.games-rm-tit span{ cursor:pointer; padding:0 15px; border-right:1px solid #d0d0d0; }
+.games-rm-tit span.br{ border-right:none; }
+.games-rm-tit span.active{ color:#f35050; }
+.games-rm-cont>div{ display:none; }
+.games-rm-cont>div.active{ display:block; }
+.games-rk .joyme-lbzx-box li dd p b{ font-size:14px; color:#333; padding-bottom:3px; display: block; width:95%; overflow: hidden; height:16px; line-height:17px; }
+.games-rk .joyme-lbzx-box li dd p span{ font-weight:normal; color:#555; font-size:12px; height:14px; line-height:14px; display: block; overflow: hidden; margin-bottom:3px; }
+/*排序*/
+.games-result{ height:57px; border-top:1px solid #e3e3e3; border-bottom:1px solid #e3e3e3; margin-top:0; line-height:57px; }
+.games-result p{ float:left; font-size:14px; font-weight:500; }
+.games-result p span{ color:#f35050; }
+.games-sort{ float:right; margin-top:14px; }
+.games-sort a{ display:block; float:left; width:88px; height:28px; color:#555; line-height:28px; text-align:center; ; margin-left:-1px; border:1px solid #d7d7d7; }
+.games-sort a:hover{ text-decoration:none; }
+.games-sort a.games-sort1{ border-left:1px solid #d7d7d7; }
+.games-sort a.games-sort1.now{ background:#f35050; color:#fff; border-left:1px solid #f35050; border-top:1px solid #f35050; border-bottom:1px solid #f35050; }
+.games-sort a.now{ background:#f35050; color:#fff; border-right:1px solid #f35050; border-top:1px solid #f35050; border-bottom:1px solid #f35050; }
+.games-result-cont>div{ display:none; }
+.games-result-cont>div.now{ display:block; }
+/*最终页*/
+.games-tj-all dl{ width:350px; }
+.games-tj-all .games-tj-like{ background:#f5f5f5; border:1px solid #e9e9e9; }
+.games-tj-all .games-tj-er{ background:#f5f5f5; border:1px solid #e9e9e9; }
+.games-tj-all .games-tj-top{ padding-bottom:0; }
+.games-js div{ line-height:1.7; color:#555; font-size:14px; padding-top:10px; }
+.games-lb-cont li{ float:left; width:50%; height:26px; line-height:26px; font-size:0; color:#333; margin-top:13px; }
+.games-lb-cont li span{ background:url(../images/gamecollection/lb-icon.png) no-repeat left center; padding-left:22px; padding-right:38px; font-size:14px; height:26px; line-height: 26px; width:50%; overflow: hidden; display: inline-block; }
+.games-lb-cont li a{ display:inline-block; width:70px; border-radius:15px; text-align:center; background:#f35050; color:#fff; font-size:14px; vertical-align: top; }
+.games-lb-cont li a:hover{ text-decoration:none; background:#ec4444; }
+.joyme-rxjj-bottom.games-sp-cont{ height:120px; width:760px; padding:0; margin-top:20px; }
+.joyme-rxjj-bottom.games-sp-cont ul{ height:120px; width:760px; }
+.joyme-rxjj-bottom.games-sp-cont ul li{ height:120px; width:780px; }
+.joyme-rxjj-bottom.games-sp-cont ul li>a{ width:240px; height:120px; position:relative; }
+.joyme-rxjj-bottom.games-sp-cont ul li>a img{ width:100%; height:100%; }
+.joyme-rxjj-bottom.games-sp-cont ul li>a font{ width:100%; }
+/*.joyme-rxjj-bottom.joyme-rxjj-bottom ul li>a cite{ top:23px; }*/
+.joyme-zxpd-dl.games-zx-cont dl dd div.joyme-zxpd-dl-top{ background:none; }
+.joyme-zxpd-dl.games-zx-cont dl dd div.joyme-zxpd-dl-num span{ color:#999; font-size:12px; }
+.joyme-zxpd-dl.games-zx-cont dl.bb{ border-bottom:none; }
+/*joyme-zxpd-dl*/
+.joyme-zxpd-dl dl{ height:130px; margin:20px 0 0; width:100%; overflow:hidden; padding-bottom:20px; border-bottom:1px solid #dcdcdc; }
+.joyme-zxpd-dl dl.bb{ border-bottom:none; }
+.joyme-zxpd-dl dl dt{ width:230px; height:130px; overflow:hidden; }
+.joyme-zxpd-dl dl dd{ width:506px; height:130px; overflow:hidden; margin-left:20px; position:relative; }
+.joyme-zxpd-dl dl dd div.joyme-zxpd-dl-top{ background: url(../images/gamecollection/node.png) repeat-x left bottom; }
+.joyme-zxpd-dl dl dd div h2{ font-size:16px; color:#333; font-weight:bolder; }
+.joyme-zxpd-dl dl dd div p{ color:#999; padding:10px 0 8px; font-size:12px; }
+.joyme-zxpd-dl dl dd div p a{ color:#257cc6; }
+.joyme-zxpd-dl dl dd div span{ color:#555; font-size:14px; display:block; padding-top:8px; }
+.joyme-zxpd-dl dl dd div span a{ color:#3bcb09; }
+.joyme-zxpd-dl dl dd em{ color:#999; position:absolute; left:0; bottom:0; }
+.joyme-zxpd-dl dl dd em a{ color:#999; }
+.joyme-zxpd-dl dl dd div.joyme-zxpd-dl-num{ position:absolute; bottom:0; right:0; }
+.joyme-zxpd-dl dl dd div.joyme-zxpd-dl-num a{ color:#999; cursor:pointer; }
+.joyme-zxpd-dl dl dd div.joyme-zxpd-dl-num a b{ font-weight:normal; }
+.joyme-zxpd-dl dl dt img{ width:100%; }
+.joyme-zxpd-dl dl dt,.joyme-zxpd-dl dl dd{ float:left; }
+/*游戏截图*/
+.games-jt-cont{ width:540px; height:270px; margin:20px auto 0; overflow:hidden; position:relative; padding-left:60px; cursor:pointer; }
+.games-jt-cont>span{ position:absolute; background:rgba(0,0,0,0.2); width:40px; height:270px; top:0; }
+.games-jt-cont>span.games-jt-left{ left:0; }
+.games-jt-cont>span.games-jt-right{ right:0; }
+.games-jt-cont:hover>span{ background:rgba(208,208,198,0.4); }
+.games-jt-cont ul{ }
+.games-jt-cont li{ float:left; width:480px; height:270px; overflow:hidden; }
+.games-jt-cont li{ margin-right:20px;text-align: center;background:#ECECEC;line-height: 270px; }
+.games-jt-cont li img{vertical-align: middle; }
+.popupImg{ width:100%; height:100%; position:fixed; top:0; left:0; bottom:0; right:0; background:rgba(0,0,0,0.6); z-index:999; display:none; cursor:pointer; }
+.popupImg>cite{ top:50%; left:50%; overflow:hidden; position:absolute; padding:10px; background:#fff; }
+.popupImg>cite img{ width:100%; height:100%; }
+/*复制首页*/
+.joyme-tjsy a{ float:left; text-decoration:none; }
+.joyme-tjsy a:hover{ text-decoration:underline; }
+.joyme-tjsy dl{ margin:16px 0; text-align:center; width:90px; }
+.joyme-tjsy dl dt{ width:50px; height:50px; margin:0 auto; }
+.joyme-tjsy dl dt img{ width:100%; height:100%; -webkit-border-radius:15px; -moz-border-radius:15px; -ms-border-radius:15px; -o-border-radius:15px; border-radius:15px; }
+.joyme-tjsy dl dd{ padding-top:5px; }
+.joyme-tjsy dl dd span{ color:#333; }
+.joyme-tjsy a:hover{ color:#f35050; }
+.joyme-tjsy a:hover dl dd span{ color:#f35050; }
+.joyme-lbzx-box{ overflow:hidden; padding-top:20px; }
+.joyme-lbzx-box li{ overflow:hidden; zoom:1; }
+.joyme-lbzx-box li:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.joyme-lbzx-box li a{ display:block; background: url(../images/gamecollection/node.png) repeat-x left bottom; }
+.joyme-lbzx-box li dt{ width:100%; overflow:hidden; padding:9px 0; vertical-align:middle; }
+.joyme-lbzx-box li dt cite{ display:inline-block; *display:inline; *zoom:1; width:14px; height:16px; background:url(../images/gamecollection/sprite.png) no-repeat; background-position:0 -97px; vertical-align:middle; }
+.joyme-lbzx-box li dt span{ padding-left:8px; color:#333; font-size:14px; height:16px; line-height:16px; display: block; float: left; width:93%; overflow: hidden; }
+.joyme-lbzx-box li dt b{ float:right; width:20px; height:20px; background:url(../images/gamecollection/sprite.png) no-repeat; background-position:0 -137px; }
+.joyme-lbzx-box li dd{ height:70px; display:none; overflow:hidden; width:100%; padding:10px 0; position:relative; }
+.joyme-lbzx-box li dd cite{ float:left; width:70px; height:70px; }
+.joyme-lbzx-box li dd cite img{ width:70px; height:70px; }
+.joyme-lbzx-box li dd p{ float:left; padding-left:10px; }
+.joyme-lbzx-box li dd p span{ display:block; font-size:14px; font-weight:bold; color:#333; }
+.joyme-lbzx-box li dd p b{ display:block; font-size:12px; color:#555; font-weight:normal; }
+.joyme-lbzx-box li dd em{ position:absolute; right:0; bottom:11px; width:50px; height:24px; background:#F35050; border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px; -ms-border-radius:15px; -o-border-radius:15px; text-align:center; line-height:24px; font-size:12px; color:#fff; }
+.joyme-lbzx-box li a:hover dd em{ background:#ec4444; }
+.joyme-lbzx-box li.show dt{ display:none}
+.joyme-lbzx-box li.show dd{ display:block; padding:9px 0; }
+.joyme-lbzx-box li.first-lb dd{ padding:0 0 9px; }
+.joyme-lbzx-box li.first-lb dt{ padding:0 0 9px; }
+.joyme-rxjj-bottom{ width:680px; height:105px; padding:15px 0 20px; overflow:hidden; position:relative; }
+.joyme-rxjj-bottom ul{ height:105px; position:absolute; overflow:hidden; }
+.joyme-rxjj-bottom ul li{ float:left; width:680px; height:105px; }
+.joyme-rxjj-bottom ul li>a{ float:left; height:105px; width:155px; margin:0 20px 0 0; position:relative; }
+.joyme-rxjj-bottom ul li>a.mrta{ margin:0; }
+.joyme-rxjj-bottom ul li>a:hover span{ visibility:hidden; }
+.joyme-rxjj-bottom ul li>a:hover cite{ background-position:0 -42px; }
+.joyme-rxjj-bottom ul li>a img{ height:105px; width:155px; }
+.joyme-rxjj-bottom ul li>a span{ width:100%; height:100%; top:0; left:0; background:url(../images/gamecollection/rxjj-video-bg.png) repeat; position:absolute; }
+.joyme-rxjj-ce-bottom a:hover,.joyme-rxjj-ce-bottom a:hover span{ color:#f35050; }
+.joyme-rxjj-bottom ul li>a cite{ width:42px; height:42px; background-image:url(../images/gamecollection/video-begin.png); position:absolute; top:50%; left:50%; margin:-29px 0 0 -21px; background-repeat:no-repeat; background-position:0 0; }
+.joyme-rxjj-bottom ul li>a font{ width:155px; height:25px; line-height: 25px; position: absolute; left:0; bottom:0; background: url(../images/gamecollection/pic-bg.png) repeat 0 0; }
+.joyme-rxjj-bottom ul li>a b{ padding:0 10px; font-size:14px; color:#fff; font-weight:normal; }
+.joyme-rxjj-bottom ol{ position:absolute; bottom:0; left:50%; margin-left:-35px; }
+.joyme-rxjj-bottom ol li{ width:20px; height:4px; background:#d7d7d7; float:left; margin-right:5px; cursor:pointer; }
+.joyme-rxjj-bottom ol li.on{ background:#3bcb09; }
+/*复制资讯频道*/
+.joyme-lbzx-box.joyme-wzzz-box li dt cite{ display:block; *display:inline; *zoom:1; width:6px; height:9px; background:url(../images/gamecollection/jt-icon.png) no-repeat; vertical-align:middle; margin-top:5px; float: left; }
+.joyme-lbzx-box.joyme-wzzz-box li dd p{ width:180px; font-size:14px; color:#333; }
+.joyme-lbzx-box.joyme-wzzz-box li dd em{ background:#ececec; color:#999; }
+.joyme-lbzx-box.joyme-wzzz-box li a:hover dd em{ background:#ececec; }
+.joyme-paging-box{ padding:44px 0; }
+.pagecon{ overflow: hidden; padding:0; text-align:center; }
+.pagecon .page { display:inline-block; }
+.pagecon .page ul{ height:26px; overflow:hidden; }
+.pagecon .page ul li{ height: 24px; line-height: 25px; border: 1px solid #d4d4d4; padding: 0px 1px; margin-right: 2px; vertical-align: middle; display:inline-block; *display:inline; *zoom:1; cursor:pointer; }
+.pagecon .page ul li a{ color:#555; text-decoration:none; }
+.pagecon .page ul li a:hover{ text-decoration:none; }
+.pagecon .page ul li:hover { height: 26px; border:none; border-right:1px solid #f35050; border-left:1px solid #f35050; background:#f35050; color:#fff; }
+.pagecon .page ul li:hover a{ color:#fff; }
+.pagecon .page ul li a,.pageinfo{ display:block; padding:0 10px; }
+.pagecon .page ul li.thisclass{ height: 26px; background:#f35050; border:none; color:#fff; padding:0 10px; }
+/*目录*/
+.joyme-bt{ margin: 0 auto; height: 40px; line-height: 40px; padding-left: 2px; width:1080px; margin-bottom:-20px}
+.joyme-bt span{ color:#555; }
+.joyme-bt span a{ color: #555; }
+.joyme-bt span a.nowpage{ color:#999; }
+div.joyme-bt span a:hover{ color:#999; }
+
+/*最终页 推荐游戏更改*/
+.games-end-topl{ float: left; width:340px; overflow: hidden; }
+.games-end-topr{ float: left; width:420px; position: relative; }
+.end-topl-title{ width:100%; margin-bottom:13px; }
+.end-topl-title h1{ display: inline-block; font-size:24px; color:#333; max-width:84%; overflow: hidden; height:24px; line-height: 23px; }
+.end-topl-title b{ display: inline-block; color:#fff; font-size:16px; background: #f37171; -webkit-border-radius:10px; -ms-border-radius:10px; -moz-border-radius:10px; -o-border-radius:10px; border-radius:10px; padding:0 10px; font-weight: normal; vertical-align: top;height:24px; line-height: 26px; }
+.end-topl-con dt{ float: left; width:120px; height:120px; overflow: hidden; }
+.end-topl-con dt img{ width:100%; }
+.end-topl-con dd{ float: left; margin:0 15px; width:200px; }
+.end-topl-con dd span{ display: block; font-size:12px; color: #555; height:30px; line-height: 30px; width:100%; overflow: hidden; }
+.wiki-enter{ display: block; width:100%; height:29px; overflow: hidden; text-align: right; position: absolute;left:0;top:0; }
+.wiki-enter a{ display: inline-block; padding-right:10px; background: url(../images/gamecollection/enter-bg.png) no-repeat; background-position: right center;margin-top:3px; }
+.end-topr-con{ padding:9px 20px; border:1px solid #ebebeb; background: #f5f5f5; -moz-border-radius: 7px; -ms-border-radius: 7px; -o-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px; overflow: hidden;margin-top:42px;position: relative; }
+.topr-conl{ width:267px; overflow: hidden; float: left; margin-right:20px;padding-top:1px;}
+.topr-conl .like-unlike{ height:30px; padding-left:23px; position: relative; margin-bottom:5px; }
+.like-unlike span{ display: block; width:243px; height:16px; -moz-border-radius: 15px; -ms-border-radius: 15px; -o-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; background: #dbdbdb; position: relative; top:8px; width:100%; overflow: hidden; }
+.like-unlike cite{ display:block; width:30px; height:30px; background: url(../images/gamecollection/new-face.png) no-repeat; top:0; left:0; z-index: 9; position: absolute; }
+.topr-conl-like.like-unlike cite{ background-position: 0 0; }
+.topr-conl-unlike.like-unlike cite{ background-position: 0 -30px; }
+.like-unlike span b{ display: block; height:16px; -moz-border-radius: 15px; -ms-border-radius: 15px; -o-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; width:0; }
+.topr-conl-like.like-unlike span b{ background: #f37171; }
+.topr-conl-unlike.like-unlike span b{ background: #4f94cf; }
+.topr-conl-btn{ margin-top:10px; overflow: hidden;margin-left:3px; }
+.topr-conl-btn span{ display: block; width:58px; height:22px; line-height: 22px; background: #fff; border:1px solid #d7d7d7; -moz-border-radius: 12px; -ms-border-radius: 12px; -o-border-radius: 12px; -webkit-border-radius: 12px; border-radius: 12px; text-align: center; float: left; margin-right:15px; cursor: pointer; font-size:12px; }
+.topr-conl-btn span.like-btn{ color: #f35050; }
+.topr-conl-btn span.unlike-btn{ color: #257cc6; }
+.topr-conl-btn span.like-btn:hover{ background:#f35050; color:#fff; }
+.topr-conl-btn span.unlike-btn:hover{ background:#257cc6; color:#fff; }
+.topr-conr{ float:left; width:90px; overflow: hidden; text-align:center;position: absolute;right:7px;top:6px; }
+.topr-conr cite{ display: block; width:100%; overflow: hidden;margin-top:1px; }
+.topr-conr img{ width: 100%;height:86px; }
+.alert-icon{ width:100%; margin-top:8px; position: relative; }
+.alert-icon cite{ width:97px; height:33px; margin:0 auto; display: block; position: absolute; top:0; left:50%; margin-left:-45px; }
+.alert-icon.like-btn cite{ background: url(../images/gamecollection/alert-icon.png) no-repeat 0 0; }
+.alert-icon.unlike-btn cite{ background: url(../images/gamecollection/alert-icon.png) no-repeat 0 -37px; }
+.games-index-top .games-end-topl{ width:310px; margin-bottom:20px; }
+.games-index-top  .end-topl-con dd{ width:150px; }
+.games-index-top  .end-topl-con p a{ display: inline-block; padding: 0 10px; height: 26px; line-height: 26px; color: #fff; border-radius: 15px; margin-right: 5px;margin-top:3px; }
+.games-index-top  .end-topl-con p a.games-tj-lb{background: #f35050;}
+.games-index-top .end-topl-con p a.games-tj-wiki{background: #257cc6;}
+.games-index-top .end-topr-con{background: #fff;padding:9px 15px 9px;}
+.games-index-top .games-end-topr{width:410px;}
+
+.games-jt-cont:hover span>cite{display: block;}
+.games-jt-cont span>cite{  position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 35px;
+    background-image: url(../images/gamecollection/sprite.png);
+    background-repeat: no-repeat;
+    margin: -17px 0 0 -6px;
+    display: none;
+}
+.games-jt-cont span.games-jt-left cite{background-position: -183px -38px}
+.games-jt-cont.hover>span.games-jt-left cite{background-position:-183px -38px;}
+.games-jt-cont.hover>span.games-jt-left.show cite{background-position:-183px 0;}
+.games-jt-cont.hover>span.games-jt-right cite{background-position:-196px -38px;}
+.games-jt-cont.hover>span.games-jt-right.show cite{background-position:-196px 0;}

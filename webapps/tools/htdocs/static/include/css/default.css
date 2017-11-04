@@ -1,0 +1,360 @@
+a:active {
+    font-size: 12px;
+    color: #0000FF
+}
+
+a:hover {
+    font-size: 12px;
+    color: #0000FF
+}
+
+a:visited {
+    font-size: 12px;
+    color: #0000CC
+}
+
+a.nounderline:link {
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+}
+
+a.nounderline:active {
+    font-size: 12px;
+    color: #0000FF;
+    text-decoration: none;
+}
+
+a.nounderline:hover {
+    font-size: 12px;
+    color: #0000FF;
+    text-decoration: none;
+}
+
+a.nounderline:visited {
+    font-size: 12px;
+    color: #0000CC;
+    text-decoration: none;
+}
+
+a.nounderline:link {
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+    background-color: #FFFFFF;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+}
+
+.fontcolor_input_hint {
+    color: #FF0000
+}
+
+.default_button {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #0000FF;
+}
+
+.default_input_singleline {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    color: #000000;
+    border: 1px solid #666666;
+
+}
+
+.needed_input_singleline {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    color: #000000;
+    border: 1px solid #FF0000;
+
+}
+
+.default_input_multiline {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.default_select_single {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+}
+
+.default_select_multi {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000
+}
+
+.default_line_td {
+    background-color: #BEBEBE;
+    color: #000000;
+}
+
+.list_table_frame {
+}
+
+.list_table_title_tr {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+    background-color: #DFDFDF;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+.list_table_opp_tr {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+    background-color: #FFFFFF;
+    line-height: 22px;
+
+}
+
+.list_table_even_tr {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+    background-color: #CCE8CF;
+    line-height: 22px;
+}
+
+.list_table_header_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    line-height: 22px;
+    color: #000000;
+    background-color: #FFFFFF;
+    font-weight: bold;
+}
+
+.list_table_page_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    line-height: 22px;
+    background-color: #F7F7F7;
+}
+
+.edit_table_frame {
+    border-top: 0px solid;
+    border-right: solid;
+    border-bottom: 0px solid;
+    border-left: solid;
+}
+
+.edit_table_notnulltitle_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+    background-color: #B4B4B4;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+.edit_table_defaulttitle_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+    background-color: #DBDBDB;
+    line-height: 22px;
+}
+
+.edit_table_value_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+    background-color: #F3F3F3;
+    line-height: 22px;
+}
+
+.edit_table_header_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+.detail_table_frame {
+
+}
+
+.detail_table_title_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+    background-color: #DBDBDB;
+    line-height: 22px;
+
+}
+
+.detail_table_value_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+    background-color: #F3F3F3;
+    line-height: 22px;
+}
+
+.detail_table_header_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    line-height: 22px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.date_popwin {
+    font-family: "Courier New", "Courier";
+    font-size: 12px;
+    background-color: #CCCCCC
+}
+
+.error_msg_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #FF0000;
+    line-height: 22px;
+}
+
+.page_navigation_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+    background-color: #F4F4F4;
+    line-height: 22px;
+}
+
+.tab_active_tab_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: bold;
+    background-color: #B5B5B5;
+    border: thin solid #B5B5B5;
+}
+
+.tab_noactive_tab_td {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    line-height: 22px;
+    background-color: #E1E1E1;
+    border: thin solid #E1E1E1;
+}
+
+.toolbar_tr {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    line-height: 22px;
+    background-color: #F7F7F7;
+}
+
+.fontcolor_dsp_hint {
+    color: #FF0000
+}
+
+.navPoint {
+    FONT-SIZE: 10pt;
+    CURSOR: hand;
+    COLOR: FF0000;
+    FONT-FAMILY: Webdings
+}
+
+.tab_active_button {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    line-height: 20px;
+    color: #0000FF;
+    background-color: #B5B5B5;
+    border: 1px none;
+}
+
+.tab_button {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    line-height: 20px;
+    color: #0000FF;
+    background-color: #B5B5B5;
+    border: 1px none;
+    width: 100px;
+}
+
+.tab_button_long {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    line-height: 20px;
+    color: #0000FF;
+    background-color: #B5B5B5;
+    border: 1px none;
+    width: 200px;
+}
+
+.tab_active_button {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    line-height: 20px;
+    color: #0000FF;
+    background-color: #B5B5B5;
+    border: 1px none;
+}
+
+.tab_noactive_button {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    line-height: 20px;
+    color: #999999;
+    background-color: #E1E1E1;
+    border: 1px none;
+}
+
+.header {
+    height: 24px;
+    font-style: italic;
+}
+
+.navigation {
+    background-color: #EFEFEF;
+    height: 24px;
+    font-style: italic;
+}
+
+.footer {
+    background-color: #EFEFEF;
+    height: 24px;
+}
+
+.toolbar {
+    background-color: #EFEFEF;
+}
+
+.link_title {
+    color: #000000;
+}
+
+.link_title:link {
+    text-decoration: none;
+}
+
+.link_title:visited {
+    text-decoration: none;
+}
+
+.link_title:active {
+    text-decoration: none;
+}

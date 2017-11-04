@@ -1,0 +1,174 @@
+<project name="image" default="webapps.image" basedir=".">
+    <!--###########################################################-->
+    <!--## Buildfile for the platform webapp.  The webapp target is  ##-->
+    <!--## called from the main buildfile, /java/build/build.xml.##-->
+    <!--###########################################################-->
+    <property name="webapps.image.available" value="true"/>
+
+
+    <!--###########################################################-->
+    <!--## Core webapp target                                    ##-->
+    <!--###########################################################-->
+    <target name="webapps.image.core"
+            depends="webapps.image.bootstrap,webapps.image.create.output,webapps.image.compile,webapps.image.config"
+            description="build just the www webapp"/>
+
+    <target name="webapps.image"
+            depends="webapps.image.core,webapps.image.core.jar,webapps.image.htdocs.tar"
+            description="build the image webapp"/>
+
+    <!--###########################################################-->
+    <!--## initialization target                                 ##-->
+    <!--## This target expects the following parameters to be    ##-->
+    <!--## defined:                                              ##-->
+    <!--##	${view.webapps.root} - the root webapps directory    ##-->
+    <!--##	${output.stage.root} - the lib output directory      ##-->
+    <!--##	${output.classes.root} - the platform classes dir    ##-->
+    <!--###########################################################-->
+    <target name="webapps.image.bootstrap" depends="bootstrap" unless="webapps.image.bootstrap.complete">
+        <!-- set the webapp root -->
+        <path id="webapps.image.path">
+            <pathelement path="${view.webapps.root}/image"/>
+        </path>
+        <pathconvert dirsep="/" property="webapps.image.root" refid="webapps.image.path"/>
+
+        <!-- set the java root -->
+        <property name="webapps.image.java.root" value="${webapps.image.root}/java"/>
+
+        <!-- set the htdocs root -->
+        <property name="webapps.image.htdocs.root" value="${webapps.image.root}/htdocs"/>
+
+        <!-- set class output root -->
+        <property name="webapps.image.classes.root" value="${output.classes.root}/webapps/image"/>
+
+        <!-- display the directories: -->
+        <echo message="----------------------------------------------------         "/>
+        <echo message="  image webapp view root     ${view.webapps.root}             "/>
+        <echo message="   - version                 ${build.platform.version}      "/>
+        <echo message="   - java                    ${webapps.image.java.root}       "/>
+        <echo message="   - htdocs                  ${webapps.image.htdocs.root}     "/>
+        <echo message="   - classes                 ${webapps.image.classes.root}    "/>
+        <echo message="   - output                  ${output.stage.root}              "/>
+        <echo message="----------------------------------------------------         "/>
+
+        <!-- flag boostrap as complete -->
+        <property name="webapps.image.bootstrap.complete" value="true"/>
+    </target>
+
+    <!--###########################################################-->
+    <!--## webapp preparing target                               ##-->
+    <!--###########################################################-->
+    <target name="webapps.image.create.output" depends="webapps.image.bootstrap">
+        <!-- create the classes directory: -->
+        <mkdir dir="${webapps.image.classes.root}"/>
+
+        <!-- create the version stamp -->
+        <echo file="${webapps.image.htdocs.root}/version.txt" message="${build.platform.version}"/>
+    </target>
+
+
+    <!--###########################################################-->
+    <!--## webapp compile target                                 ##-->
+    <!--###########################################################-->
+    <target name="webapps.image.compile" depends="webapps.image.bootstrap,webapps.image.create.output"
+            description="compile the webapp classes">
+        <!-- compile the platform webapp classes -->
+        <javac
+                srcdir="${webapps.image.java.root}"
+                destdir="${webapps.image.classes.root}"
+                nowarn="${platform.javac.nowarn}"
+                debug="${platform.javac.debug}"
+                optimize="${platform.javac.optimize}"
+                deprecation="${platform.javac.deprecation}"
+                includeAntRuntime="no"
+                includeJavaRuntime="yes"
+                encoding="${java.source.encoding}">
+
+            <classpath>
+                <pathelement path="${compiletime.classpath}"/>
+                <pathelement path="${output.classes.framework.root}"/>
+                <pathelement path="${output.classes.webcommon.root}"/>
+            </classpath>
+
+            <sourcepath>
+                <pathelement location="${webapps.image.java.root}"/>
+            </sourcepath>
+        </javac>
+    </target>
+
+    <target name="webapps.image.config" depends="webapps.image.bootstrap"
+            description="copy the web config and properties to web-inf classes">
+        <mkdir dir="${webapps.image.htdocs.root}/WEB-INF/classes"/>
+
+        <copy todir="${webapps.image.htdocs.root}/WEB-INF/">
+            <fileset dir="${output.classes.webcommon.root}/META-INF/">
+                <include name="*"/>
+            </fileset>
+        </copy>
+
+        <copy todir="${webapps.image.htdocs.root}/WEB-INF/classes">
+            <fileset dir="${webapps.image.java.root}">
+                <include name="**/*.xml"/>
+                <include name="**/*.properties"/>
+                <exclude name="build/**"/>
+                <exclude name="work/**"/>
+            </fileset>
+        </copy>
+
+        <native2ascii encoding="utf-8" dest="${webapps.image.htdocs.root}/WEB-INF/classes/hotdeploy/i18n"
+                      src="${view.configfiles.root}/hotdeploy/i18n" ext=".properties">
+            <include name="**/*.properties"/>
+        </native2ascii>
+    </target>
+    <!--###########################################################-->
+    <!--## webapps jar or tar target                             ##-->
+    <!--###########################################################-->
+    <target name="webapps.image.core.jar" depends="webapps.image.compile" description="builds the image-java.jar">
+        <mkdir dir="${output.stage.root}"/>
+        <jar destfile="${output.stage.root}/image-java.jar">
+            <fileset dir="${webapps.image.classes.root}">
+            </fileset>
+            <fileset dir="${webapps.image.java.root}">
+                <include name="**/*.xml"/>
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="webapps.image.htdocs.tar" description="creates the image-htdocs.tar for deployment">
+        <tar destfile="${output.stage.root}/image-htdocs.tar" longfile="warn">
+            <tarfileset dir="${webapps.image.htdocs.root}">
+                <include name="**/*"/>
+            </tarfileset>
+        </tar>
+    </target>
+
+    <!--###########################################################-->
+    <!--## webapp.clean target                                   ##-->
+    <!--###########################################################-->
+    <target name="webapps.image.clean" depends="webapps.image.bootstrap"
+            description="deletes all class files, image-htdocs.tar and www-java.jar">
+        <!-- Delete the files generated by the build -->
+        <delete quiet="true">
+            <fileset dir="${output.stage.root}" casesensitive="yes" followsymlinks="false">
+                <include name="image-*.jar"/>
+                <include name="image-*.tar"/>
+            </fileset>
+        </delete>
+
+        <delete quiet="true">
+            <fileset dir="${webapps.image.classes.root}" casesensitive="yes" followsymlinks="false">
+                <include name="**/*"/>
+            </fileset>
+        </delete>
+
+        <delete quiet="true">
+            <fileset dir="${webapps.image.classes.root}" casesensitive="yes" followsymlinks="false">
+            </fileset>
+        </delete>
+
+        <delete quiet="true">
+            <fileset dir="${webapps.image.htdocs.root}/WEB-INF/classes" casesensitive="yes" followsymlinks="false">
+            </fileset>
+        </delete>
+    </target>
+</project>

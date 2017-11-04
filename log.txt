@@ -1,0 +1,65 @@
+{"password":"cuimeng515","profileKey":"www","rememberMe":false,"username":"18880111482","loginDomain":"mobile"}
+3
+{"accountNo":"7cd7ttqMDpfOFd5UHfcuO8EufO5GwLvtgLQv","createdIp":"172.16.84.117","extraParams":{"uid":"5181247","platform":"0","mock":"0","otherid":"13811930000","appkey":"2ojbX21Pd7WqJJRWmIniM0","pid":"b4f0c6c2f97023a1307a3086af3b1493","code":"36996","uno":"7cd7ttqMDpfOFd5UHfcuO8EufO5GwLvtgLQv","profileid":"b4f0c6c2f97023a1307a3086af3b1493","password":"123456","version":"1.1.0","channelid":"appstore","clientid":"14445AE5-F05D-4BF5-BF55-E9E0434FA663","source":"1","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJVSURfRjY4NEQ1OTc1OUNGOEQ4RjRDMzI1MTRGRDc3MDM2REQiLCJhdXRoIjoiUk9MRV9VU0VSIiwibG9naW5JbmZvIjp7ImxvZ2luRG9tYWluIjoicXEiLCJwcm9maWxlTm8iOiJiNGYwYzZjMmY5NzAyM2ExMzA3YTMwODZhZjNiMTQ5MyJ9LCJleHAiOjE0OTYzNzM5NTV9.rLoqAVEZmJ7PARgBjcKFCI0ytiGgpgTQp6oVIyJGPK_25RJHPIID6SF6XSuaZao5xtcBOR49kHMldEtmqcC4oQ","logindomain":"mobile"},"icon":"","login":"13811930000","loginDomain":"mobile","nick":"","password":"123456","profileKey":"www"}
+
+
+2
+{"accountNo":"7cd7ttqMDpfOFd5UHfcuO8EufO5GwLvtgLQv","appKey":"2ojbX21Pd7WqJJRWmIniM0","cityId":0,"createdIp":"172.16.84.117","createdTime":"2017-06-01T11:25:55.817+08:00","experience":0,"flag":520,"icon":"http://joymepic.joyme.com/qiniu/headicon/2017/06/53/e2c3863e0db840436f084ea0402215e6f5f6.jpg","id":5181247,"level":0,"lowercaseNick":"微服务刘","nick":"微服务刘","profileKey":"www","profileNo":"b4f0c6c2f97023a1307a3086af3b1493","provinceId":0,"sex":0}
+
+
+
+SERVER_TOMCAT_MAX-THREADS=800
+
+1
+{"createdIp":"172.16.84.117","extraParams":{"uid":"5180429","platform":"0","icon":"http://q.qlogo.cn/qqapp/1106057256/8723B740CC2FE1F1729D37B88B2A90C2/100","mock":"0","otherid":"UID_F684D59759CF8D8F4C32514FD77036DD","appkey":"2ojbX21Pd7WqJJRWmIniM0","_profile_appkey_":"2ojbX21Pd7WqJJRWmIniM0","pid":"56c9d184f8723415edeca4dac7034379","profileid":"56c9d184f8723415edeca4dac7034379","version":"1.1.0","channelid":"appstore","clientid":"14445AE5-F05D-4BF5-BF55-E9E0434FA663","time":"1496287554908","nick":"微服务刘","source":"1","token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNDQ0NUFFNS1GMDVELTRCRjUtQkY1NS1FOUUwNDM0RkE2NjMiLCJhdXRoIjoiUk9MRV9VU0VSIiwibG9naW5JbmZvIjp7ImxvZ2luRG9tYWluIjoiY2xpZW50IiwicHJvZmlsZU5vIjoiNTZjOWQxODRmODcyMzQxNWVkZWNhNGRhYzcwMzQzNzkifSwiZXhwIjoxNDk2MzczOTEyfQ.grKt9lzgZk5mfyJPStIWJEXO4wwrb6qRrGvEF25Gr3ZKA5YpNvxTx-IRtEN5exH_w3MlP809OdUC6QGo07nmjQ","logindomain":"qq","openid":"8723B740CC2FE1F1729D37B88B2A90C2"},"icon":"http://joymepic.joyme.com/qiniu/headicon/2017/06/53/e2c3863e0db840436f084ea0402215e6f5f6.jpg","login":"UID_F684D59759CF8D8F4C32514FD77036DD","loginDomain":"qq","nick":"微服务刘","profileKey":"www"}[2017-06-28 10:48:56] [ERROR] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'editorContentController' defined in file [/Users/ericliu/workspace/ericliu-mac-joyme-platform/build/work/classes/webapps/tools/com/enjoyf/webapps/tools/webpage/controller/editor/EditorContentController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.enjoyf.webapps.tools.webpage.controller.editor.EditorContentController]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:997)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:943)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:585)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:384)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4791)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5285)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:633)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:655)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1628)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.enjoyf.webapps.tools.webpage.controller.editor.EditorContentController]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:162)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:76)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:990)
+	... 26 more
+Caused by: java.lang.NullPointerException
+	at com.enjoyf.platform.props.hotdeploy.ContextHotdeployConfig.reload(ContextHotdeployConfig.java:331)
+	at com.enjoyf.platform.props.hotdeploy.ContextHotdeployConfig.init(ContextHotdeployConfig.java:140)
+	at com.enjoyf.platform.props.hotdeploy.HotdeployConfig.<init>(HotdeployConfig.java:28)
+	at com.enjoyf.platform.props.hotdeploy.ContextHotdeployConfig.<init>(ContextHotdeployConfig.java:134)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at java.lang.Class.newInstance(Class.java:383)
+	at com.enjoyf.platform.props.hotdeploy.HotdeployConfigFactory.getConfig(HotdeployConfigFactory.java:53)
+	at com.enjoyf.webapps.tools.webpage.controller.editor.EditorContentController.<init>(EditorContentController.java:37)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 28 more

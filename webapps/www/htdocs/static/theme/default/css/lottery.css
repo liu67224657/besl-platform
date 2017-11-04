@@ -1,0 +1,51 @@
+body{background:#1a4771}
+#lottery-banner{height:450px; background:url(../img/lottery-pic-1.jpg) no-repeat center top; box-shadow:0 1px 5px #272727; position:relative;}
+#lottery-banner div{width:1004px; margin:0 auto; height:450px; position:relative;}
+#lottery-banner div a{display:block; width:222px; height:60px; line-height:900px; overflow:hidden; background:url(../img/lottery.png) no-repeat; position:absolute; bottom:60px;}
+#lottery-banner div a.lottery-join-qq{background-position:0 0; left:494px;}
+#lottery-banner div a.lottery-join-weibo{background-position:-243px 0; right:45px;}
+
+#lottery-content{width:1004px; margin:0 auto; background:url(http://lib.joyme.com/static/theme/default/img/sbg.png) repeat; padding-top:10px;}
+#lottery-content h2{height:60px; line-height:60px; font-size:26px; font-family:'黑体'; color:#000; padding-left:30px; position:relative}
+#lottery-content h2 span{color:#04a2ad}
+#lottery-content h2 a{font-family:'宋体'; font-size:12px; line-height:12px; font-weight:normal; position:absolute; right:4px; top:30px; color:#04a2ad}
+
+#gift-show{margin:0 10px;}
+#gift-show ul{display:block; overflow:hidden; border:1px solid #cbc8c8; background:#fff}
+#gift-show li{float:left; width:196px; height:238px; border-right:1px solid #cbc8c8; padding:24px 24px 0; overflow:hidden; text-align:center}
+#gift-show li div{padding:1px; border:1px solid #cbc8c8;}
+#gift-show li img{width:192px; height:152px; display:block;}
+#gift-show p{line-height:20px; font-size:14px; padding-top:8px; font-family:'microsoft yahei'}
+
+#get-gift-user{padding:10px 0; height:146px; overflow:hidden; background:url(../img/lottery-pic-2.jpg) repeat-y center top #fff; border:1px solid #cbc8c8}
+#get-gift-user li{overflow:hidden;}
+#get-gift-user li span{float:left; height:30px; line-height:30px;}
+span.sp1{width:90px; padding-left:24px;}
+span.sp2{width:110px}
+span.sp3{width:186px}
+span.sp4{width:80px}
+
+#recommend-wiki{background:#fff; margin:0 10px; border:1px solid #cbc8c8; padding:10px 0; overflow:hidden;}
+#recommend-wiki li{float:left; width:184px; margin-left:10px;}
+#recommend-wiki li div{padding:1px; border:1px solid #cbc8c8}
+#recommend-wiki li img{width:180px; height:116px; display:block;}
+#recommend-wiki li p{line-height:30px; text-align:center;}
+#recommend-wiki li a{color:#000}
+#recommend-wiki div.getMore{clear:both; text-align:right; line-height:20px; padding-right:1em}
+#recommend-wiki div.getMore a{color:#6e6e6e}
+
+#lottery-sorry{text-align:center; padding:12em 0 30em; font-family:'黑体'}
+#lottery-sorry h1{font-size:28px; color:#04a2ad}
+#lottery-sorry p{ font-size:24px; color:#000; padding:24px 0 35px; font-weight:bold}
+#lottery-sorry a{font-family:'宋体'; color:#6e6e6e; text-decoration:underline}
+
+#lottery-get-type1{padding-bottom:30em}
+#lottery-get-type1 h1, #lottery-get-type2 h1{font-size:28px; color:#000; padding:22px 10px; text-align:center; font-family:'黑体'}
+#lottery-get-type1 h1 span, #lottery-get-type2 h1 span{color:#04a2ad}
+
+#gift-detail{margin:0 10px; border:1px solid #cbc8c8; background:#fff;}
+.gift-pic{width:324px; height:380px; margin:0 auto; padding-top:24px}
+.gift-pic div{padding:1px; border:1px solid #ccc;}
+.gift-pic img{width:320px; height:260px; display:block;}
+.gift-pic p{line-height:24px; padding-top:18px; font-size:14px; text-align:center;}
+.tips{height:218px; text-align:center; fotn-size:14px; color:#ff0000; padding-top:20px;}

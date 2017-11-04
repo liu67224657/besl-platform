@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+    <description>user face tag</description>
+    <display-name>userface tag</display-name>
+    <tlib-version>1.1</tlib-version>
+    <short-name>uf</short-name>
+    <uri>/uf</uri>
+
+    <function>
+        <name>parseIcon</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.IconTag</function-class>
+        <function-signature>java.lang.String praseIcon(java.lang.String,java.lang.String,java.lang.String)
+        </function-signature>
+        <example>&lt;c:out value="${uf:parseFace(a.jpg,B,a,jpg)}"&gt;</example>
+    </function>
+
+</taglib>

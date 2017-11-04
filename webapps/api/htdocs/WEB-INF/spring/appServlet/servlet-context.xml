@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+        xmlns:mvc="http://www.springframework.org/schema/mvc"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:cache="http://www.springframework.org/schema/cache"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/aop 
+    	http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+    	http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/cache
+		http://www.springframework.org/schema/cache/spring-cache-3.1.xsd
+        ">
+
+
+    <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <beans:property name="defaultEncoding" value="UTF-8"/>
+        <beans:property name="maxUploadSize" value="104857600"/>
+        <beans:property name="maxInMemorySize" value="4096"/>
+    </beans:bean>
+
+    <beans:bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <beans:property name="messageConverters">
+            <beans:list>
+                <beans:bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                    <beans:property name="supportedMediaTypes">
+                        <beans:list>
+                            <beans:value>text/plain;charset=UTF-8</beans:value>
+                        </beans:list>
+                    </beans:property>
+                </beans:bean>
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+
+    <context:component-scan base-package="com.enjoyf.webapps.joyme"/>
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <context:annotation-config/>
+
+    <!--<beans:bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager" p:cache-manager-ref="ehcache">-->
+    <!--</beans:bean>-->
+
+
+    <!-- spring自己的换管理器，这里定义了两个缓存位置名称 ，既注解中的value
+    <cache:annotation-driven cache-manager="cacheManager"/>
+
+   <beans:bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
+        <beans:property name="caches">
+            <beans:set>
+                &lt;!&ndash;<beans:bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean" p:name="andCache"  />&ndash;&gt;
+                &lt;!&ndash;<beans class="org.springframework.cache.concurrent.ConcurrentCacheFactoryBean" p:name="andCache" />&ndash;&gt;
+                <beans:bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean" name="andCache" />
+            </beans:set>
+        </beans:property>
+    </beans:bean>-->
+
+    <!-- Enables the Spring MVC @Controller programming model -->
+    <mvc:annotation-driven/>
+
+    <!-- Handles HTTP GET requests for /resources/** by efficiently serving
+         up static resources in the ${webappRoot}/resources directory -->
+
+    <!--<mvc:resources mapping="/static/**" location="/static/"/>-->
+    <mvc:resources mapping="/crossdomain.xml" location="/"/>
+    <mvc:resources mapping="/sitemap.xml" location="/"/>
+    <mvc:resources mapping="/sitemap.htm" location="/"/>
+    <mvc:resources mapping="/version.txt" location="/"/>
+    <mvc:resources mapping="/node-info.txt" location="/"/>
+    <mvc:resources mapping="/robots.txt" location="/"/>
+    <mvc:resources mapping="/google090cbc8f4ce5a42d.html" location="/"/>
+
+    <!--<mvc:resources mapping="/hotdeploy/**" location="/"/>-->
+    <!--<mvc:resources mapping="/hotdeploy/**" location="/hotdeploy/"/>-->
+
+    <beans:bean id="i18nSource"
+                class="org.springframework.context.support.ResourceBundleMessageSource">
+        <beans:property name="basenames">
+            <beans:list>
+                <beans:value>/hotdeploy/i18n/www/user</beans:value>
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+
+    <beans:bean id="freemarkerConfig"
+                class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <!-- .ftl文件存放的根目录 -->
+        <beans:property name="templateLoaderPath" value="/"/>
+        <beans:property name="freemarkerSettings">
+            <beans:props>
+                <beans:prop key="defaultEncoding">UTF-8</beans:prop>
+                <beans:prop key="template_update_delay">5</beans:prop>
+                <!--刷新模板的周期，单位为秒 -->
+                <beans:prop key="default_encoding">UTF-8</beans:prop>
+                <!--模板的编码格式 -->
+                <beans:prop key="locale">zh_CN</beans:prop>
+                <!-- 本地化设置 -->
+                <beans:prop key="datetime_format">yyyy-MM-dd HH:mm:ss</beans:prop>
+                <beans:prop key="time_format">HH:mm:ss</beans:prop>
+                <beans:prop key="number_format">0.######</beans:prop>
+                <beans:prop key="boolean_format">true,false</beans:prop>
+                <!--<beans:prop key="auto_import">"index.ftl" as p</beans:prop>-->
+                <beans:prop key="whitespace_stripping">true</beans:prop>
+                <beans:prop key="tag_syntax">auto_detect</beans:prop>
+                <beans:prop key="url_escaping_charset">UTF-8</beans:prop>
+            </beans:props>
+        </beans:property>
+        <beans:property name="freemarkerVariables">
+            <beans:map>
+                <beans:entry key="xml_escape" value-ref="fmXmlEscape"/>
+            </beans:map>
+        </beans:property>
+        <!--可以增加其他freemarker的配置，详情请参阅FreeMarkerConfigurerAPI -->
+    </beans:bean>
+
+    <beans:bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape"/>
+
+    <beans:bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
+    <beans:bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <!-- 设置为true以忽略对Accept Header的支持 -->
+        <!-- <beans:property name="ignoreAcceptHeader" value="true"/> -->
+        <!-- 在没有扩展名时即: "/user/1" 时的默认展现形式 -->
+        <beans:property name="defaultContentType" value="text/html"/>
+        <!-- 扩展名至mimeType的映射,即 /user.json => application/json -->
+        <beans:property name="mediaTypes">
+            <beans:map>
+                <!--
+                    <beans:entry key="html" value="text/html" />
+                    <beans:entry key="json" value="application/json" />
+                    <beans:entry key="xml" value="application/xml" />
+
+                    <beans:entry key="excel" value="application/excel" />
+                    <beans:entry key="pdf" value="application/pdf" />
+                    -->
+            </beans:map>
+        </beans:property>
+        <!-- 用于开启 /userinfo/123?format=json 的支持 -->
+        <!-- <beans:property name="favorParameter" value="false"/> -->
+        <beans:property name="viewResolvers">
+            <beans:list>
+                <!--<beans:bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+                    <beans:property name="order" value="2"/>
+                    <beans:property name="cache" value="true"/>
+                    <beans:property name="prefix" value="/views/ftl/"/>
+                    <beans:property name="suffix" value=".ftl"/>
+                    <beans:property name="exposeSpringMacroHelpers" value="true"/>
+                    <beans:property name="exposeRequestAttributes" value="true"/>
+                    <beans:property name="exposeSessionAttributes" value="true"/>
+                    <beans:property name="contentType" value="text/html;charset=UTF-8"/>
+                </beans:bean>-->
+                <beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+                    <beans:property name="order" value="0"/>
+                </beans:bean>
+
+
+                <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+                    <beans:property name="order" value="1"/>
+                    <beans:property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+                    <beans:property name="prefix" value="/"/>
+                    <beans:property name="suffix" value=".jsp"/>
+                </beans:bean>
+                <!-- 可加入其他视图技术如 volacity jstl等 -->
+            </beans:list>
+        </beans:property>
+
+
+        <beans:property name="defaultViews">
+            <beans:list>
+                <!--<beans:bean	class="org.springframework.webpage.servlet.view.json.MappingJacksonJsonView">
+                        <beans:property name="prefixJson" value="true"/>
+                        </beans:bean>
+                     <beans:bean id="marshallingView" class="org.springframework.webpage.servlet.view.xml.MarshallingView">
+                        <beans:property name="marshaller"> <beans:bean id="xStreamMarshaller" class="org.springframework.oxm.xstream.XStreamMarshaller">
+                        <beans:property name="autodetectAnnotations" value="true"/> </beans:bean>
+                        </beans:property> <beans:property name="contentType" value="application/xml"
+                        /> </beans:bean> -->
+            </beans:list>
+        </beans:property>
+
+    </beans:bean>
+    <beans:bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <beans:property name="defaultErrorView" value="/views/jsp/common/500"/>
+        <beans:property name="exceptionMappings">
+            <beans:props>
+            </beans:props>
+        </beans:property>
+    </beans:bean>
+
+
+</beans:beans>

@@ -1,0 +1,72 @@
+@charset "utf-8";
+body{background:url(../img/wiki-bg.jpg) repeat-x #fff;}
+.login_logo{margin:0 0  9px;}
+#wiki{width:480px; margin:32px auto; position:relative;}
+#wiki-share{background:#fff; border:1px solid #c6c6c6; border-radius:6px; box-shadow:2px 2px 4px rgba(0,0,0,.12)}
+
+/* rewrite */
+.blog_login .inputtextbtn{width:180px;}
+.wlogin_l{padding:50px 0 20px 20px; width:230px;}
+.wlogin_r{width:200px; height:264px; padding:20px 0 0 10px; margin:50px 0 50px 10px;}
+
+/* 推荐成功 */
+.wiki-succeed{text-align:center; background:url(../img/wiki-pic-1.jpg) no-repeat center 32px; font-family:'microsoft yahei'; padding-bottom:40px;}
+.wiki-succeed h2{font-size:26px; color:#636363; font-weight:normal; padding-top:80px;}
+.wiki-succeed p{color:#68b40c; font-size:16px; line-height:70px;}
+
+.wiki-share-title{line-height:34px; font-size:16px; color:#494949; border-bottom:1px dashed #e2e2e2; margin:10px 18px 0; padding-left:2px; font-family:'microsoft yahei'; font-weight:normal;}
+
+.wiki-share-status{overflow:hidden; width:442px; margin-left:18px; text-align:right; line-height:20px; padding:10px 0;}
+.wiki-share-status em{color:#75ac1f; font-size:18px; padding:0 4px; vertical-align:middle}
+.wiki-share-status i{color:#0b82ac; padding:0 6px;}
+
+.wiki-share-box{overflow:hidden; margin:0 18px;}
+.wiki-share-img{float:left; height:100px; overflow:hidden;}
+.wiki-share-img img{min-height:100px;}
+.wiki-share-box textarea{float:right; width:290px; height:90px; padding:5px; border:1px solid #ccc; border-radius:4px; box-shadow:0px 1px 2px #f2f2f2 inset; color:#000}
+
+.wiki-share-btn{padding:12px 0; border-bottom:1px dashed #ccc;}
+.wiki-share-btn a{float:left; margin-right:16px; width:113px; height:33px; line-height:33px; text-align:center; color:#3d3d3d; background:url(../img/wiki-btn.jpg) no-repeat; text-decoration:none;}
+.wiki-share-btn a:hover{background-position:0 -33px; color:#fff;}
+
+.wiki-share-tips{height:38px; line-height:30px; background:url(../img/wiki-pic-2.jpg) no-repeat; color:#71b901; margin-left:18px; padding-left:8px; margin-top:10px;}
+.wiki-share-login-tips{padding:6px 10px; margin:0 18px; border-bottom:1px dashed #ccc}
+
+.wiki-share-platform{height:33px; line-height:33px; padding:10px 0 14px; margin:0 18px;}
+.wiki-share-platform a{display:inline-block; width:34px; height:33px; vertical-align:middle; margin-right:6px;}
+.wiki-share-sina{background:url(../img/sina.png)}
+.wiki-share-qq{background:url(../img/qq.png)}
+.wiki-share-tengxun{background:url(../img/tengxun.png)}
+.wiki-share-renren{background:url(../img/renren.png)}
+
+.wiki-share-haslogined{margin:0 18px; line-height:42px; padding:10px 0; border-bottom:1px dashed #e2e2e2; overflow:hidden;}
+.wiki-share-haslogined a.tips{color:#0b7fb0;}
+.wiki-share-haslogined a.sendBtn{float:right; width:72px; height:38px; line-height:900px; overflow:hidden; background:url(../img/wiki-pic-6.jpg) no-repeat;}
+.wiki-share-haslogined em{display:inline-block; width:15px; height:16px; background:url(../img/wiki-pic-3.jpg) no-repeat; vertical-align:middle}
+
+.wiki-share-text{margin:0 18px; padding-top:14px;}
+.wiki-share-text em{display:inline-block; vertical-align:middle; width:8px; height:16px; margin-right:4px; background:url(../img/wiki-pic-7.jpg) no-repeat 4px;}
+.welcome{position:absolute; right:4px; top:38px;}
+.change-accounts{display:inline-block; width:74px; height:18px; line-height:18px; color:#147296; text-indent:16px; background:url(../img/wiki-pic-7.jpg) no-repeat; margin-left:4px;}
+
+
+.share-qzone, .share-renren, .share-qq, .share-tengxun, .share-sina{display:inline-block; width:16px; height:16px; background:url(../img/wiki-share-platform-2.png) no-repeat; margin:0px 4px 0 0; vertical-align:middle;}
+.share-qzone{background-position:-92px -25px}
+.share-qzone:hover{background-position:-92px 0;}
+.share-renren{background-position:-46px -25px}
+.share-renren:hover{background-position:-46px 0;}
+.share-qq{background-position:0px -25px}
+.share-qq:hover{background-position:0px 0;}
+.share-tengxun{background-position:-69px -25px}
+.share-tengxun:hover{background-position:-69px 0;}
+.share-sina{background-position:-23px -25px}
+.share-sina:hover{background-position:-23px 0;}
+
+.wiki-share-done{height:240px; padding-left:160px; background:url(../img/wiki-pic-4.jpg) no-repeat 30px center; font-family:'microsoft yahei'; margin-right:18px;}
+.wiki-share-done em{vertical-align:middle; font-size:30px; color:#fe5400; padding:0 6px; font-family:Georgia}
+.wiki-share-done .p-1{line-height:36px; padding-top:64px; font-size:16px;}
+.wiki-share-done .p-2{line-height:44px; font-size:16px;}
+.wiki-share-done a.confirm{display:inline-block; width:72px; height:37px; background:url(../img/wiki-pic-5.jpg); line-height:900px; overflow:hidden;}
+.wiki-share-done p.gotolink{text-align:right; font-size:16px; padding-top:14px;}
+.wiki-share-done p.gotolink a{color:#1480ae}
+

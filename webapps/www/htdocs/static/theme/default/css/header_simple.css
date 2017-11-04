@@ -1,0 +1,209 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#joyme-head-2015 {
+    font: 12px/1.5 arial, \5FAE\8F6F\96C5\9ED1, \5b8b\4f53, helvetica, sans-serif;
+}
+
+#joyme-head-2015 {
+    width: 100%;
+    height: 41px;
+    line-height: 41px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#joyme-head-2015 .joyme-head-nav {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.joyme-left-nav {
+    float: left;
+}
+
+.joyme-left-nav a {
+    font-size: 12px;
+    color: #333;
+    padding: 0 13px;
+    text-decoration: none;
+}
+
+.joyme-left-nav a:hover {
+    color: #f35050;
+    text-decoration: underline;
+}
+
+.joyme-right-nav {
+    float: right;
+}
+
+.joyme-loginbar .not {
+    padding: 11px 0;
+}
+
+.joyme-loginbar .not a {
+    color: #333;
+    text-decoration: none;
+}
+
+.joyme-loginbar .not a:hover {
+    text-decoration: none;
+    color: #f35050
+}
+
+.weibo-login, .qq-login, .dw-app i, .dw-app cite, .after span cite {
+    background-image: url(../images/joyme-icon.png);
+    background-repeat: no-repeat;
+}
+
+.weibo-login, .qq-login {
+    width: 20px;
+    height: 18px;
+    float: left;
+    text-indent: -999em;
+    cursor: pointer;
+}
+
+.weibo-login {
+    background-position: 0 0;
+}
+
+.qq-login {
+    margin-left: 5px;
+    background-position: -20px 0;
+}
+
+.joyme-loginbar span {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    height: 41px;
+    padding: 0 0 0 5px;
+    line-height: 41px;
+    font-size: 0;
+}
+
+.joyme-loginbar .not span {
+    height: 18px;
+    line-height: 18px;
+    float: left;
+}
+
+.joyme-loginbar span a {
+    padding: 0 5px;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.joyme-loginbar span .a-login {
+    background: url(../images/line-bg.gif) no-repeat right center;
+}
+
+/*登录*/
+.after {
+    height: 41px;
+    line-height: 41px;
+}
+
+.after span {
+    position: relative;
+    padding-right: 20px;
+    cursor: pointer;
+    line-height:41px;
+    position: relative;
+    z-index: 1000;
+}
+.after span cite {
+    position: absolute;
+    top: 16px;
+    right: 0;
+    width: 12px;
+    height: 8px;
+    background-position: -15px -328px;
+    cursor: pointer;
+    text-indent: -999em;
+    font-size: 12px;
+}
+
+.after span em {
+    font-size: 12px;
+    font-style: normal;
+}
+
+.after span a.joyme-userName {
+    color: #3bcb09;
+    text-decoration: none;
+}
+
+.after span a.joyme-userName:hover {
+    text-decoration: underline;
+}
+
+.after span a {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    height: 41px;
+    padding: 0;
+    position: relative;
+    z-index: 1000;
+    line-height: 41px;
+}
+
+.after div {
+    width: 65px;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    padding-top: 40px;
+    z-index: 999;
+}
+
+.after ul {
+    display: none;
+    width: 70px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 8px rgba(6, 0, 1, .4);
+    -moz-box-shadow: 0 0 8px rgba(6, 0, 1, .4);
+    box-shadow: 0 0 8px rgba(6, 0, 1, .4);
+    border: 1px solid #d9d9d9;
+    overflow:hidden;
+}
+
+.after span:hover ul {
+    display: block;
+    list-style: none;
+}
+
+.after ul li {
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    list-style: none;
+}
+
+.after ul li a {
+    display: block;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    border: none;
+    border-bottom: 1px solid #d9d9d9;
+    color: #333;
+    text-decoration: none;
+}
+
+.after ul li a:hover {
+    background: #efefef;
+    text-decoration: none;
+    color: #f35050
+}

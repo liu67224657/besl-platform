@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+#wrapper{ width:100%; max-width:640px; color:#fff; margin:0 auto; position:relative;}
+.wap-bg{ width:100%; font-size:0;}
+.wap-bg span{ display:block;}
+.wap-bg span img{ width:100%;}
+header{ text-align:center; color:#fffc; font-size:20px;}
+header p{ padding:25px 0 0; font-weight:bold;}
+header p:nth-of-type(2){ padding-top:15px; }
+.wap-center{ width:100%; position:absolute; top:0; left:0;}
+.wap-center h2{ font-size:14px; padding:37px 0 0; color:#fff; text-align:center; }
+.form-bar{ overflow:hidden; margin:0 40px;}
+.form-bar dl{ width:100%; margin:10px 0 0; padding:0 15px; clear:both; background:#fff; overflow:hidden; }
+.form-bar dl dt,.form-bar dl dd{ float:left; padding:5px 0; color:#898989;}
+.form-tips{ padding:10px 0; color:#fff; font-size:14px; text-align:center;}
+.info-box{ margin:0 14px;}
+.info-box h3{ position:relative; padding:25px 0 5px; border-bottom:1px solid #ffde00; font-size:0;}
+.info-box h3 span{ position:absolute; left:0; bottom:0px; border-bottom:2px solid #ffde00; font-size:14px; color:#fff; }
+.info-box p:nth-of-type(1){ padding:12px 0 0;}
+.info-box p{ font-size:12px; line-height:24px; color:#fff;}
+.info-box p a{ color:#fff;}
+.wap-center .btn{ position:static; height:auto; padding:45px 48px 20px;}
+.wap-center .btn a:last-child{ margin:0; }
+.wap-center footer{ color:#fff;}
+.info-tips{ font-size:12px; text-align:center; color:#fff;}
+.info-share{ padding:62px 0 0;}
+/*Q币下载宣传*/
+.bg-box{width:100%;height:auto;position:relative;z-index:1;}
+.bg-box span{font-size:0;display:block;width:100%;}
+.bg-box span.pr{position:relative;}
+.bg-box span img{width:100%;}
+.btn{position:absolute;z-index:2;left:0;top:20px;width:100%;height:108px;padding:0 48px;:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;text-align: center;}
+.btn a.button{display:block;width:100%;height:48px;text-align:center;line-height:48px;color:#fff;font-size:16px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		background-color: #f59000;
+		-webkit-box-shadow: 0 2px 0 1px #c76200;
+		-moz-box-shadow: 0 2px 0 1px #c76200;
+		box-shadow: 0 2px 0 1px #c76200;}
+.btn a.button:last-child{margin-top:10px;}
+.btn a.button-bottom{width:100%;height:28px;line-height:28px;color:#fff;text-align:center;background:#007401;display:block;color:#fff;font-size:14px;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;margin-top:8px;}
+.btn p{text-align:center;color:#fff;padding-top:6px;font-size:14px;}
+.btn p b{color:#fff000;font-size:14px;font-weight:normal;}
+.btn p:nth-of-type(1){padding-top:10px;}
+.pr div.title{font-size:20px;font-weight:bold;position:absolute;top:30px;left:0;width:100%;text-align:center;}
+footer{position:absolute;bottom:20px;left:0;width:100%;text-align:center;z-index:2;height:14px;}
+footer span{text-align:center;color:#fff;font-size:14px;}
+
+
+/*弹出窗*/
+.dialog{ width:90%; position:fixed; left:5%; top:50%; margin-top:-25%; background:rgba(0,0,0,0.8); -webkit-transform: scale(0);-moz-transform: scale(0); transform:scale(0); -webkit-border-radius:5px;-moz-border-radius:10px; border-radius:5px;overflow:hidden; z-index:99;}
+.dialog.show{-webkit-transform: scale(1);-moz-transform: scale(1); transform: scale(1);transition:all 0.5s;}
+.dialog h2{ padding:30px 20px; line-height:24px; text-align:center; font-size:16px; color:#fff; font-weight:normal;}
+.dialog div{ text-align:center; overflow:hidden; font-size:0; display:-moz-box; display:-webkit-box; display:box; }
+.dialog div a{ display:block; padding:10px 0; font-size:14px;-moz-box-flex:3; -webkit-box-flex:3; box-flex:3; color:#fff; border-top:1px solid #6B6969;}
+.dialog div a:nth-last-child(odd){ border-left:1px solid #6B6969;}
+.dialog div a:active{ background:rgba(0,0,0,1);}
+
+.popup_box{width:100%;height:100%;font-size:0;padding:0;margin:0;position:fixed;top:0;left:0;z-index:15;}
+.popup_box img{width:100%;display:block;-webkit-border-bottom-left-radius:10px;-webkit-border-bottom-right-radius:10px;overflow:hidden;-moz-border-bottom-left-radius:10px;-moz-border-bottom-right-radius:10px;-ms-border-bottom-left-radius:10px;-ms-border-bottom-right-radius:10px;-o-border-bottom-left-radius:10px;-o-border-bottom-right-radius:10px;overflow:hidden;border-bottom-right-radius:10px;border-bottom-left-radius:10px;}
+.mark_box{position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:10;}

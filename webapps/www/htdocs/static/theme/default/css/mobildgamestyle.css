@@ -1,0 +1,217 @@
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); margin: 0; padding: 0; word-wrap: break-word; }
+ul { list-style: none; }
+a { text-decoration: none; }
+html { font-size: 62.5%; width: 100%; height: 100% }
+body { background: #eceef0; font-size: 14px; text-align: justify; font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif }
+.imgbox img { display: block; width: 100%; }
+.topbar-place { height: 44px; }
+.topbar-place .topbar { position: fixed; width: 100%; left: 0; top: 0; z-index: 100; }
+.topbar { position: relative; height: 44px; overflow: hidden; -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); }
+.topbar .t { height: 44px; line-height: 44px; text-align: center; color: #fff; font-size: 18px; width: 100%; position: absolute; left: 0; top: 0; z-index: 1; }
+.logo { width: 72px !important; height: 30px; position: absolute; left: 2%; top: 50%; margin-top: -15px; z-index: 2; }
+#tc-shut { display: inline-block; height: 24px; line-height: 24px; background: #fff; -webkit-border-radius: 12px; padding: 0 30px 0 10px; color: #11a204; position: absolute; right: 4%; top: 50%; margin-top: -12px; z-index: 2; }
+#tc-shut span { padding-right: 4px; }
+#tc-shut em { display: inline-block; width: 24px; height: 24px; background: url(../images/mobilegame/icon-1.png) no-repeat center center #fff; background-size: 14px 14px; border: 2px solid #11a204; -webkit-border-radius: 24px; position: absolute; right: -4px; top: -2px; -webkit-transform: rotate(45deg); -webkit-transition: all 0.5s; }
+#tc-shut.close em { -webkit-transform: rotate(0deg); }
+.fb-btn, .cancel-btn, .return-btn, .normal-btn { display: inline-block; padding: 0 10px; height: 44px; line-height: 44px; position: absolute; color: #fff; font-size: 16px; top: 0; z-index: 2 }
+.fb-btn { right: 2%; }
+.cancel-btn { left: 2%; }
+.return-btn { background: url(../images/mobilegame/icon-17.png) no-repeat 0 center; background-size: 11px 17px; padding: 0 16px; left: 2%; }
+.normal-btn { right: 2%; }
+.focus-txt { color: #9b9b9b; font-size: 16px; line-height: 20px; padding: 10px 1em 16px; margin: 0 6px 10px; -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16); border-radius: 0 0 4px 4px; border: 1px solid #cfcdca; background: #fff; }
+#listbox { background: #fff; border-bottom: 1px solid #dedede; }
+#listbox .list:last-child { border: none; }
+.listbox2 .game-info { margin-left: 3%; }
+.list-num { display: block; width: 45px; height: 41px; position: absolute; left: 1px; top: 1px; background-repeat: no-repeat; background-size: 45px 41px; color: #fff; line-height: 20px; text-indent: 5px; background-image: url(../images/mobilegame/num-4.png); font-style: italic; text-shadow: 2px 0 0 #ffbf00; font-size: 16px; }
+.list { border-bottom: 1px solid #dedede; padding: 12px 0; position: relative; }
+.game-info { display: -webkit-box; height: 60px; margin-left: 11%; }
+.game-info img { display: block; width: 60px; height: 60px; margin-right: 10px }
+.game-info > div { -webkit-box-flex: 1; height: 60px; box-sizing: border-box; border-bottom: 1px solid #dedede; margin-right: 10px }
+.game-info .h2 { font-size: 18px; line-height: 18px; color: #535353; font-weight: normal; margin-right: 10px; margin-bottom: 20px; background: url(../images/mobilegame/icon-2.png) no-repeat right center; background-size: 9px 13px; white-space: nowrap; overflow: hidden; -webkit-text-overflow: ellipsis; }
+.game-info p { font-size: 12px; line-height: 12px; overflow: hidden; }
+.game-info code { float: right; color: #9e9e9e; margin-top: 2px }
+.game-info em { color: #ff8d12; margin-left: 6px; font-style: normal; float: left; margin-top: 1px; }
+.game-info .score-1 { float: left; }
+.score-1 { display: inline-block; width: 70px; height: 12px; font-size: 0; background: url(../images/mobilegame/icon-3.png) no-repeat; background-size: 70px 12px; position: relative; overflow: hidden; }
+.score-1 i { display: inline-block; width: 70px; height: 12px; background: url(../images/mobilegame/icon-4.png) no-repeat #fff; background-size: 70px 12px; position: absolute; left: 0; top: 0; }
+.score-2 { display: inline-block; width: 130px; height: 19px; font-size: 0; background: url(../images/mobilegame/icon-6.png) no-repeat; background-size: 130px 19px; position: relative; overflow: hidden; }
+.score-2 i { display: inline-block; width: 130px; height: 19px; background: url(../images/mobilegame/icon-7.png) no-repeat #fff; background-size: 130px 19px; position: absolute; left: 0; top: 0; }
+.user-dp { display: -webkit-box; padding: 6px 0; background: #f5f5f5; margin: 10px 3% 0; }
+.user-dp img { width: 32px; height: 32px; -webkit-border-radius: 64px; margin: 0 6px; }
+.user-dp div { -webkit-box-flex: 1; font-size: 14px; line-height: 20px; color: #5f5f5f; margin-right: 10px; }
+.game-tag { background: url(../images/mobilegame/pic-2.jpg) repeat; background-size: 100% auto; padding-bottom: 10px; }
+.game-tag .h1 { font-size: 20px; line-height: 20px; font-weight: bold; color: #fff; margin: 0 10px; padding: 13px 0 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tag-and-pic { margin: 0 10px; display: -webkit-box; }
+.tag-and-pic div { -webkit-box-flex: 1; font-size: 0; text-align: left; }
+.tag-and-pic div a { display: inline-block; font-size: 12px; height: 30px; line-height: 30px; padding: 0 10px; color: #fff; background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(0, 0, 0, 0.22); -webkit-border-radius: 4px; margin-right: 5px; margin-bottom: 5px; white-space: nowrap; }
+.tag-and-pic img { width: 90px; height: 90px; -webkit-border-radius: 7px; }
+.fx-btn { margin: 0 10px; font-size: 0; overflow: hidden; padding: 16px 0; }
+.fx-btn a { display: inline-block; width: 48%; height: 32px; line-height: 32px; text-align: center; border: 1px solid #c9c9c9; color: #c9c9c9; font-size: 16px; -webkit-border-radius: 4px; }
+.fx-btn a:first-child { float: left; }
+.fx-btn a:last-child { float: right; }
+.pf-btn { display: block; margin: 0 10px; height: 42px; line-height: 42px; font-size: 14px; color: #5d6063; text-align: center; background: #fff; -webkit-border-radius: 4px; }
+.pf-btn:before { content: ''; display: inline-block; width: 15px; height: 15px; background: url(../images/mobilegame/icon-5.png) no-repeat; background-size: 100% 100%; margin-right: 2px; margin-top: -6px; vertical-align: middle; }
+.show-score { background: #fff; padding: 20px; text-align: center; }
+.show-score div:nth-of-type(1) { height: 19px; display: -webkit-box; -webkit-box-orient: horizontal; -webkit-box-pack: center; -webkit-box-align: center; }
+.show-score .score-2 { vertical-align: middle; }
+.show-score em { color: #ff8d12; font-style: normal; font-size: 18px; display: inline-block; height: 19px; line-height: 19px; vertical-align: middle; margin-left: 4px; }
+.show-score div:nth-of-type(2) { color: #9b9b9b; text-align: center; padding-top: 10px; }
+.tc-place { height: 45px }
+.tc { background: #fff; height: 45px; border-top: 1px solid #dedede; width: 100%; position: fixed; left: 0; bottom: 0; z-index: 999; }
+.tc-box { margin: 5px 10px 0; display: -webkit-box }
+.tc-box .pl-opinions { -webkit-box-flex: 1; border: none; padding: 0; margin-right: 4px }
+.tc-box .pl-opinions div { border-right: 1px solid #eee }
+.tc-box div#tc-btn { -webkit-box-flex: 1; margin-right: 4px; height: 34px; line-height: 32px; text-indent: 34px; color: #aeaeae; font-size: 13px; border: 1px solid #d3d3d3; -webkit-border-radius: 4px; -webkit-box-sizing: border-box; background: url(../images/mobilegame/icon-9.png) no-repeat 9px 4px #f5f5f5; background-size: 23px 23px; }
+.tc-box div#tx-btn { width: 40px; height: 36px; background: url(../images/mobilegame/icon-8.png) no-repeat center 7px; background-size: 20px 100px; text-indent: -999em; overflow: hidden; }
+.tc-box div#tx-btn:active { background-position: center -70px; }
+.tc-form { display: none; width: 100%; background: #efefef; position: fixed; z-index: 999; left: 0; bottom: 0; }
+.tc-form2 { background: #fff; position: static; display: block; padding-top: 20px; }
+.tc-form2 .tc-ctrl { display: none; }
+.tc-form2 .tc-form-box textarea { height: 100px }
+.tc-ctrl { margin: 0 10px; padding: 10px 0; overflow: hidden; }
+.tc-ctrl span { width: 30px; height: 30px; border: 1px solid #c1c1c1; text-indent: -999em; overflow: hidden; -webkit-border-radius: 30px; background-repeat: no-repeat; background-position: center center; }
+.tc-ctrl span:nth-of-type(1) { float: left; background-image: url(../images/mobilegame/icon-10.png); background-size: 12px; }
+.tc-ctrl span:nth-of-type(2) { opacity: 0.5; float: right; background-image: url(../images/mobilegame/icon-11.png); background-size: 16px 12px; border-color: #33cb26 }
+.tc-form-box { margin: 0 10px; padding-bottom: 15px; position: relative; }
+.tc-form-box textarea { width: 100%; height: 80px; border: 1px solid #e2e2e2; background: #fff; margin: 0; -webkit-border-radius: 0; -webkit-box-shadow: none; -webkit-appearance: none; -webkit-box-sizing: border-box; padding: 4px; color: #000; font-size: 14px; }
+.tc-form-box span { position: absolute; right: 5px; bottom: 20px; color: #cacaca }
+.tc-layer { position: fixed; width: 100%; height: 100%; left: 0; top: 0; background: rgba(0, 0, 0, 0.8); display: none; z-index: 1000; }
+.share-to { position: fixed; bottom: 0; left: 0; width: 100%; padding-bottom: 10px; }
+#close-share { margin: 10px 20px 0; height: 38px; line-height: 38px; font-size: 18px; color: #fff; text-align: center; background: #05a9f6; -webkit-border-radius: 4px; }
+.footer { background: #eceef0; padding: 15px 0; }
+.footer div { font-size: 10px; text-align: center; color: #c4c5c5; line-height: 16px; }
+#returntop { width: 54px; height: 54px; background: url(../images/mobilegame/returnTop.png) no-repeat 0 0; background-size: 54px 54px; color: #fff; text-align: center; position: fixed; right: 7px; bottom: 20px; opacity: 0.8; z-index: 999; cursor: pointer; border-radius: 0 3px 3px 0; text-indent: -9999em; overflow: hidden; display: none; }
+.pl-type { height: 42px; line-height: 42px; border-left: 5px solid #37beff; overflow: hidden; padding: 0 10px 0 5px; }
+.pl-type2 { background: #fff; margin-bottom: 8px; }
+.pl-type a { color: #aeaeae; display: block; overflow: hidden; }
+.pl-type a strong { color: #242424; padding-right: 4px; }
+.pl-type a span { float: right; }
+.pl-list-box { margin: 0 5px; }
+.pl-list { border: 1px solid #e2e2e2; background: #fff; margin-bottom: 8px; }
+.pl-show { display: -webkit-box; padding-bottom: 20px; }
+.pl-show img { width: 32px; height: 32px; -webkit-border-radius: 32px; margin: 5px 5px 0; }
+.pl-show div:nth-of-type(1) { -webkit-box-flex: 1; margin-right: 5px; }
+.pl-show .d1 { display: -webkit-box; padding: 10px 0 20px; }
+.pl-show .d1 strong { display: block; color: #323232; font-size: 16px; line-height: 16px; font-weight: normal; margin-right: 5px; -webkit-box-flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pl-show .d2 { line-height: 18px; color: #000; }
+.pl-opinions { border-top: 1px solid #eee; padding: 6px 0; display: -webkit-box; }
+.pl-opinions div { height: 36px; -webkit-box-flex: 1; text-align: center; color: #aeaeae; }
+
+.pl-opinions div:before { content: ''; display: block; width: 23px; height: 21px; margin: 0 auto; background-repeat: no-repeat; background-position: 0 0; background-size: 23px 42px; }
+.pl-opinions div:active:before { background-position: 0 -21px; }
+.pl-opinions div.sel:before { background-position: 0 -21px; }
+
+.pl-opinions div:first-child { border-right: 1px solid #eee }
+.pl-opinions div:first-child:before { background-image: url(../images/mobilegame/icon-12.png); }
+.pl-opinions div:first-child:active{color: #d54b3a;}
+.pl-opinions div:first-child.sel { color: #d54b3a; }
+
+
+.pl-opinions div:last-child:before { background-image: url(../images/mobilegame/icon-13.png); }
+.pl-opinions div:last-child:active{color: #3a96fe;}
+.pl-opinions div:last-child.sel { color: #3a96fe; }
+
+
+
+.set-score { height: 28px; padding: 18px 0; font-size: 0; text-align: center; border-bottom: 1px solid #e2e2e2; }
+.set-score span { display: inline-block; width: 29px; height: 29px; margin-right: 10px; background-repeat: no-repeat; background-position: 0 0; background-size: 100%; background-image: url(../images/mobilegame/icon-15.png); }
+.set-score span.set { background-image: url(../images/mobilegame/icon-14.png) }
+.get-score { padding: 0px 0 16px; border: none; }
+.get-score-1 span:nth-of-type(1) { background-image: url(../images/mobilegame/icon-14.png) }
+.get-score-2 span:nth-of-type(1) { background-image: url(../images/mobilegame/icon-14.png) }
+.get-score-2 span:nth-of-type(2) { background-image: url(../images/mobilegame/icon-14.png) }
+.get-score-3 span:nth-of-type(1) { background-image: url(../images/mobilegame/icon-14.png) }
+.get-score-3 span:nth-of-type(2) { background-image: url(../images/mobilegame/icon-14.png) }
+.get-score-3 span:nth-of-type(3) { background-image: url(../images/mobilegame/icon-14.png) }
+.get-score-4 span:nth-of-type(1) { background-image: url(../images/mobilegame/icon-14.png) }
+.get-score-4 span:nth-of-type(2) { background-image: url(../images/mobilegame/icon-14.png) }
+.get-score-4 span:nth-of-type(3) { background-image: url(../images/mobilegame/icon-14.png) }
+.get-score-4 span:nth-of-type(4) { background-image: url(../images/mobilegame/icon-14.png) }
+.get-score-5 span { background-image: url(../images/mobilegame/icon-14.png) }
+.share-title { height: 44px; line-height: 44px; border-left: 4px solid #37beff; color: #000; font-size: 19px; font-weight: bold; padding-left: 6px; position: relative; margin: 10px 0; }
+.close-window-btn { display: block; width: 35px; height: 35px; background: url(../images/mobilegame/icon-16.png) no-repeat center center #626262; background-size: 13px 13px; -webkit-border-radius: 35px; position: absolute; right: 10px; top: 4px; }
+.show-pl { margin: 0 10px; padding: 1em; border: 1px solid #e0e0e0; background: #fff; }
+.show-pl div { height: 60px; line-height: 20px; overflow-y: scroll; color: #9b9b9b; }
+.share-to { background: #fff; border-top: 1px solid #e0e0e0; }
+.share-to .h2 { font-size: 16px; line-height: 16px; color: #3d3d3d; text-align: center; padding: 7px 0 14px; }
+#share-to-box { text-align: justify; font-size: 0; overflow: hidden; }
+#share-to-box a { font-size: 12px; display: inline-block; width: 25%; height: 70px; text-align: center; color: #404040!important; float: left; background: none; padding: 0; }
+#share-to-box #bdshare a:before {content: ''; width: 42px; height: 42px; display: block; margin: 0 auto 7px; background-repeat: no-repeat; background-position: center; background-size: 100%;}
+#share-to-box #bdshare{z-index: 0; padding: 0; font-size: 14px; float: none; text-align: center!important;}
+
+
+#share-to-box a.bds_qzone:before{background-image: url(../images/mobilegame/share-qzone.png);}
+#share-to-box a.bds_tsina:before{background-image: url(../images/mobilegame/share-sinaweibo.png);}
+#share-to-box a.bds_tqq:before{background-image: url(../images/mobilegame/share-txweibo.png);}
+#share-to-box a.bds_tqf:before{background-image: url(../images/mobilegame/share-pengyouquan.png);}
+
+.mypoint { display: block; background: url(../images/mobilegame/icon-19.png) no-repeat 96% center #fff; background-size: 6px 11px; -webkit-border-radius: 4px; margin: 0 10px; padding-bottom: 8px; }
+.mypoint div:first-child { padding-top: 2px; margin-left: 8px; }
+.mypoint strong { background: #37beff; display: inline-block; font-weight: normal; color: #fff; height: 18px; line-height: 18px; padding: 0 4px; -webkit-border-radius: 2px; }
+.mypoint div:last-child { line-height: 16px; height: 32px; overflow-y: scroll; margin: 4px 3em 0 1em; font-size: 12px; color: #b5b5b5 }
+.pl-long { margin: 0 5px; }
+.pl-long > a { display: block; border: 1px solid #e2e2e2; margin-bottom: 8px; background: #fff; }
+.pl-long a .sp-1 { display: block; height: 34px; line-height: 34px; color: #000; font-size: 16px; background: url(../images/mobilegame/icon-2.png) no-repeat right center; background-size: 9px 13px; margin: 0 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pl-long a .sp-2 { display: block; line-height: 18px; color: #5c5c5c; padding-bottom: 10px; margin: 0 10px; }
+.pl-long a .sp-3 { display: block; height: 30px; line-height: 30px; color: #b2b6ba; text-align: right; font-size: 12px; border-top: 1px solid #eee; padding: 0 10px; }
+.pl-content { background: #fff }
+.pl-content-title { border-bottom: 1px solid #eee; padding-top: 10px; }
+.pl-content-title h1 { color: #000; font-size: 18px; margin: 0 14px; line-height: 24px; }
+.pl-content-title p { text-align: right; color: #b7b7b7; padding-right: 6px; height: 18px; padding-top: 16px; font-size: 12px; line-height: 12px; }
+.pl-txt { margin: 0 10px; padding: 10px 0; line-height: 24px; color: #666; }
+.pl-txt p { text-indent: 2em; margin-bottom: 1em; }
+.pl-txt img { display: block; background: #fafafa; border: 1px solid #e2e2e2; padding: 4px; -webkit-box-sizing: border-box; max-width: 100%; margin: 0 auto 1em; }
+.d-game { display: -webkit-box; padding: 18px 0 30px; background: #fff; border-bottom: 1px solid #e0e0e0; }
+.d-game img { width: 60px; height: 60px; margin: 0 10px; }
+.d-game a.d { display: inline-block; width: 68px; height: 24px; line-height: 24px; text-align: center; color: #0072ff; border: 1px solid #0072ff; -webkit-border-radius: 4px; margin-right: 10px; margin-top: 32px; }
+.d-game > div { -webkit-box-flex: 1; margin-right: 10px; }
+.d-game p { height: 42px; font-size: 18px; color: #535353; }
+.d-game em { color: #ff8d12; font-style: normal; margin-left: 4px; }
+.game-dis { margin: 12px; line-height: 20px; color: #5f5f5f }
+.game-dis h2 { font-weight: normal; font-size: 18px; padding-bottom: 10px; color: #a4a4a4 }
+.game-dis p { padding-bottom: 1em; color: #a4a4a4 }
+.game-dis img { display: block; max-width: 98%; margin: 0 auto; padding: 2%; margin-bottom: 1em; }
+.d-p { padding: 10px; background: #e5eef1; color: #696969; }
+.d-p-l { font-size: 0; text-align: justify; background: #fff; padding: 20px 0; }
+.d-p-l a { display: inline-block; font-size: 14px; font-weight: bold; height: 38px; line-height: 38px; width: 40%; border: 1px solid #0072ff; color: #0072ff; background: #fff; -webkit-border-radius: 4px; text-align: center; margin-bottom: 5% }
+.d-p-l a.appstore { text-indent: -999em; overflow: hidden; background: url(../images/mobilegame/icon-20.png) no-repeat center center; background-size: 102px 40px; }
+.d-p-l a.appstore-ipad { text-indent: -999em; overflow: hidden; background: url(../images/mobilegame/icon-21.png) no-repeat center center; background-size: 102px 40px; }
+.d-p-l a:nth-child(odd) { margin-left: 5%; }
+.d-p-l a:nth-child(even) { margin-right: 5%; }
+.d-p-l:after { content: ''; display: inline-block; width: 40%; height: 0; }
+.d-p-tab { height: 35px; border-bottom: 1px solid #d0cfcf; font-size: 0; text-align: center; }
+.d-p-tab span { display: inline-block; width: 40%; height: 34px; line-height: 34px; text-align: center; font-size: 16px; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: transparent; }
+.d-p-tab span.sel { border-bottom-color: #05a9f6; color: #05a9f6; }
+.ph-xg { /* background: #fff;  */ }
+.ph-xg-list { border-bottom: 1px solid #dedede; padding-bottom: 16px; background: #fff; margin-bottom: 10px; }
+.ph-xg .d1 { display: -webkit-box; height: 18px; line-height: 18px; background: url(../images/mobilegame/icon-2.png) no-repeat right center; background-size: 9px 13px; margin: 0 10px; padding: 12px 0; }
+.ph-xg .d1 span { display: block; height: 18px; padding: 0 8px; background: #37beff; color: #fff; font-size: 10px; margin-right: 14px; -webkit-border-radius: 2px; }
+.ph-xg .d1 strong { display: block; height: 18px; -webkit-box-flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 16px; color: #000; margin-right: 2px; }
+.ph-xg .d2 { display: block; height: 32px; padding: 5px; margin: 0px 10px 0; background: #f0f0f0; overflow: hidden; font-size: 12px; }
+.ph-xg .d2 img { float: left; width: 32px; height: 32px; -webkit-border-radius: 32px; margin-right: 6px; vertical-align: middle; }
+.ph-xg .d2 span { float: left; height: 32px; line-height: 32px; color: #a6a6a6; }
+.ph-xg .d2 em { float: right; height: 32px; line-height: 32px; padding-right: 26px; color: #a6a6a6; font-style: normal; background: url(../images/mobilegame/icon-18.png) no-repeat right 7px; background-size: 23px 20px; }
+#tc-print { width: 50%; height: 50%; position: fixed; right: 10px; top: 44px; font-size: 0; overflow: hidden; z-index: 10; -webkit-transition: all 0.2s; }
+#tc-print-box { float: right; width: 100%; text-align: right; -webkit-transition: all 0.5s; }
+#tc-print-box > div { margin-bottom: 10px; overflow: hidden; background: rgba(0, 0, 0, 0.6); -webkit-border-radius: 15px; display: block; }
+#tc-print-box > div.open { overflow: inherit; height: auto; background: rgba(40, 193, 27, 0.8); padding: 4px 0 4px 4px; }
+#tc-print-box > div.open p { line-height: 18px; }
+#tc-print-box img { float: left; width: 30px; height: 30px; margin-right: 6px; -webkit-border-radius: 15px; }
+#tc-print-box p { font-size: 14px; line-height: 30px; margin-right: 5px; color: #fff; text-align: left; overflow: hidden; }
+#contribution-bg { display: block; width: 100%; height: 100%; position: fixed; left: 0; top: 0; background: rgba(0, 0, 0, 0.6); z-index: 40; }
+.contribution { background: #fff; min-height: 100px; margin: 0 10px; position: relative; top: 50%; left: 0; padding-bottom: 10px; -webkit-border-radius: 4px; -webkit-transform: translate3d(0, -50%, 0); }
+.contribution div { font-size: 18px; font-weight: bold; color: #7a7a7a; text-align: center; height: 40px; line-height: 40px; border-bottom: 1px solid #d3d3d3; margin-bottom: 10px; }
+.contribution p { line-height: 20px; font-size: 12px; color: #a6a6a6; font-weight: normal; margin: 0 20px; }
+.contribution a[href^="mail"] { display: block; margin: 0 22px; font-size: 18px; line-height: 18px; padding: 6px 0 20px; color: #097a00; }
+.contribution span { display: block; height: 38px; line-height: 38px; font-size: 18px; text-align: center; color: #fff; background: #05a9f6; margin: 0 30px; -webkit-border-radius: 4px; margin-top: 10px; }
+#pic-loop { margin: 0 10px; padding: 10px 0; overflow: hidden; }
+#pic-loop-box { display: -webkit-box; height: 100%; -webkit-backface-visibility: hidden; -webkit-transition: 300ms; }
+#pic-loop-box img { display: block; width: 96%; margin: 0 auto }
+.loading { padding: 2rem 0; text-align: center; font-size: 1.4rem; background: #fff }
+.loading a { display: inline-block; height: 2.6rem; line-height: 2.6rem; color: #b1b1b1; vertical-align: middle; padding: 0 1rem; background: #f1f1f1; -webkit-border-radius: 4px; }
+.loading a i { display: inline-block; width: 32px; height: 32px; background: #eee url(../images/mobilegame/loading_wap.gif) no-repeat 0 0; background-size: 32px 32px; margin-right: 3px; vertical-align: -11px; }
+.loading a b { font-weight: normal; }
+
+.focus{position: relative;}
+.focus a{display: block;}
+.focus div{position: absolute; width: 100%; line-height: 26px; font-size: 20px;  color: #fff; padding: 4px; left: 0; bottom: 0; background: rgba(0,0,0,0.8); -webkit-box-sizing: border-box;}

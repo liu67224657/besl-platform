@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+    <description>user face tag</description>
+    <display-name>userface tag</display-name>
+    <tlib-version>1.1</tlib-version>
+    <short-name>uf</short-name>
+    <uri>/uf</uri>
+
+    <function>
+        <name>parseFace</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.lang.String
+            parseFace(com.enjoyf.platform.service.profile.ProfileBlogHeadIconSet,java.lang.String,boolean)
+        </function-signature>
+        <example>&lt;c:out value="${uf:parseFace(profileBlogHeadIconSet,B,true)}"&gt;</example>
+    </function>
+    <function>
+        <name>parseFacesExOne</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.lang.String
+            parseFace(com.enjoyf.platform.service.profile.ProfileBlogHeadIconSet,java.lang.String)
+        </function-signature>
+        <example>&lt;c:out value="${uf:parseFace(profileBlogHeadIconSet,B)}"&gt;</example>
+    </function>
+    <function>
+        <name>parseFacesInclude</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.util.List
+            parseFacesInclude(com.enjoyf.platform.service.profile.ProfileBlogHeadIconSet,java.lang.String,java.lang.String,boolean,int,int)
+        </function-signature>
+        <example>&lt;c:out value="${uf:parseFacesInclude(profileBlogHeadIconSet,1,B,true,0,2)[0]}"&gt;</example>
+    </function>
+
+
+    <function>
+        <name>parseBFace</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.lang.String parseBFace(java.lang.String)</function-signature>
+        <example>&lt;c:out value="${uf:parseBFace(name)}"&gt;</example>
+    </function>
+
+    <function>
+        <name>parseOrgImg</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.lang.String parseOrgImg(java.lang.String)</function-signature>
+        <example>&lt;c:out value="${uf:parseOrgImg(name)}"&gt;</example>
+    </function>
+
+    <function>
+        <name>parseMFace</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.lang.String parseMFace(java.lang.String)</function-signature>
+        <example>&lt;c:out value="${uf:parseMFace(name)}"&gt;</example>
+    </function>
+    <function>
+        <name>parseSFace</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.lang.String parseSFace(java.lang.String)</function-signature>
+        <example>&lt;c:out value="${uf:parseSFace(name)}"&gt;</example>
+    </function>
+    <function>
+        <name>parseSSFace</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.lang.String parseSSFace(java.lang.String)</function-signature>
+        <example>&lt;c:out value="${uf:parseSSFace(name)}"&gt;</example>
+    </function>
+    <function>
+        <name>parseBFacePath</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.lang.String parseBFacePath(java.lang.String)</function-signature>
+        <example>&lt;c:out value="${uf:parseBFacePath(name)}"&gt;</example>
+    </function>
+
+    <function>
+        <name>parseAudioM</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.lang.String parseAudioM(java.lang.String)</function-signature>
+        <example>&lt;c:out value="${uf:parseAudioM(name)}"&gt;</example>
+    </function>
+    <function>
+        <name>parseAudioO</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.lang.String parseAudioO(java.lang.String)</function-signature>
+        <example>&lt;c:out value="${uf:parseAudioO(name)}"&gt;</example>
+    </function>
+    <function>
+        <name>parseAudioS</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.lang.String parseAudioS(java.lang.String)</function-signature>
+        <example>&lt;c:out value="${uf:parseAudioO(name)}"&gt;</example>
+    </function>
+    <function>
+        <name>parseAudioSs</name>
+        <function-class>com.enjoyf.platform.webapps.common.html.tag.ImageURLTag</function-class>
+        <function-signature>java.lang.String parseAudioSs(java.lang.String)</function-signature>
+        <example>&lt;c:out value="${uf:parseAudioO(name)}"&gt;</example>
+    </function>
+</taglib>

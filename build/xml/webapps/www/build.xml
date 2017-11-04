@@ -1,0 +1,241 @@
+<project name="www" default="webapps.www" basedir=".">
+    <!--###########################################################-->
+    <!--## Buildfile for the platform webapp.  The webapp target is  ##-->
+    <!--## called from the main buildfile, /java/build/build.xml.##-->
+    <!--###########################################################-->
+    <property name="webapps.www.available" value="true"/>
+
+
+    <!--###########################################################-->
+    <!--## Core webapp target                                    ##-->
+    <!--###########################################################-->
+    <target name="webapps.www.core"
+            depends="webapps.www.bootstrap,webapps.www.create.output,webapps.www.compile,webapps.www.config"
+            description="build just the www webapp"/>
+
+    <target name="webapps.www"
+            depends="webapps.www.core,webapps.www.core.jar,webapps.www.htdocs.tar"
+            description="build the www webapp"/>
+
+    <!--###########################################################-->
+    <!--## initialization target                                 ##-->
+    <!--## This target expects the following parameters to be    ##-->
+    <!--## defined:                                              ##-->
+    <!--##	${view.webapps.root} - the root webapps directory    ##-->
+    <!--##	${output.stage.root} - the lib output directory      ##-->
+    <!--##	${output.classes.root} - the platform classes dir    ##-->
+    <!--###########################################################-->
+    <target name="webapps.www.bootstrap" depends="bootstrap" unless="webapps.www.bootstrap.complete">
+        <!-- set the webapp root -->
+        <path id="webapps.www.path">
+            <pathelement path="${view.webapps.root}/www"/>
+        </path>
+        <pathconvert dirsep="/" property="webapps.www.root" refid="webapps.www.path"/>
+
+        <!-- set the java root -->
+        <property name="webapps.www.java.root" value="${webapps.www.root}/java"/>
+
+        <!-- set the htdocs root -->
+        <property name="webapps.www.htdocs.root" value="${webapps.www.root}/htdocs"/>
+
+        <!-- set class output root -->
+        <property name="webapps.www.classes.root" value="${output.classes.root}/webapps/www"/>
+        <property name="webapps.www.htdocs.temp.root" value="${output.webapps.htdocs.root}/www"/>
+
+        <!-- display the directories: -->
+        <echo message="----------------------------------------------------         "/>
+        <echo message="  www webapp view root       ${view.webapps.root}             "/>
+        <echo message="   - version                 ${build.platform.version}      "/>
+        <echo message="   - java                    ${webapps.www.java.root}       "/>
+        <echo message="   - htdocs                  ${webapps.www.htdocs.root}     "/>
+        <echo message="   - classes                 ${webapps.www.classes.root}    "/>
+        <echo message="   - output                  ${output.stage.root}              "/>
+        <echo message="----------------------------------------------------         "/>
+
+        <!-- flag boostrap as complete -->
+        <property name="webapps.www.bootstrap.complete" value="true"/>
+    </target>
+
+    <!--###########################################################-->
+    <!--## webapp preparing target                               ##-->
+    <!--###########################################################-->
+    <target name="webapps.www.create.output" depends="webapps.www.bootstrap">
+        <!-- create the classes directory: -->
+        <mkdir dir="${webapps.www.classes.root}"/>
+
+        <!-- create the version stamp -->
+        <echo file="${webapps.www.htdocs.root}/version.txt" message="${build.platform.version}"/>
+    </target>
+
+
+    <!--###########################################################-->
+    <!--## webapp compile target                                 ##-->
+    <!--###########################################################-->
+    <target name="webapps.www.compile" depends="webapps.www.bootstrap,webapps.www.create.output"
+            description="compile the webapp classes">
+        <!-- compile the platform webapp classes -->
+        <javac
+                srcdir="${webapps.www.java.root}"
+                destdir="${webapps.www.classes.root}"
+                nowarn="${platform.javac.nowarn}"
+                debug="${platform.javac.debug}"
+                optimize="${platform.javac.optimize}"
+                deprecation="${platform.javac.deprecation}"
+                includeAntRuntime="no"
+                includeJavaRuntime="yes"
+                encoding="${java.source.encoding}">
+
+            <classpath>
+                <pathelement path="${compiletime.classpath}"/>
+                <pathelement path="${output.classes.framework.root}"/>
+                <pathelement path="${output.classes.webcommon.root}"/>
+            </classpath>
+
+            <sourcepath>
+                <pathelement location="${webapps.www.java.root}"/>
+            </sourcepath>
+        </javac>
+    </target>
+
+    <target name="webapps.www.config" depends="webapps.www.bootstrap"
+            description="copy the web config and properties to web-inf classes">
+        <mkdir dir="${webapps.www.htdocs.root}/WEB-INF/classes"/>
+
+        <copy todir="${webapps.www.htdocs.root}/WEB-INF/">
+            <fileset dir="${output.classes.webcommon.root}/META-INF/">
+                <include name="*"/>
+            </fileset>
+        </copy>
+
+        <copy todir="${webapps.www.htdocs.root}/WEB-INF/classes">
+            <fileset dir="${webapps.www.java.root}">
+                <include name="**/*.xml"/>
+                <include name="**/*.properties"/>
+                <exclude name="build/**"/>
+                <exclude name="work/**"/>
+            </fileset>
+        </copy>
+
+        <native2ascii encoding="utf-8" dest="${webapps.www.htdocs.root}/WEB-INF/classes/hotdeploy/i18n"
+                      src="${view.configfiles.root}/hotdeploy/i18n" ext=".properties">
+            <include name="**/*.properties"/>
+        </native2ascii>
+    </target>
+    <!--###########################################################-->
+    <!--## webapps jar or tar target                             ##-->
+    <!--###########################################################-->
+    <target name="webapps.www.core.jar" depends="webapps.www.compile" description="builds the www-java.jar">
+        <mkdir dir="${output.stage.root}"/>
+        <jar destfile="${output.stage.root}/www-java.jar">
+            <fileset dir="${webapps.www.classes.root}">
+            </fileset>
+            <fileset dir="${webapps.www.java.root}">
+                <include name="**/*.xml"/>
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="webapps.www.htdocs.tar" description="creates the www-htdocs.tar for deployment">
+        <!--copy htdocs files to temp dir-->
+        <copy todir="${webapps.www.htdocs.temp.root}">
+            <fileset dir="${webapps.www.htdocs.root}">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+
+        <!--do something here before tar..-->
+        <condition property="spm.support">
+            <os name="linux"/>
+        </condition>
+
+        <condition property="js.compile.available">
+            <and>
+                <istrue value="${spm.support}"/>
+                <istrue value="${js.compile.enable}"/>
+            </and>
+        </condition>
+
+        <echo message="The www webapp: js.compile.enable -> ${js.compile.enable}"/>
+        <echo message="The www webapp: spm.support -> ${spm.support}"/>
+        <echo message="The www webapp: js.compile.available -> ${js.compile.available}"/>
+
+        <property name="lib.domain.name" value="lib.joyme.com"/>
+
+        <antcall target="webapps.www.js.compile"/>
+
+        <!--create the tar file.-->
+        <tar destfile="${output.stage.root}/www-htdocs.tar" longfile="warn">
+            <tarfileset dir="${webapps.www.htdocs.temp.root}">
+                <include name="**/*"/>
+            </tarfileset>
+        </tar>
+    </target>
+
+    <target name="webapps.www.js.compile" description="compile the init js files" if="js.compile.available">
+        <!--do something here before tar..-->
+        <delete quiet="true">
+            <fileset dir="${webapps.www.htdocs.temp.root}/static/js/builtinit/" casesensitive="yes" followsymlinks="false">
+                <include name="*.js"/>
+            </fileset>
+        </delete>
+
+        <exec dir="${webapps.www.htdocs.temp.root}" executable="spm" failonerror="true">
+            <arg value="build"/>
+            <arg value="${webapps.www.htdocs.temp.root}/static/js/init/"/>
+            <arg value="--combine_all"/>
+            <arg value="--out_path"/>
+            <arg value="static/js/builtinit"/>
+            <arg value="--app_url"/>
+            <arg value="http://${lib.domain.name}/static/js/init"/>
+        </exec>
+
+        <delete quiet="true">
+            <fileset dir="${webapps.www.htdocs.temp.root}/static/js/init/" casesensitive="yes" followsymlinks="false">
+                <include name="*.js"/>
+            </fileset>
+        </delete>
+
+        <copy todir="${webapps.www.htdocs.temp.root}/static/js/init/">
+            <fileset dir="${webapps.www.htdocs.temp.root}/static/js/builtinit/">
+                <include name="*.js"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <!--###########################################################-->
+    <!--## webapp.clean target                                   ##-->
+    <!--###########################################################-->
+    <target name="webapps.www.clean" depends="webapps.www.bootstrap"
+            description="deletes all class files, www-htdocs.tar and www-java.jar">
+        <!-- Delete the files generated by the build -->
+        <delete quiet="true">
+            <fileset dir="${output.stage.root}" casesensitive="yes" followsymlinks="false">
+                <include name="www-*.jar"/>
+                <include name="www-*.tar"/>
+            </fileset>
+        </delete>
+
+        <delete quiet="true">
+            <fileset dir="${webapps.www.htdocs.temp.root}" casesensitive="yes" followsymlinks="false">
+                <include name="**/*"/>
+            </fileset>
+        </delete>
+
+        <delete quiet="true">
+            <fileset dir="${webapps.www.classes.root}" casesensitive="yes" followsymlinks="false">
+                <include name="**/*"/>
+            </fileset>
+        </delete>
+
+        <delete quiet="true">
+            <fileset dir="${webapps.www.classes.root}" casesensitive="yes" followsymlinks="false">
+            </fileset>
+        </delete>
+
+        <delete quiet="true">
+            <fileset dir="${webapps.www.htdocs.root}/WEB-INF/classes" casesensitive="yes" followsymlinks="false">
+            </fileset>
+        </delete>
+    </target>
+</project>
+

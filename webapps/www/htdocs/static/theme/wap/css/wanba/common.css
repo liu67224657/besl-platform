@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+* {-webkit-tap-highlight-color: rgba(0, 0, 0, 0); margin:0; padding:0; word-break: break-all; word-wrap: break-word;}
+a {text-decoration:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);-webkit-text-size-adjust:none;-webkit-user-select: none; -o-text-size-adjust:none; -ms-text-size-adjust:none; text-size-adjust:none; }
+html,body{ font-size:10px;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+audio, canvas, video {display: inline-block;*display: inline;*zoom: 1;}
+html,body,input, select, textarea,button { font-size:10px;font-family:arial, "Hiragino Sans GB",\5b8b\4f53;}
+table { border-collapse: collapse;border-spacing: 0;}
+th { text-align: inherit;}
+fieldset, img { border: 0;}
+iframe { display: block;}
+abbr, acronym { border: 0; font-variant: normal;}
+del { text-decoration: line-through; }
+address, caption, cite, code, dfn, em, th, var { font-style: normal; font-weight: 500;}
+ol, ul { list-style: none; }
+caption, th { text-align: left;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;}
+.fl{ float:left;}
+.fr{ float:right;}
+.ovf{ overflow:hidden;}
+.txt-l{ text-align:left;}
+.txt-r{ text-align:right;}
+.txt-c{ text-align:center;}
+.clearfix{zoom:1;}
+.clearfix:after{display:block; content:''; clear:both; line-height:0; visibility:hidden;}
+.bs{box-sizing:border-box;-webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+h1 {font-size:1.6rem;}
+h2,h3,h4,h5,h6{font-size:1.4rem;}
+p,span,em,b,font,a{font-size:1.2rem;font-weight:normal;font-style:normal;}
+body,html,#wrapper{width:100%;height:100%;position:relative;box-sizing:border-box;-webkit-box-sizing:border-box; -moz-box-sizing:border-box;overflow:hidden;}
+/*tips*/
+.Threebox { width: 60%; display: none; position: fixed; top: 50%; left: 22%; position:fixed;z-index:1000; }
+.Threebox span { color: #fff; line-height: 18px; font-size: 14px; padding: 10px; display: block; text-align: center; background: rgba(0, 0, 0, 0.8); border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px;}
+
+/*四周描边*/
+.ui-border-radius {position:relative;border:0; }
+.ui-border-radius:before{content: "";width: 200%;height: 200%;position: absolute;top: 0;left: 0;border: 1px solid #e0e0e0;-webkit-transform: scale(0.5);-webkit-transform-origin: 0 0;padding: 1px;-webkit-box-sizing: border-box;border-radius:0.6rem;pointer-events: none; } 
+.ui-border { position: relative; border: 0; }
+.ui-border-t, .ui-border-b, .ui-border-l, .ui-border-r, .ui-border-tb { border: 0; }
+.ui-border-t { background-position: left top; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, #dedfe0), to(#dedfe0)); }
+.ui-border-b { background-position: left bottom; background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, #dedfe0), to(#dedfe0)); }
+.ui-border-t,
+.ui-border-b,
+.ui-border-tb { background-repeat: repeat-x; -webkit-background-size: 100% 1px; }
+.ui-border-tb { background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, #dedfe0), to(#dedfe0)), -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, #dedfe0), to(#dedfe0)); background-position: top, bottom; }
+.ui-border-l { background-position: left top; background-image: -webkit-gradient(linear, right top, left top, color-stop(0.5, transparent), color-stop(0.5, #dedfe0), to(#dedfe0)); }
+.ui-border-r { background-position: right top; background-image: -webkit-gradient(linear, left top, right top, color-stop(0.5, transparent), color-stop(0.5, #dedfe0), to(#dedfe0)); }
+.ui-border-l,
+.ui-border-r { background-repeat: repeat-y; -webkit-background-size: 1px 100%; }
+.ui-border:after { content: ""; width: 100%; height: 100%; position: absolute; top: 0; left: 0;
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, #dedfe0), to(#dedfe0)), -webkit-gradient(linear, left top, right top, color-stop(0.5, transparent), color-stop(0.5, #dedfe0), to(#dedfe0)), -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, #dedfe0), to(#dedfe0)), -webkit-gradient(linear, right top, left top, color-stop(0.5, transparent), color-stop(0.5, #dedfe0), to(#dedfe0));
+-webkit-background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%; background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%; background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%; background-repeat: no-repeat; background-position: top, right, bottom, left; padding: 1px; border-radius:0.3rem; -webkit-box-sizing: border-box; z-index: 10; pointer-events: none; }
+.mi-tab-cont>div.loading { background: none; }
+.spinner { width: 2rem; height: 2rem; position: relative; margin: 0 auto; }
+.double-bounce1, .double-bounce2 { width: 100%; height: 100%; border-radius: 50%; background-color: #67CF22; opacity: 0.6; position: absolute; top: 0; left: 0; -webkit-animation: bounce 2.0s infinite ease-in-out; animation: bounce 2.0s infinite ease-in-out; }
+.double-bounce2 { -webkit-animation-delay: -1.0s; animation-delay: -1.0s; }
+@-webkit-keyframes bounce {
+	0%, 100% { -webkit-transform: scale(0.0) }
+	50% { -webkit-transform: scale(1.0) }
+}
+@keyframes bounce {
+	0%, 100% { transform: scale(0.0); -webkit-transform: scale(0.0);}
+	50% { transform: scale(1.0); -webkit-transform: scale(1.0);}
+} 
+#pullDown, #pullUp, #pullDown1, #pullUp1 { height:52px; text-align: center; font-size: 1rem; color: #666; }
+#pullUp, #pullUp1 { padding-top: 0.5rem; }
+.loading, .flip { padding: 1rem 0; }
+.loading .spinner, .flip .spinner { margin: 0.5rem auto; }
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone4/4s */
+  html,body{ font-size:9px;} 
+}
+@media screen and (min-width:339px) and (max-width:413px){
+  html,body{ font-size:11px;} 
+}
+@media screen and (min-width:414px) and (max-width:640px){
+  html,body{ font-size:12px;} 
+}

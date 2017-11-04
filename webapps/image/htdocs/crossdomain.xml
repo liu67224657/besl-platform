@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<cross-domain-policy>
+    <allow-access-from domain="*.joyme.test"/>
+    <allow-http-request-headers-from domain="*.joyme.test" headers="*" secure="false"/>
+
+    <allow-access-from domain="*.joyme.dev"/>
+    <allow-http-request-headers-from domain="*.joyme.dev" headers="*" secure="false"/>
+
+    <allow-access-from domain="*.joyme.alpha"/>
+    <allow-http-request-headers-from domain="*.joyme.alpha" headers="*" secure="false"/>
+
+    <allow-access-from domain="*.joyme.prealpha"/>
+    <allow-http-request-headers-from domain="*.joyme.prealpha" headers="*" secure="false"/>
+
+    <allow-access-from domain="*.joyme.com"/>
+    <allow-http-request-headers-from domain="*.joyme.com" headers="*" secure="false"/>
+
+    <allow-access-from domain="*.joyme.beta"/>
+    <allow-http-request-headers-from domain="*.joyme.beta" headers="*" secure="false"/>
+
+    <allow-access-from domain="192.168.*.*"/>
+    <allow-http-request-headers-from domain="192.168.*.*" headers="*" secure="false"/>
+
+    <allow-access-from domain="172.16.*.*"/>
+    <allow-http-request-headers-from domain="172.16.*.*" headers="*" secure="false"/>
+
+    <allow-access-from domain="10.*.*.*"/>
+    <allow-http-request-headers-from domain="10.*.*.*" headers="*" secure="false"/>
+</cross-domain-policy>

@@ -1,0 +1,455 @@
+<project name="platform" default="usage" basedir="../.">
+
+    <path id="build.tools.path">
+        <pathelement path="../../."/>
+    </path>
+    <pathconvert dirsep="/" property="build.tools.root" refid="build.tools.path"/>
+
+    <!--the workspace root settings-->
+    <path id="basedir.path">
+        <pathelement path="${basedir}"/>
+    </path>
+    <pathconvert dirsep="/" property="view.root" refid="basedir.path"/>
+
+    <!-- set the build root -->
+    <path id="basedir.build.path">
+        <pathelement path="${basedir}/build"/>
+    </path>
+    <pathconvert dirsep="/" property="view.build.root" refid="basedir.build.path"/>
+    <property name="view.build.java.root" value="${view.build.root}/src/main/java"/>
+    <property name="view.build.resources.root" value="${view.build.root}/src/main/resources"/>
+
+    <path id="basedir.framework.path">
+        <pathelement path="${basedir}/framework"/>
+    </path>
+    <pathconvert dirsep="/" property="view.framework.root" refid="basedir.framework.path"/>
+    <property name="view.framework.java.root" value="${view.framework.root}/src/main/java"/>
+    <property name="view.framework.test.root" value="${view.framework.root}/src/main/test"/>
+    <property name="view.framework.resources.root" value="${view.framework.root}/src/main/resources"/>
+
+    <path id="basedir.configfiles.path">
+        <pathelement path="${basedir}/configfiles"/>
+    </path>
+    <pathconvert dirsep="/" property="view.configfiles.root" refid="basedir.configfiles.path"/>
+
+    <path id="basedir.relatedjars.path">
+        <pathelement path="${basedir}/relatedjars"/>
+    </path>
+    <pathconvert dirsep="/" property="view.relatedjars.root" refid="basedir.relatedjars.path"/>
+
+    <path id="basedir.webcommon.path">
+        <pathelement path="${basedir}/webcommon"/>
+    </path>
+    <pathconvert dirsep="/" property="view.webcommon.root" refid="basedir.webcommon.path"/>
+    <property name="view.webcommon.java.root" value="${view.webcommon.root}/src/main/java"/>
+    <property name="view.webcommon.resources.root" value="${view.webcommon.root}/src/main/resources"/>
+
+    <path id="basedir.webapps.path">
+        <pathelement path="${basedir}/webapps"/>
+    </path>
+    <pathconvert dirsep="/" property="view.webapps.root" refid="basedir.webapps.path"/>
+
+    <!--import-->
+    <loadproperties srcFile="${view.build.root}/jscompile.properties" encoding="utf8"/>
+    <import file="${view.build.root}/xml/webapps/www/build.xml" optional="true"/>
+    <import file="${view.build.root}/xml/webapps/tools/build.xml" optional="true"/>
+    <import file="${view.build.root}/xml/webapps/image/build.xml" optional="true"/>
+
+    <!--###########################################################-->
+    <!--## usage task                                            ##-->
+    <!--###########################################################-->
+    <target name="usage">
+        <echo taskname="usage" message="USAGE: bld [-v] [-projecthelp] [targets]"/>
+        <echo taskname="usage" message=" "/>
+        <echo taskname="usage" message="-v			 runs ant in verbose mode"/>
+        <echo taskname="usage" message=" "/>
+        <echo taskname="usage" message="-projecthelp   list of valid targets"/>
+        <echo taskname="usage" message=" "/>
+        <echo taskname="usage" message="target		 execute 'bld -projecthelp' for list of valid targets"/>
+        <echo taskname="usage" message=" "/>
+    </target>
+
+    <!--###########################################################-->
+    <!--## initialization targets                                ##-->
+    <!--###########################################################-->
+    <target name="bootstrap" unless="bootstrap.complete">
+        <tstamp>
+            <format property="build.date" pattern="yyyy-MM-dd HH:mm"/>
+        </tstamp>
+
+        <!-- compile-time classpath -->
+        <path id="compiletime.classpath.ref">
+            <pathelement location="${view.framework.root}"/>
+            <pathelement location="${view.webcommon.root}"/>
+            <fileset dir="${view.relatedjars.root}">
+                <include name="**/*.jar"/>
+            </fileset>
+        </path>
+
+        <property name="compiletime.classpath" refid="compiletime.classpath.ref"/>
+
+        <!-- read environment variables: -->
+        <property environment="env"/>
+
+        <condition property="build.platform.version" value="${major.number}.${minor.number}.${build.number}">
+            <isset property="pversion"/>
+        </condition>
+
+        <!-- set default value for build version (in case it wasn't set above): -->
+        <property name="build.platform.version" value="0.0.0.0"/>
+        <property name="java.source.encoding" value="utf-8"/>
+        <property name="platform.javac.debug" value="on"/>
+        <property name="platform.javac.nowarn" value="on"/>
+        <property name="platform.javac.optimize" value="off"/>
+        <property name="platform.javac.deprecation" value="off"/>
+
+        <condition property="build.compile.includes" value="${env._COM_BUILD_INCLUDE}">
+            <isset property="env._COM_BUILD_INCLUDE"/>
+        </condition>
+
+        <!-- set default value for working dir (in case it wasn't set above): -->
+        <property name="output.root" value="${view.build.root}/work"/>
+
+        <property name="output.classes.root" value="${output.root}/classes"/>
+        <property name="output.classes.framework.root" value="${output.classes.root}/framework"/>
+        <property name="output.classes.webcommon.root" value="${output.classes.root}/webcommon"/>
+        <property name="output.classes.build.root" value="${output.classes.root}/build"/>
+
+        <property name="output.relatedjars.root" value="${output.root}/relatedjars"/>
+
+        <property name="output.patch.root" value="${output.root}/patch"/>
+        <property name="output.patch.classes.root" value="${output.patch.root}/classes"/>
+        <property name="output.patch.jars.root" value="${output.patch.root}/jars"/>
+
+        <property name="output.configfiles.root" value="${output.root}/configfiles"/>
+        <property name="output.webapps.htdocs.root" value="${output.root}/htdocs"/>
+
+        <property name="output.stage.root" value="${output.root}/stage"/>
+
+        <!-- set package dirs: -->
+        <condition property="build.package.root" value="c:/ops/online/package">
+            <os family="windows"/>
+        </condition>
+        <condition property="build.package.root" value="/opt/package">
+            <os family="unix"/>
+        </condition>
+
+        <!-- Delete the tasks first -->
+        <mkdir dir="${output.classes.build.root}"/>
+        <delete>
+            <fileset dir="${output.classes.build.root}">
+                <include name="**/*.class"/>
+            </fileset>
+        </delete>
+
+        <javac destdir="${output.classes.build.root}"
+               srcdir="${view.build.java.root}"
+               nowarn="${platform.javac.nowarn}"
+               debug="${platform.javac.debug}"
+               optimize="${platform.javac.optimize}"
+               deprecation="${platform.javac.deprecation}"
+               includeAntRuntime="no"
+               includeJavaRuntime="no"
+               encoding="${java.source.encoding}">
+            <classpath>
+                <pathelement path="${compiletime.classpath}"/>
+            </classpath>
+        </javac>
+
+        <taskdef name="checksize" classname="CheckSize" classpath="${output.classes.build.root}"/>
+        <taskdef name="safeunjar" classname="SafeUnjar" classpath="${output.classes.build.root}"/>
+        <taskdef name="stringreplace" classname="StringReplace" classpath="${output.classes.build.root}"/>
+        <taskdef name="createinstallable" classname="CreateInstallable" classpath="${output.classes.build.root}"/>
+        <taskdef name="intersect" classname="Intersect" classpath="${output.classes.build.root}"/>
+        <taskdef name="nonfatal" classname="NonFatal" classpath="${output.classes.build.root}"/>
+        <taskdef name="performancetimer" classname="PerformanceTimer" classpath="${output.classes.build.root}"/>
+        <taskdef name="fetchproperty" classname="FetchProperty" classpath="${output.classes.build.root}"/>
+
+        <!-- echo build summary: -->
+        <echo message="---------------------------------------------------- "/>
+        <echo message="  build version          ${build.platform.version}   "/>
+        <echo message="  build date             ${build.date}               "/>
+        <echo message="  workspace view root    ${view.root}                "/>
+        <echo message="   - build               ${view.build.root}          "/>
+        <echo message="   - framework           ${view.framework.root}      "/>
+        <echo message="   - related jars        ${view.relatedjars.root}    "/>
+        <echo message="   - webapps             ${view.webapps.root}        "/>
+        <echo message="  build output root      ${output.root}              "/>
+        <echo message="   - classes             ${output.classes.root}"/>
+        <echo message="   - framework classes   ${output.classes.framework.root}"/>
+        <echo message="   - webcommon classes   ${output.classes.webcommon.root}"/>
+        <echo message="   - build classes       ${output.classes.build.root}"/>
+        <echo message="   - stage               ${output.stage.root}        "/>
+        <echo message="   - related jars        ${output.relatedjars.root}  "/>
+        <echo message="---------------------------------------------------- "/>
+
+        <!-- flag boostrap as complete -->
+        <property name="bootstrap.complete" value="true"/>
+    </target>
+
+    <!--###########################################################-->
+    <!--## platform preparing targets					         ##-->
+    <!--###########################################################-->
+    <target name="create.output" depends="bootstrap">
+        <!-- create the classes directory: -->
+        <mkdir dir="${output.classes.root}"/>
+        <mkdir dir="${output.classes.webcommon.root}"/>
+
+        <!-- create the lib directory: -->
+        <mkdir dir="${output.stage.root}"/>
+    </target>
+
+    <target name="init" depends="bootstrap" unless="init.complete">
+        <!-- create version: -->
+        <filter token="BUILDDATE" value="${build.date}"/>
+        <filter token="BUILDVERSION" value="${build.platform.version}"/>
+
+        <copy file="${view.build.root}/Version-java.template"
+              tofile="${view.framework.java.root}/com/enjoyf/platform/build/Version.java" filtering="true"
+              preservelastmodified="true" overwrite="true"/>
+
+        <property name="init.complete" value="true"/>
+    </target>
+
+    <target name="marknextversion" depends="bootstrap" unless="init.complete">
+        <buildnumber file="${view.build.root}/version.file"/>
+    </target>
+
+    <!--###########################################################-->
+    <!--## platform all targets							         ##-->
+    <!--###########################################################-->
+    <target name="all" description="All the targets" depends="platform.all,webapps.all">
+    </target>
+
+    <target name="patch.build" description="patch build" depends="all">
+        <delete quiet="true" includeemptydirs="true">
+            <fileset dir="${output.patch.classes.root}" casesensitive="yes" followsymlinks="false">
+                <include name="**/*"/>
+            </fileset>
+        </delete>
+
+        <mkdir dir="${output.patch.classes.root}"/>
+        <mkdir dir="${output.patch.jars.root}"/>
+
+        <!--copy all the class to patch class root.-->
+        <copy todir="${output.patch.classes.root}">
+            <fileset dir="${output.classes.framework.root}">
+                <include name="**/*.class"/>
+            </fileset>
+            <fileset dir="${output.classes.webcommon.root}">
+                <include name="**/*.class"/>
+            </fileset>
+
+            <fileset dir="${webapps.www.classes.root}">
+                <include name="**/*.class"/>
+            </fileset>
+            <fileset dir="${webapps.tools.classes.root}">
+                <include name="**/*.class"/>
+            </fileset>
+            <fileset dir="${webapps.image.classes.root}">
+                <include name="**/*.class"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="continue" description="Continue building" depends="platform.all,webapps.all">
+        <antcall target="build.flag"/>
+    </target>
+
+    <target name="nightly" description="Nightly building">
+        <antcall target="bootstrap"/>
+
+        <antcall target="platform.all"/>
+        <antcall target="webapps.all"/>
+        <antcall target="package"/>
+
+        <antcall target="build.flag"/>
+    </target>
+
+    <target name="version" description="Versioned building">
+        <antcall target="marknextversion"/>
+
+        <property name="pversion" value="yes"/>
+        <loadproperties srcFile="${basedir}/build/version.file" encoding="utf8"/>
+
+        <antcall target="platform.all"/>
+        <antcall target="webapps.all"/>
+        <antcall target="package"/>
+
+        <antcall target="build.flag"/>
+    </target>
+
+    <target name="platform.all" description="All the platform targets"
+            depends="platform.framework.jar,platform.webcommon.jar,platform.configfiles.tar,platform.relatedjars.tar">
+    </target>
+
+    <target name="webapps.all" description="All the webapps targets"
+            depends="platform.all,webapps.www,webapps.tools,webapps.image">
+    </target>
+
+    <target name="build.flag" description="Create the build flag file" depends="bootstrap">
+        <touch file="${output.root}/continue-build-succeeded"/>
+    </target>
+
+    <target name="platform.framework" depends="init" description="build core platform classes">
+        <mkdir dir="${output.classes.root}"/>
+        <mkdir dir="${output.classes.framework.root}"/>
+
+        <!-- compile the platform classes -->
+        <!--target="1.6"-->
+        <javac
+                srcdir="${view.framework.root}"
+                destdir="${output.classes.framework.root}"
+                nowarn="${platform.javac.nowarn}"
+                debug="${platform.javac.debug}"
+                optimize="${platform.javac.optimize}"
+                deprecation="${platform.javac.deprecation}"
+                excludes="test/**,build/**,${view.framework.test.root}"
+                includeAntRuntime="no"
+                includeJavaRuntime="no"
+                encoding="${java.source.encoding}">
+            <classpath>
+                <pathelement path="${compiletime.classpath}"/>
+            </classpath>
+            <sourcepath>
+                <pathelement location="${view.framework.root}"/>
+            </sourcepath>
+        </javac>
+    </target>
+
+    <target name="platform.webcommon" depends="init,platform.framework" description="build platform webcommon classes">
+        <mkdir dir="${output.classes.root}"/>
+        <mkdir dir="${output.classes.webcommon.root}"/>
+
+        <!-- compile the web common classes -->
+        <javac
+                srcdir="${view.webcommon.java.root}"
+                destdir="${output.classes.webcommon.root}"
+                nowarn="${platform.javac.nowarn}"
+                debug="${platform.javac.debug}"
+                optimize="${platform.javac.optimize}"
+                deprecation="${platform.javac.deprecation}"
+                excludes="test/**,build/**"
+                includeAntRuntime="no"
+                includeJavaRuntime="no"
+                encoding="${java.source.encoding}">
+
+            <classpath>
+                <pathelement path="${compiletime.classpath}"/>
+                <pathelement path="${output.classes.framework.root}"/>
+            </classpath>
+            <sourcepath>
+                <pathelement location="${view.webcommon.java.root}"/>
+            </sourcepath>
+        </javac>
+
+        <copy todir="${output.classes.webcommon.root}">
+            <fileset dir="${view.webcommon.resources.root}" includes="**/*"/>
+        </copy>
+    </target>
+
+    <target name="platform.configfiles" depends="init" description="Copy the configfiles">
+        <mkdir dir="${output.configfiles.root}"/>
+
+        <copy todir="${output.configfiles.root}">
+            <fileset dir="${view.configfiles.root}" includes="**/*.properties"/>
+            <fileset dir="${view.configfiles.root}" includes="**/*.ftl"/>
+            <fileset dir="${view.framework.java.root}" includes="**/*.xml"/>
+            <fileset dir="${view.framework.java.root}" includes="**/args"/>
+        </copy>
+    </target>
+
+    <target name="platform.relatedjars" depends="init" description="flatten the platform's related jars">
+        <mkdir dir="${output.relatedjars.root}"/>
+        <copy todir="${output.relatedjars.root}" flatten="true">
+            <fileset dir="${view.relatedjars.root}" includes="**/*.jar">
+                <exclude name="compile-time-jars/**/*.jar"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <!--###########################################################-->
+    <!--## platform jar or tar targets							 ##-->
+    <!--###########################################################-->
+    <target name="platform.framework.jar" description="builds the platform framework jar" depends="platform.framework">
+        <mkdir dir="${output.stage.root}"/>
+        <jar destfile="${output.stage.root}/platform-framework.jar">
+            <fileset dir="${output.classes.framework.root}">
+                <include name="**"/>
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="platform.webcommon.jar" description="builds the platform jar" depends="platform.webcommon">
+        <mkdir dir="${output.stage.root}"/>
+        <jar destfile="${output.stage.root}/platform-webcommon.jar">
+            <fileset dir="${output.classes.webcommon.root}">
+                <include name="**"/>
+                <include name="WEB-INF/**"/>
+                <include name="META-INF/**"/>
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="platform.configfiles.tar" depends="platform.configfiles"
+            description="Creates the platform-configfiles.tar for deployment">
+        <tar destfile="${output.stage.root}/platform-configfiles.tar" longfile="warn">
+            <tarfileset dir="${output.configfiles.root}">
+            </tarfileset>
+        </tar>
+    </target>
+
+    <target name="platform.relatedjars.tar" depends="platform.relatedjars"
+            description="Creates the platform-relatedjars.tar for deployment">
+        <tar destfile="${output.stage.root}/platform-relatedjars.tar" longfile="warn">
+            <tarfileset dir="${output.relatedjars.root}">
+                <include name="*"/>
+            </tarfileset>
+        </tar>
+    </target>
+
+    <!--###########################################################-->
+    <!--## clean targets										 ##-->
+    <!--###########################################################-->
+    <target name="clean" depends="bootstrap,webapps.clean"
+            description="deletes all class files and dirs under output.root">
+        <!-- Delete the files generated by the build -->
+        <delete quiet="true" includeemptydirs="true">
+            <fileset dir="${output.root}" casesensitive="yes" followsymlinks="false">
+                <include name="**/*"/>
+                <exclude name="${output.classes.build.root}/**"/>
+            </fileset>
+        </delete>
+    </target>
+
+    <target name="webapps.clean" depends="bootstrap" description="webapps' clean">
+    </target>
+
+    <!--###########################################################-->
+    <!--## package targets			    					     ##-->
+    <!--###########################################################-->
+    <target name="package" depends="platform.all,webapps.all" description="Copy all jar and tar files to package dir">
+        <mkdir dir="${build.package.root}/platform/${build.platform.version}"/>
+
+        <copy todir="${build.package.root}/platform/${build.platform.version}">
+            <fileset dir="${output.stage.root}" includes="**/*"/>
+        </copy>
+
+        <condition property="current.version.filename" value="zeroversion">
+            <equals arg1="${build.platform.version}" arg2="0.0.0.0"></equals>
+        </condition>
+        <condition property="current.version.filename" value="prealphaIIversion">
+            <contains string="${build.platform.version}" substring="pII"></contains>
+        </condition>
+        <condition property="current.version.filename" value="prealphaversion">
+            <contains string="${build.platform.version}" substring="p"></contains>
+        </condition>
+        <condition property="current.version.filename" value="stabilityversion">
+            <contains string="${build.platform.version}" substring="b"></contains>
+        </condition>
+        <property name="current.version.filename" value="mainversion"/>
+
+        <echo file="${build.package.root}/platform/${current.version.filename}" message="${build.platform.version}"/>
+    </target>
+</project>
+

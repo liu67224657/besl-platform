@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="http://www.joyme.com/static/js/common/jquery-1.9.1.min.js"></script>
+    <script>
+        $().ready(function() {
+            $.get("http://localhost:8888/content-service/api/test/content/info",{},function(req){
+                alert("http://localhost:8888/content-service/api/test/content/info"+" result : "+req);
+            })
+
+            $.get("http://localhost:8281/api/test/content/info",{},function(req){
+                alert("http://localhost:8281/api/test/content/info"+" result : "+req);
+            })
+        });
+    </script>
+</head>
+<body>
+http://localhost:8888/content-service/api/test/content/info
+
+<br/>
+http://localhost:8281/api/test/content/info
+</body>
+</html>

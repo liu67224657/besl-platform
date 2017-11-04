@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+body, h1, h2, h3, h4, h5, h6, hr, p,blockquote,dl, dt, dd, ul, ol, li,pre,form, fieldset, legend, button, input, textarea,th, td,img,iframe,cite{border:medium none;margin:0;padding:0;}
+body,button, input, select, textarea {font: 14px/1.5 "Microsoft YaHei",tahoma, Srial, helvetica, sans-serif;}
+h1, h2, h3, h4, h5, h6 { font-size:100%;}
+em,i,code,b,cite{font-style:normal;}
+ul, ol { list-style:none; }
+a { text-decoration:none; color:#464646;}
+a:hover { text-decoration:underline; color:#F60;}
+a{outline:none;}
+img{ border:0px;}
+table { border-collapse:collapse; border-spacing:0; }
+img, label, input {vertical-align: middle;}
+html body div.clear,
+html body span.clear{background: none;border: 0;clear: both; display: block;float: none;
+font-size: 0; margin: 0;padding: 0;overflow: hidden;visibility: hidden;width:0;height: 0;line-height:0;
+}
+.clearfix:after{content:".";display:block;height:0; line-height:0; clear:both; visibility:hidden; }
+.clearfix{ zoom:1; }
+* html .clearfix{height:1%}
+/*common*/
+.fl{ float:left;}
+.fr{ float:right;}
+.ovf{ overflow:hidden;}
+.ma{ margin-left:auto; margin-right:auto;}
+.pa{ position:absolute;}
+.pr{ position:relative;}
+.tc{ text-align:center;}
+.tl{ text-align:left;}
+.tr{ text-align:right;}
+/*内容开始*/
+body{ background:#ee2f21 url(../images/bg-16.jpg) repeat-y center 0;}
+#wrap,#wp_bg,#footer{ width:100%;}
+#wrap{ padding-top:500px;}
+#wp_bg{ height:500px; left:0; top:0; text-align:center; font-size:0; z-index:1;}
+#wp_bg span{ display:block; width:100%; height:50px;}
+#wp_bg span.bg_1{ background:url(../images/bg-1.jpg) no-repeat center 0;}
+#wp_bg span.bg_2{ background:url(../images/bg-2.jpg) no-repeat center 0;}
+#wp_bg span.bg_3{ background:url(../images/bg-3.jpg) no-repeat center 0;}
+#wp_bg span.bg_4{ background:url(../images/bg-4.jpg) no-repeat center 0;}
+#wp_bg span.bg_5{ background:url(../images/bg-5.jpg) no-repeat center 0;}
+#wp_bg span.bg_6{ background:url(../images/bg-6.jpg) no-repeat center 0;}
+#wp_bg span.bg_7{ background:url(../images/bg-7.jpg) no-repeat center 0;}
+#wp_bg span.bg_8{ background:url(../images/bg-8.jpg) no-repeat center 0;}
+#wp_bg span.bg_9{ background:url(../images/bg-9.jpg) no-repeat center 0;}
+#wp_bg span.bg_10{ background:url(../images/bg-10.jpg) no-repeat center 0;}
+#wp_bg span.bg_11{ background:url(../images/bg-11.jpg) no-repeat center 0;}
+#wp_bg span.bg_12{ background:url(../images/bg-12.jpg) no-repeat center 0;}
+#wp_bg span.bg_13{ background:url(../images/bg-13.jpg) no-repeat center 0;}
+#wp_bg span.bg_14{ background:url(../images/bg-14.jpg) no-repeat center 0;}
+#wp_bg span.bg_15{ background:url(../images/bg-15.jpg) no-repeat center 0;}
+#wp_bg span.bg_16{ background:url(../images/bg-16.jpg) no-repeat center 0;}
+#center{ width:100%; }
+.cen_box{ width:1005px;}
+.cen_box ul{ margin-bottom:50px; padding:7px 0 0; background:url(../images/shelf_bg.png) no-repeat center 0;}
+.cen_box ul li{ width:227px; height:268px; margin-left:20px; position:relative; float:left;}
+.cen_box ul li .game_bg{ width:227px; height:268px; position:absolute; top:0; left:0; z-index:1;}
+.cen_box ul li .game_bg img{ width:227px; height:268px; }
+.cen_box ul li .game_box{ height:83px; padding:185px 0 0 20px; color:#000; position:relative; z-index:9;}
+.cen_box ul li em{ font-size:18px; line-height:24px;}
+.cen_box ul li p{ line-height:20px; font-size:12px;}
+.cen_box ul li.l_1{ background:url(../images/game_bg_1.jpg) no-repeat 0 0;}
+.cen_box ul li.l_2{ background:url(../images/game_bg_2.jpg) no-repeat 0 0;}
+.cen_box ul li.l_3{ background:url(../images/game_bg_3.jpg) no-repeat 0 0;}
+.cen_box ul li.l_4{ background:url(../images/game_bg_4.jpg) no-repeat 0 0;}
+.cen_box ul li.l_5{ background:url(../images/game_bg_5.jpg) no-repeat 0 0;}
+.cen_box ul li.l_6{ background:url(../images/game_bg_6.jpg) no-repeat 0 0;}
+.cen_box ul li.l_7{ background:url(../images/game_bg_7.jpg) no-repeat 0 0;}
+.cen_box ul li.l_8{ background:url(../images/game_bg_8.jpg) no-repeat 0 0;}
+.cen_box ul li.l_9{ background:url(../images/game_bg_9.jpg) no-repeat 0 0;}
+.cen_box ul li.l_10{ background:url(../images/game_bg_10.jpg) no-repeat 0 0;}
+.cen_box ul li.l_11{ background:url(../images/game_bg_11.jpg) no-repeat 0 0;}
+.cen_box ul li.l_12{ background:url(../images/game_bg_12.jpg) no-repeat 0 0;}
+.gaem_Icon,.link_btn {display:block; position:absolute; z-index:19;}
+.gaem_Icon{  width:112px; height:112px; top:27px; left:50%; margin-left:-56px;}
+.gaem_Icon img{ width:112px; height:112px;}
+.link_btn { width:64px; height:95px; top:154px; right:15px; background:url(../images/link_btn.png) no-repeat 0 bottom; text-indent:-999em;-webkit-transition:height 0.3s; -moz-transition:height 0.5s; -ms-transition:height 0.5s; transition:height 0.5s; cursor:pointer;}
+.link_btn:hover { height:104px; }
+#center,#footer{ position:relative; z-index:9;}
+#footer{ padding-top:38px; background:url(../images/ft-bg.jpg) no-repeat center 0; margin-top:-10px;}
+.f_link{ width:100%; padding:52px 0 75px; text-align:center; background:#ee2f21;}

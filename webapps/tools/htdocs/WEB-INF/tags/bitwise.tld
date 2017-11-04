@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+	<description>bitwise tag</description>
+	<display-name>bitwise tag</display-name>
+	<tlib-version>1.1</tlib-version>
+	<short-name>bit</short-name>
+	<uri>/bit</uri>
+	<function>
+		<name>AND</name>
+		<function-class>com.enjoyf.webapps.tools.webpage.tags.BitwiseTag</function-class>
+		<function-signature>int and(int, int)</function-signature>
+	</function>
+	<function>
+		<name>OR</name>
+		<function-class>com.enjoyf.webapps.tools.webpage.tags.BitwiseTag</function-class>
+		<function-signature>int or(int, int)</function-signature>
+	</function>
+
+</taglib>

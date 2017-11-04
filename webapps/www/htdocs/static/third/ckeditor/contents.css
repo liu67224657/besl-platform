@@ -1,0 +1,5 @@
+@charset "utf-8";
+body{font-family: '宋体'; color:#555;border: medium none; font-size:14px; line-height:22px;}
+.cke_show_borders{ word-wrap: break-word;}
+.cke_show_borders a{text-decoration: none; color: #555;}
+.cke_show_borders u{text-decoration: none; color:#555;}

@@ -1,0 +1,52 @@
+.wrapper, .wrappers{background: #efefef;}
+/*新游开测*/
+.timeShaft-tit{height:34px;width:100%;background:rgba(250,250,250,0.9);display:none;}
+.timeShaft-tit.po1{position:fixed;top:35px;left:0;z-index:2;display:block;}
+.timeShaft-main{padding:20px 10px 0px 10px;background:#efefef;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;overflow: hidden;}
+.timeShaft-main-box{border-left:2px solid #ddd;width:100%;height:100%;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;min-height:680px;}
+.timeShaft-main-block{position:relative;padding:22px 0 9px 5px;}
+.timeShaft-main-block span{width:6px;height:6px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;float:left;position:absolute;top:1px;left:-4px;}
+.timeShaft-main-time{padding:0 15px;height:24px;color:#fff;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;-o-border-radius:15px;-ms-border-radius:15px;margin:-30px 0 0 3px;position:absolute;font-size:16px;font-weight:bolder;line-height:24px;}
+/*热门*/
+.timeShaft-main-block.hot span{background:#ff6148;}
+.timeShaft-main-time.hot{background:#ff6148;}
+.timeShaft-main-block.hot h2,.timeShaft-main-block.tomorrow h2{color:#ff6148;background: url(../images/my/time-hot.png) no-repeat left center;background-size: 13px;}
+/*明日*/
+.timeShaft-main-block.yesterday span{background:#ff8c1d;}
+.timeShaft-main-time.yesterday{background:#ff8c1d;}
+/*昨日*/
+.timeShaft-main-block.tomorrow span{background:#f7b412;}
+.timeShaft-main-time.tomorrow{background:#f7b412;}
+/*未来一周*/
+.timeShaft-main-block.future span{background:#74c941;}
+.timeShaft-main-time.future{background:#74c941;}
+/*过去一周*/
+.timeShaft-main-block.formerly span{background:#54ca9c;}
+.timeShaft-main-time.formerly{background:#54ca9c;}
+/*日期*/
+.timeShaft-main-block.date span{background:#bbb;}
+.timeShaft-main-time.date{background:#bbb;}
+
+
+.timeShaft-block-one{height:76px;margin-bottom:10px;width:100%;border:1px solid #e0e0e0;position:relative;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;background:#fff;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.timeShaft-block-one.ma{margin-top:4px;}
+.timeShaft-block-one>a{display:block;width:100%;height:100%;}
+.timeShaft-block-one>a:active{background:#f5f5f5;}
+.timeShaft-block-l{width:50px;height:50px;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px;-ms-border-radius:10px;overflow:hidden;margin:12px 0 0 12px;}
+.timeShaft-block-l img{width:100%;}
+.timeShaft-block-r{text-align:left;line-height:22px;padding-left:7px;}
+.timeShaft-block-r h1{color:#000;padding-top:10px;font-size:16px;}
+.timeShaft-block-r h2,.timeShaft-block-r h3{color:#606060;line-height:17px;}
+.timeShaft-block-r h3{clear:both;font-size:12px;}
+.timeShaft-block-r h2{background:url(../images/my/time.png) no-repeat left center;background-size:13px;-webkit-background-size:13px;-moz-background-size:13px;-o-background-size:13px;-ms-background-size:13px;padding-left:15px;float:left;font-size:12px;}
+.timeShaft_btn{width:7px;height:12px;background:url(../images/my/boult.png) no-repeat 0 0;background-size:100% 100%;position:absolute;right:15px;top:50%;margin-top:-6px;}
+.timeShaft-tit>.timeShaft-main-time{margin:6px 0 0 18px;}
+.wrapper>div{display:none;}
+.wrapper>div.cur_timeBox{display:block;}
+.yxxq_tab_title{position:relative;z-index:99;}
+.yxxq_zx_icon{position:relative;float:left;margin:-5px 4px;}
+
+
+.popup_box{width:100%;font-size:0;padding:0;margin:0;display:none;z-index:101;position:absolute;left:0;top:0;}
+.popup_box img{width:100%;display:block;-webkit-border-bottom-left-radius:10px;-webkit-border-bottom-right-radius:10px;overflow:hidden;-moz-border-bottom-left-radius:10px;-moz-border-bottom-right-radius:10px;-ms-border-bottom-left-radius:10px;-ms-border-bottom-right-radius:10px;-o-border-bottom-left-radius:10px;-o-border-bottom-right-radius:10px;overflow:hidden;border-bottom-right-radius:10px;border-bottom-left-radius:10px;}
+.mark_box{position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:100;display:none;}

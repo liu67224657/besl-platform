@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,th,td,p,blockquote,pre,form,fieldset,legend,input,button,textarea,hr{margin:0;padding:0}
+body{ color:#494949;font:12px/1.125 Arial,Helvetica,sans-serif,"宋体";background-attachment:fixed;}
+table{border-collapse:collapse;border-spacing:0}
+li{list-style:none;}
+fieldset,img{border:0}
+q:before,q:after{content:''}
+input,textarea,select{outline:none}
+input[type="text"],input[type="password"],textarea{outline-style:none;-webkit-appearance:none}
+textarea{resize:none}
+address,caption,cite,code,dfn,em,i,th,var{font-style:normal;font-weight:normal}
+legend{color:#000}
+abbr,acronym{border:0;font-variant:normal}
+a{text-decoration:none; color:#55779e}
+a:hover{text-decoration:underline;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block}
+* html .clearfix{height:1%}
+.clearfix{display:block}
+.clear{clear:both;height:0;font:0/0 Arial;visibility:hidden}
+.fl{float:left}
+.fr{float:right}
+/*尾部*/
+.footer{width:940px;margin:0px auto;font-size:12px; text-align:center;padding:20px 0 10px 0;color:#fff;}
+.footer span,.footer a{margin:0px 12px;color:#fff;font-family:Arial, Helvetica, sans-serif}

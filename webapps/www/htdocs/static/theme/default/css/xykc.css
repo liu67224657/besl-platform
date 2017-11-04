@@ -1,0 +1,32 @@
+html,body{width: 100%;height: 100%;display: -webkit-box;display: -moz-box;display: -ms-box;display: -o-box;font-size: 63%;}
+.wrapperBox{display: -webkit-box;-webkit-box-orient: vertical;-webkit-box-flex: 1;display: -moz-box;-moz-box-orient: vertical;-moz-box-flex: 1;display: -o-box;-o-box-orient: vertical;-o-box-flex: 1;width: 100%;height: 100%;}
+#scrollBox{display: -webkit-box;-webkit-box-flex: 1;display: -ms-box;-ms-box-flex: 1;display: -o-box;-o-box-flex: 1;width: 100%;height: 100%;overflow-y: scroll;/*overflow-x: hidden;*/}
+.box{display: -webkit-box;-webkit-box-orient: vertical;-webkit-box-flex: 1;display: -moz-box;-moz-box-orient: vertical;-moz-box-flex: 1;display: -o-box;-o-box-orient: vertical;-o-box-flex: 1;position: relative;height: 200%;border-left: 1px solid #e0e0e0;margin: 20px 6px 0;}
+.box img{ width: 100%; height: 100%;}
+.timeTip{width: 67px;height: 20px;border-radius: 10px;color: #fff;text-align: center;line-height: 20px;font-size: 2.2em;position: absolute;margin: -10px 0 0 7px;}
+.timeTip:before{position: absolute;left: -9px;top: 8px;content: "";display: inline-block;width: 4px;height: 4px;border-radius: 4px;}
+.firstTip{ background: #FF4500;}
+.firstTip:before{ background: #FF4500;}
+.secondTip{ background: #2E8DEB;}
+.secondTip:before{ background: #2E8DEB;}
+.thirdTip{ background: #53fa5f;}
+.thirdTip:before{ background: #53fa5f;}
+.fourthTip{ background: #ccc;}
+.fourthTip:before{ background: #ccc;}
+.box ul{ margin-left: 8px;}
+.box ul li{ margin-bottom: 10px;}
+.box ul{ margin-top: 20px; margin-bottom: 20px;}
+.box dl{height: 86px;width: 100%;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-o-box-sizing: border-box;-ms-box-sizing: border-box;border: 1px solid #e0e0e0;display: -webkit-box;-webkit-box-pack: center;-webkit-box-align: center;display: moz-box;moz-box-pack: center;moz-box-align: center;display: -o-box;-o-box-pack: center;-o-box-align: center;display: -ms-box;-ms-box-pack: center;-ms-box-align: center;
+}
+.box dt{width: 60px;height: 60px;padding: 0 6px 0 9px;}
+.box dd{height: 60px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-box-flex: 1;display: -moz-box;-moz-box-align: center;-moz-box-flex: 1;display: -o-box;-o-box-align: center;-o-box-flex: 1;-ms-box;-ms-box-align: center;-ms-box-flex: 1;font-size: 14px;}
+.box dd p:nth-child(1){ line-height: 18px;}
+.box dd p:nth-child(2){display: -webkit-box;-webkit-box-align: center;-webkit-box-flex: 1;display: -moz-box;-moz-box-align: center;-moz-box-flex: 1;display: -o-box;-o-box-align: center;-o-box-flex: 1;-ms-box;-ms-box-align: center;-ms-box-flex: 1;}
+.box dd p:nth-child(2) a{display: block;width: 62px;height: 28px;border-radius: 14px;border: 1px solid #808080;text-align: center;line-height: 28px;color: #2E90EB;text-decoration: none;margin-right: 5px;}
+.box dd p:nth-child(2) span{display: block;width: 13px;height: 13px;background: url(../images/my/time.png) no-repeat;background-size: 100%;
+}
+.box dd p:nth-child(2) em{display: -webkit-box;-webkit-box-flex: 1;color: #b8b8b8;
+}
+.box dd p:nth-child(3){ color: #b8b8b8;}
+.box dd b{ display: block;}
+.fixed{position: fixed;left: 7px;top: 60px;}

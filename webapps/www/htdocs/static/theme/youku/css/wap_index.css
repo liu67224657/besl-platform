@@ -1,0 +1,115 @@
+/*焦点图*/
+#header{overflow: hidden;}
+#pic-loop, #hotNews-loop{ margin:0 auto; position: relative;width:100%;height: 100%;overflow: hidden;}
+.pic-loop-box,.hotNews-loop-box{width: 100%;height: 100%; display:block; display:-webkit-box; display:-ms-box; display:-moz-box; -webkit-backface-visibility:hidden; }
+.pic-loop-box img { width: 100%;height: 100%; display: block; }
+.swiper-slide{width:100%;height: 100%;position: relative;}
+#pic-loop a{height: 100%;}
+.pagination { position: absolute; width: 100%; left: 0; bottom: 0.4rem; font-size: 1.2rem; text-align: center;}
+.pagination span { display: inline-block; width: 0.4rem; height: 0.4rem; -webkit-border-radius: 2rem; -ms-border-radius: 2rem; -moz-border-radius: 2rem; border-radius: 2rem; background: #fff; margin-right: 0.2rem;}
+.pagination span.swiper-active-switch { background: #4cb7ff;}
+/*俱乐部倒计时*/
+.jlb-dl{ display:block; width:100%; height:5.8rem; box-sizing:border-box; -webkit-box-sizing:border-box; padding:0.5rem 0.8rem; position:relative; overflow:hidden; }
+.jlb-dl dl{ display:-webkit-box; display:-webkit-box; position: relative; height:100%; font-size:0; }
+.jlb-dl dl:after{ content:''; position:absolute; right:0; top:50%; width:0.5rem; height:1rem; margin-top:-0.5rem; background:url(../images/jlb-jt.png) no-repeat 0 0; background-size:100% 100%; }
+.jlb-dl dt{ width:6.2rem; height:100%; line-height:4rem; box-sizing:border-box; -webkit-box-sizing:border-box; position:relative; display:inline-block; vertical-align: middle;}
+.jlb-dl dt:before{ content:''; width:1px; height:100%; right:0; background:#dcdcdc; -webkit-transform: scaleX(0.5); transform: scaleX(0.5); position:absolute; }
+.jlb-dl dt cite{ display: inline-block; width: 5.3rem; vertical-align: top; position: relative; top: 50%; left: 0; margin-top: -9px; }
+.jlb-dl dt cite img{ width:100%; vertical-align:middle; }
+.jlb-dl dd{ position:relative; font-size:0; height:4.4rem; display: inline-block; vertical-align: top; padding-left:0.4rem; }
+.jlb-dl dd cite{ display: inline-block; width: 3rem; height: 85%; vertical-align: top; text-align: center; }
+.ms dd code,.dh dd code{ border-radius: 0.3rem; color: #ff3300; font-size: 1rem; position: relative; vertical-align: middle; position: relative; top:50%; padding:0.1rem 0.2rem 0.1rem; line-height: 1rem; }
+.ms dd code{ color:#ff3300; }
+.dh dd code{ color:#4bb6fe; }
+.dh dd code:after,.ms dd code:after{ content:''; position: absolute; top: 0; left: 0; width: 200%; height: 200%; -webkit-border-radius: 0.6rem; -webkit-box-sizing: border-box; -webkit-transform: scale(0.5); -webkit-transform-origin: left top; }
+.ms dd code:after{ border: 0.1rem solid #ff3300; color:#ff3300; }
+.dh dd code:after{ border: 0.1rem solid #4bb6fe; color:#4bb6fe; }
+.jlb-dl dd h2{ display:inline-block; position:relative; padding-left:0.3rem; }
+.jlb-dl dd h2 b{ display:block; font-size:1.5rem; color:#333; font-weight:normal; padding-top:0.5rem; margin-bottom:0.1rem; }
+.ms dd h2 p,.dh dd h2 p{ font-size:1.5rem; }
+.ms dd h2 p{ color:#ff3300; }
+.dh dd h2 p{ color:#a6a6a6; }
+
+/*header end*/
+/*全球游戏看点 开始*/
+li.ggw-1{ overflow:hidden; box-sizing:border-box; -webkit-transform:scale(1); }
+li.ggw-1 a,li.ggw-2 a,li.ggw-0 a{ padding-left:0; }
+li.ggw-0 a{ padding:0.75rem 0.7rem 0.83rem 0; }
+.ggw-1 h1,.ggw-2 h1{ font-size:1.4rem; width:100%; overflow: hidden; text-overflow:ellipsis; white-space: nowrap; line-height: 18px; height:18px; display: block; }
+.ggw-2 h1{ box-sizing:border-box; padding-right:0.8rem; }
+.ggw-2 h1 i{ float: right; font-style:normal; font-size:1rem; color:#a6a6a6; }
+.ggw-1>font{ position: relative; top:0.3rem; right:0.3rem; }
+li.ggw-1 cite,li.ggw-0 cite{ width:100%; height:10rem; margin:0.7rem 0 0.6rem 0; position: relative; top:0; left:0; }
+li.ggw-0 cite{ margin:0; }
+.ggw-1 p{ font-size:1rem; color:#a6a6a6; }
+.ggw-2 p{ color:#727272; font-size:1rem; }
+.ggw-1 h1>font{ display: inline-block; text-align:right; float: right; position: relative; }
+.ggw-1 h1>font,.ggw-1 h1 b{ font-size:1rem; color:#a6a6a6; font-style:normal; font-weight: normal; }
+/*.list-item li:last-child  a:after{ display: none; }*/
+li.ggw-2 a{ padding:0.8rem 0; }
+li.ggw-2 ul{ width:100%; overflow: hidden; }
+li.ggw-2 ul li{ width:33.3%; float: left; padding:0 0.8rem 0 0; margin:0.8rem 0; position: relative; top:0; left:; }
+li.ggw-2 ul li cite{ display: block; position: relative; width:100%; min-height:6rem; margin-right:0; top:0; left:0; }
+li.ggw-2 ul li cite:after{ content: ''; position: absolute; top: 0; left: 0; width: 200%; height: 200%; border: 1px solid #dcdcdc; -webkit-box-sizing: border-box; -webkit-transform: scale(0.5); -webkit-transform-origin: left top; }
+li.ggw-2 h1 i{ position: relative; padding:0.2rem 0.2rem; line-height: 1rem; color:#a6a6a6; }
+li.ggw-2 h1 i:after{ border-radius: 0.3rem}
+/*全球游戏看点 结束*/
+/*强档联播 开始*/
+.qdlb{ position: relative; }
+.row-img{ display: block; width:100%; -webkit-box-sizing: border-box; padding:0 0.8rem; margin-bottom:1rem; }
+.row-img cite{ position: relative; display: block; width:100%; font-size:0; height:14rem; margin-top:0.8rem; }
+.row-img cite span{ width:100%; padding:1.5rem 1rem 0.8rem; box-sizing:border-box; background: linear-gradient(to bottom,transparent 0,rgba(0,0,0,0.7) 100%); position: absolute; left:0; bottom:0; z-index: 9; font-size:1rem; color:#fff; }
+.row-img cite font{ display: block; width:100%; font-size:1.4rem; line-height: 2.3rem}
+.row-img cite b{ font-style: normal; font-weight: normal; }
+.col-ul{ width:100%; -webkit-box-sizing: border-box; padding-left:0.8rem; font-size:0; }
+.col-ul li{ width:33.3%; display:inline-block; -webkit-box-sizing: border-box; padding-right:0.8rem; margin-bottom:0.5rem; vertical-align: top; }
+.col-ul li a,.col-ul li cite{ display: block; position: relative; font-size:0; }
+.col-ul li cite{ width:100%; height:14rem; margin-bottom:0.8rem; -webkit-box-sizing: border-box; -webkit-transform: scale(1); transform: scale(1); }
+.col-ul li cite:after{ content: ""; display: block; position: absolute; left: 0%; width: 200%; height: 200%; -webkit-box-sizing:border-box; top: 0%; border: 1px solid #dcdcdc; -webkit-transform: scale(0.5); -webkit-transform-origin:0 0; }
+.col-ul li h3{ font-size:1.4rem; color:#333; }
+.col-ul li font{ color: #a6a6a6; font-size: 1rem; line-height: 1.5rem; display: block; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/*强档联播 结束*/
+/*横向滚动 开始*/
+.huad-bg{ width: 100%; height: 20rem; position: relative; }
+.retu{ color: #eaeaea; font-size: 1.3rem; padding-right: 0.8rem; position: absolute; z-index: 9; padding: 0.8rem; top: 1rem; right: 0.8rem; }
+.retu:after{ content:""; background: url(../images/wqhg-icon.png) no-repeat; display: block; position: absolute; top:50%; right:0; background-position: right center; width:6px; height:10px; background-size: 100%; margin-top:-5px; }
+.huad-bg h4{ padding: 1.8rem 0; position: relative; }
+.huad-bg h4 span{ color: #eaeaea; font-size: 1.5rem; font-weight:bold; padding-left:0.8rem; display: inline-block; line-height: 1.5rem}
+.huad-bg h4 i{ width: 1rem; height: 1rem; display: inline-block; margin-right:0.3rem; position: relative; top:0.1rem; }
+.huad-bg h4 i img{ width: 100%; height: 100%; }
+.huad-box{ width: 100%; overflow-x: scroll; -webkit-overflow-scrolling: touch; -moz-overflow-scrolling: touch; margin-top:0.8rem; }
+.huad-box::-webkit-scrollbar{ display: none; }
+.scroll{ overflow-y: hidden; overflow-x:hidden; }
+.huad-box h4{ }
+.huad-boxleft{ float: left; width: 12.5rem; padding:0 1rem 0 0.8rem; box-sizing: border-box; }
+.huad-boxleft p{ color: #999; font-size: 1.3rem; line-height: 1.6rem; font-weight: normal;}
+.huad-boxright{ overflow: hidden; float: left; }
+.huad-boxright li{ float: left; width: 15rem; min-height:9rem; margin-right:0.8rem; position: relative; }
+.huad-boxright cite{ display: block; width:100%; height:9rem; -webkit-box-sizing: border-box; position: relative; }
+.huad-boxright cite.video-icon:before{ content:""; width:30px; height:30px; position: absolute; top:50%; left:50%; margin-top:-15px; margin-left:-15px; z-index: 9; display: block; background: url(../images/video-icon.png) no-repeat; background-size: 100%; }
+.huad-boxright cite:after{ content: ''; position: absolute; top: 0; left: 0; width: 200%; height: 200%; border: 1px solid #422e3f; -webkit-box-sizing: border-box; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0; }
+.huad-boxright li a{ width: 100%; display: block; }
+.huad-boxright li a img{ width: 100%; height: 100%; display: block; }
+.huad-boxright li span{ background: #fff; display: block; color: #333; font-size: 1.4rem; height: 2.5rem; line-height: 2.5rem; padding-left: 0.7rem; border: 1px solid #eaeaea; -webkit-box-sizing:border-box; box-sizing:border-box; width:100%; overflow: hidden; text-overflow:ellipsis; white-space: nowrap;font-weight: normal; }
+/*横向滚动 结束*/
+
+/*游戏专区 开始*/
+.yxzq { position: relative; }
+.yxzq ul,.yxzq-dl { width:100%; box-sizing: border-box; -webkit-box-sizing:border; padding-left:0.8rem; font-size:0; -webkit-transform: scale(1); transform: scale(1); position: relative; }
+.yxzq ul{ margin-top:1rem; }
+.yxzq ul li{ width:25%; font-size:1.2rem; color:#3c3c3c; overflow: hidden; text-align:center; position: relative; box-sizing:border-box; padding-right:0.8rem; display: inline-block; margin-bottom:1rem; }
+.yxzq ul li a{ display: block; position: relative; padding:1.1rem 0.5rem; width:100%; text-overflow:ellipsis; white-space: nowrap; overflow: hidden; box-sizing:border-box; line-height:1rem; font-weight: normal;}
+.yxzq ul li a:after{ content: ''; position: absolute; top: 0; left: 0; width: 200%; height: 200%; border: 1px solid #ccc; -webkit-box-sizing: border-box; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0; }
+.yxzq-dl dt{ padding-bottom:1.4rem; position: relative; padding-top:0.2rem; }
+.yxzq-dl dt:after,.yxzq-dl dd a:before{ content: ''; position: absolute; left: 0; bottom:0; background: #dcdcdc; width: 100%; height: 1px; -webkit-transform: scaleY(0.5); -webkit-transform-origin: 0 0; }
+.yxzq-dl dt a{ display: block; width:50%; box-sizing:border-box; padding-right:0.8rem; display: inline-block; vertical-align: top; }
+.yxzq-dl dt a cite{ display: block; width:100%; height:8.1rem; }
+.yxzq-dl dt a h3{ font-size:1.4rem; margin:0.5rem 0 0.3rem; width:100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.yxzq-dl dt a font{ font-size:1rem; color: #a6a6a6; line-height: 1rem;  font-weight: normal; }
+.yxzq-dl dd a{ padding:1.4rem 0; width:100%; box-sizing:border-box; position: relative; font-size:1.4rem; display: block; }
+.yxzq-dl dd a:after{ content: ""; display: block; width:6px; height:12px; background: url(../images/jlb-jt.png) no-repeat right center; background-size:100%; right:0.8rem; top:50%; margin-top:-7px; position: absolute; }
+.yxzq-dl dd:last-child a:before{ display: none; }
+.yxzq-dl dd font{ display: inline-block; max-width:80%; height:100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;  font-weight: normal; }
+.yxzq-dl dd i{ font-style: normal; color:#828282; font-size:1rem; background: #f2f2f2; padding:0.2rem; display: inline-block; vertical-align: top; margin-left:0.5rem; line-height: 0.9rem; position: relative; top: 0.2rem;   font-weight: normal;}
+/*游戏专区 结束*/
+

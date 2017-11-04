@@ -1,0 +1,389 @@
+/*All*/
+body {
+	top: 0px;
+	vertical-align: top;
+	/*background-image:#000000;*/
+	FONT-SIZE: 9pt;
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+	margin-top: 0px;
+	margin-bottom:0px;
+	margin-right:0px;
+	margin-left:0px;
+	scrollbar-face-color: #EBEBEB; 
+    scrollbar-shadow-color: #F5F5F5; 
+    scrollbar-arrow-color: #5391AA;  
+}
+body a{
+color:#0000FF;
+text-decoration:underline;
+}
+body 
+/*Detail*/
+input {
+	font-size: 9pt;
+	color: #666666;
+	text-decoration: none;
+	background-color: #FFFFFF;
+	padding: 1px;
+	border: 1px inset;
+	border-color:#3B6592;
+}
+
+select {
+	font-size: 9pt;
+	color: #000000;
+	text-decoration: none;
+	padding: 1px;
+	border: 1px inset;
+}
+
+radioBox {
+
+}
+textarea {
+    font-size: 9pt;
+	color: #666666;
+	text-decoration: none;
+	background-color: #F3F3F3;
+	border: 1px inset;
+}
+
+.checkBox {
+}
+
+.button {
+	color: #000000;
+	text-align:center;
+	height:20;
+}
+.buttonZc {
+	color: #000000;
+	text-align:center;
+	height:23;
+	font-size:10pt;
+}
+
+/*Title*/
+.titleTable{
+	margin-left:15;
+	font-size: 12px;
+	color: #000000;
+	height: 12px; 
+	width:95%;
+	font-weight: bold;
+	padding-left:20pt;
+	}
+	
+.titleTableTdL{
+	text-align: left;
+}
+	
+.titleTableTdR{
+	text-align: right;
+}
+
+/*ListTable*/
+.listTable{
+    color:#FFFFFF;
+	font-size:9pt;
+    width:95%;
+	margin-left:15;
+	background-color:#EEEEEE;
+}
+
+.listTableTrTitle{
+	background-color:#ECF4F9;
+	font-size: 9pt;
+	font-style: normal;
+	line-height: 19px;
+	font-weight: bold;
+	font-variant: normal;
+	color: #000000;
+	text-align: center;
+}
+
+.listTableTrValue {
+	border: thin solid #FFFFFF;
+	background-color: #FFFFFF;
+	font-size: 9pt;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: #333333;
+	text-align: center;
+	line-height: 18px;
+}
+
+.listTable a{
+	color:#0D0CBF;
+	text-decoration:underline;
+}
+
+.listTable a:hover {
+	color:#FF0000;
+	text-decoration: underline;
+}
+
+.inputTable{
+    width:95%;
+    font-size: 9pt;
+    text-align: center;
+	margin-left:15;
+	background-color:#1E77D3;
+	color:#000000;
+}
+.inputTable tr{
+	background-color:#ECF4F9;
+}
+
+/*Page*/
+.pageTable {
+    line-height: 150%;
+    font-size: 9pt;
+    color: #000000;
+    margin-left:550;
+}
+
+.pageTable a{
+	color:#0D0CBF;
+	font-size: 9pt;
+	text-decoration:none;
+}
+
+.pageTable a:hover {
+	color:#FF0000;
+	font-size: 9pt;
+	text-decoration: underline;
+}
+
+/*TreeLeft*/
+.treeTableTdA{
+	color:#000000;
+	padding-left:15pt;
+	font-weight:bold;
+	background-color:#F1F1F1;
+	font-size:9pt;
+
+}
+
+
+/*TopTableL*/
+.topTable{
+    width:100%;
+	height:82px;
+}
+.topTableTd {
+	font-size: 9pt;
+	color: #969696;
+	text-align:right;
+	padding-right:25pt;
+	height:25px;
+	background-color:#EAEAEA;
+	padding-top:3pt;
+	
+}
+
+.topTableTd a{
+		color:#0D0CBF;
+	font-size: 9pt;
+	text-decoration:none;
+}
+.topTableTd a:hover{
+	color:#FF0000;
+	font-size: 9pt;
+	text-decoration:underline;
+}
+
+
+
+/*MiddleTable*/
+.middleTable {
+	font-size: 9pt;
+	width: 100%;
+	height:8px;
+	background-color:#6666CC;
+}
+
+.middleTableZc {
+	height:8px;
+    width:75%;
+    font-size: 9pt;
+	margin-left:120;
+	background-color:#6666CC;
+
+}
+/*CopyrightTable*/
+.copyrightTable {
+	width: 100%;
+	background-position: center;
+	text-align: center;
+	padding-top:3pt;
+	color:#0D0CBF;
+	height: 66px;
+	font-size:9pt;
+	/*background-image:url(../images/bg.jpg)   */
+}
+
+/*Img*/
+.tdImg img{
+     cursor: pointer;
+}
+
+/*zhuce*/
+.zhuceListTitle{
+    width:75%;
+    font-size: 12pt;
+	margin-left:120;
+	background-color:#FFFFFF;
+	color:#000000;
+	font-weight:bold;
+	padding-left:10pt;
+}
+.zhuceListTitleT{
+    background-color:#ACCDE5;
+}
+.zhuceListTable{
+    width:75%;
+    font-size: 9pt;
+	margin-left:120;
+	background-color:#FFFFFF;
+	color:#000000;
+}
+.zhuceListTableTdTitle{
+    text-align:right;
+	padding-right:5pt;
+	background-color:#FFFFFF;
+	font-weight:bold;
+}
+.zhuceListTableTdValue{
+    text-align:left;
+	padding-left:5pt;
+	padding-top:2;
+	
+}
+.zhuceListTableTdValueR{
+    text-align:left;
+	padding-left:5pt;
+	padding-top:2;
+	color:#999999;
+	
+}
+
+.topTableZc{
+    width:75%;
+    font-size: 9pt;
+	margin-left:120;
+}
+
+
+
+/*loginTable*/
+.loginTableout{
+    width:50%;
+	margin-top:100;
+	margin-left:350;
+	text-align:center;
+	font-size:9pt;
+	text-align:left;
+	font-weight:bold;
+	background-color:#999999;
+	height:230;
+	width:300;
+	
+}
+.loginTableoutT{
+background-color:#F1F1F1;
+}
+.loginTableoutB{
+background-color:#FFFFFF;
+}
+.loginTable{
+	font-size: 9pt;
+	color: #000000;
+	text-decoration: none;
+	margin-bottom:40;
+	width:100%;
+}
+.loginTableTDTitle{
+}
+.loginTableTDValue{
+	text-align:right;
+	font-weight:bold;
+}
+.loginTableTR{
+    text-align:center;
+}
+.loginTablebottom{
+	color: #FFFFFF;
+	font-size: 12px;
+	width:100%;
+	height:100%;
+}
+
+/*domain*/
+.domainList{
+    width:95%;
+    font-size: 9pt;
+	margin-left:15;
+	color:#000000;
+	line-height: 120%;
+    font-size: 9pt;
+} 
+.domain{
+    width:90%;
+    font-size: 9pt;
+	margin-left:20;
+	background-color:#CCCCCC;
+	color:#000000;
+	line-height: 120%;
+    font-size: 9pt;
+    margin-right:20;
+} 
+.domain tr{
+    background-color:#FFFFFF;
+}
+.domainListValue{
+    font-size: 9pt;
+	color:#000000;
+	text-align:left;
+	padding-left:5pt;
+
+}
+.domainTitle{
+    font-size: 9pt;
+	font-weight:bold;
+	color:#000000;
+	text-align:right;
+	padding-right:5pt;
+	background-color:#ECF4F9;
+	height:21;
+	padding-top:2;
+}
+/*mcjs*/
+.mcjs{
+    font-size: 9pt;
+	color:#000000;
+	text-align:left;
+	width:348;
+	height:198;
+	padding-top:10pt;
+	line-height:150%;
+}
+.mcjsTitle{
+    color:#3366FF;
+}
+
+.listTableTrTitleMenu{
+	background-color:#FFF000;
+	font-size: 9pt;
+	font-style: normal;
+	line-height: 19px;
+	font-weight: bold;
+	font-variant: normal;
+	color: #000000;
+	text-align: center;
+}
+

@@ -1,0 +1,334 @@
+.rwqd-top {
+    height: 140px;
+    width: 100%;
+    background: #292929;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.rwqd-top-box {
+    text-align: center;
+    padding-top: 5px;
+}
+
+.rwqd-top-box a#header_link {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -o-border-radius: 30px;
+    -ms-border-radius: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.rwqd-top-box a#header_link img {
+    width: 100%;
+}
+
+.rwqd-top-box h1 {
+    padding-top: 4px;
+}
+
+.rwqd-top a.back {
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.rwqd-top a.back img {
+    width: 100%;
+}
+
+.rwqd-top a.mi-shop {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.gr_information {
+    border: 1px solid #363636;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 2px 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
+    -ms-border-radius: 15px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.gr_information b {
+    font-weight: normal;
+    padding-right: 13px;
+}
+
+.gr_information b:first-child {
+    background: url(../images/dou.png) no-repeat left center;
+    background-size: 15px 9px;
+    padding-left: 20px;
+}
+
+.gr_information b:last-child{background:url(../images/boult.png) no-repeat right center;background-size:5px 11px;}
+.gr_information b em{padding-right:9px;color:#ffc000;}
+.strategy{display:block;color:#959595;font-size:12px;padding-top:8px;}
+.rwqd-top-box h1{color:#fff;}
+.rwqd_box{padding:0 10px;text-align:left;background: -webkit-gradient(linear,left top,left bottom,color-stop(.5,transparent),color-stop(.5,#ddd),to(#ddd)) left bottom repeat-x;
+border-bottom:0; background-size: 100% 1px;}
+.rwqd_box div:last-child{padding-bottom:10px;}
+.rwqd_box h1{width:100%;margin-top:15px;}
+.rwqd_box h1 span{background-repeat:no-repeat;background-position:left center; background-size:10px 15px;padding-left:15px;position:relative;}
+.rwqd_box h1 b{font-weight:normal;}
+.rwqd_box h1.xsrw span{background-image:url(../images/xsrw-icon.png);}
+.rwqd_box h1.mrrw span{background-image:url(../images/mrrw-icon.png);}
+.rwqd_box h1 strong{position: absolute;width:5px;height:5px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;background:#ff0000;right:-8px;top:0px;}
+.rwqd_box a{display:block;width:100%;height:55px;position:relative;margin-top:10px;border-radius:10px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.rwqd_box a:before{content: "";
+width: 200%;
+height: 200%;
+position: absolute;
+top: 50%;
+left: 50%;
+border: 1px solid #dedfe0;
+border-radius: 20px;
+-webkit-transform: scale(0.5);
+-webkit-transform-origin: -50% -50%;}
+.rwqd_box div a:first-child{margin-top:15px;}
+
+.rwqd_box a h2{padding:7px 0 0 10px;}
+.rwqd_box a h3 span{padding-left:20px;color:#ffc000;background:url(../images/midou-min.png) no-repeat left center;background-size:15px 9px;margin-left:30px;}
+.rwqd_box a h2 span{background-repeat:no-repeat;background-size:15px 15px;background-position:left center;padding-left:20px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.rwqd_box a cite{position:absolute;right:13px;top:50%;margin-top:-15px;height:30px;width:62px;border-radius:20px;text-align:center;line-height:30px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;font-size:16px;}
+.rwqd_box a.lq h2 span{background-image:url(../images/rw-w.png);}
+.rwqd_box a.wwc cite{background-color: rgba(96,175,34,0);color:#606060;}
+.rwqd_box a.wwc cite:before{content: "";
+width: 200%;
+height: 200%;
+position: absolute;
+top: 50%;
+left: 50%;
+border: 1px solid #dddddd;
+border-radius: 40px;
+-webkit-transform: scale(0.5);
+-webkit-transform-origin: -50% -50%;}
+.rwqd_box a.wwc cite:active{border:none;color:#fff;background-color: #cbcbcb;}
+.rwqd_box a.wwc h2 span{background-image:url(../images/rw-w.png);}
+.rwqd_box a.lq cite{color:#3bcb09;line-height:31px;}
+.rwqd_box a.lq cite:before{
+content: "";
+width: 200%;
+height: 200%;
+position: absolute;
+top: 50%;
+left: 50%;
+border: 1px solid #dddddd;
+border-radius: 40px;
+-webkit-transform: scale(0.5);
+-webkit-transform-origin: -50% -50%;
+}
+.rwqd_box a.lq cite:active{background-color: #3bcb09;color:#fff;}
+.rwqd_box a.ylq h2 span{background-image:url(../images/dg-right.png);}
+.rwqd_box a.ylq cite{color:#b2b2b2;}
+
+/*rwlc*/
+.rwqd_flow{border-top:10px solid #efefef;}
+.rwqd_flow h6{color:#262626;padding:12px 0;background: -webkit-gradient(linear,left bottom,left top,color-stop(.5,transparent),color-stop(.5,#ddd),to(#ddd)) left top repeat-x;
+border-top: 0;
+background-size:100% 1px;}
+.display_box{display:box;display:-webkit-box;display:-moz-box;}
+.flow_box{width:100%;height:72px;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
+.flow_icon{-webkit-box-flex:5;-moz-box-flex:5;box-flex:5;height:100%;-moz-box-pack:center;-webkit-box-pack:center;box-pack:center;-moz-box-align:center;-webkit-box-align:center;box-align:center;-webkit-box-orient: vertical;-o-box-orient: vertical;-ms-box-orient: vertical;box-orient: vertical;}
+.flow_icon a{height:72px;width:72px;border-radius:36px;-webkit-border-radius:36px;-moz-border-radius:36px;border:1px solid #e0e0e0;-moz-box;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-pack:center;-webkit-box-pack:center;box-pack:center;-moz-box-align:center;-webkit-box-align:center;box-align:center;}
+
+.flow_icon b {color:#858585;font-weight:normal;display:block;padding:8px 0 10px;}
+
+.flow_icon a cite{background-repeat:no-repeat;background-size:cover;}
+.flow_icon a cite.flow_icon_rw{width:29px;height:38px;background-image:url(../images/rw-icon.png);}
+.flow_icon a cite.flow_icon_md{width:43px;height:26px;background-image:url(../images/md-icon.png);background-size:100% auto;}
+.flow_icon a cite.flow_icon_lp{width:40px;height:35px;background-image:url(../images/lb-icon.png);}
+.flow_boult{-webkit-box-flex:3;-moz-box-flex:3;box-flex:3;height:100%;-moz-box-pack:center;-webkit-box-pack:center;box-pack:center;-moz-box-align:center;-webkit-box-align:center;box-align:center;}
+
+.flow_boult span {
+    width: 9px;
+    height: 18px;
+    display: block;
+    background: url(../images/boult-two.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/*lw*/
+.gift-box {
+    position: absolute;
+    right: 34px;
+    bottom: -38px;
+    width: 50px;
+    height: 38px;
+    z-index: 999;
+}
+
+.gift-box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.gift-box a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 6px;
+    background: url(../images/gift-line.png) no-repeat;
+    background-size: 20px 6px;
+}
+
+.gift-box-icon {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    width: 33px;
+    height: 38px;
+    background: url(../images/gift-icon.png) no-repeat;
+    background-size: 33px 38px;
+    animation: 2s mymove infinite;
+    -webkit-animation: 2s mymove infinite;
+    -moz-animation: 2s mymove infinite;
+    -moz-transform-origin: 50% 0;
+    -webkit-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+}
+
+.star {
+    width: 11px;
+    height: 10px;
+    background: url(../images/star.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+.star1 {
+    top: 20px;
+    left: -10px;
+    -webkit-animation: star 1s 1.5s linear infinite;
+    width: 15px;
+    height: 14px;
+}
+
+.star2 {
+    top: 10px;
+    left: -15px;
+    width: 21px;
+    height: 20px;
+    -webkit-animation: star 1s 2s linear infinite;
+}
+
+.star3 {
+    top: 30px;
+    left: -15px;
+    -webkit-animation: star 1s .8s linear infinite;
+}
+
+.star4 {
+    top: 4px;
+    right: -16px;
+    width: 20px;
+    height: 19px;
+    -webkit-animation: star 1s 1.5s linear infinite;
+}
+
+.star5 {
+    top: 14px;
+    right: -15px;
+    width: 15px;
+    height: 14px;
+    -webkit-animation: star 1s 1.2s linear infinite;
+}
+
+.star6 {
+    top: 26px;
+    right: -14px;
+    -webkit-animation: star 1s 1.5s linear infinite;
+    width: 18px;
+    height: 17px;
+}
+
+@-webkit-keyframes star {
+    0% {
+        -webkit-transform: scale(1) rotate(0)
+    }
+    50% {
+        -webkit-transform: scale(0) rotate(180deg)
+    }
+    100% {
+        -webkit-transform: scale(1) rotate(360deg)
+    }
+}
+
+@-webkit-keyframes mymove {
+    0%, 88%, 77%, 100%, 66%, 55% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+    11%, 33% {
+        transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+    }
+    22%, 44% {
+        transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+    }
+}
+
+@-moz-keyframes mymove {
+    0%, 88%, 77%, 100%, 66%, 55% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+    11%, 33% {
+        transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+    }
+    22%, 44% {
+        transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+    }
+}
+
+@keyframes mymove {
+    0%, 88%, 77%, 100%, 66%, 55% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+    11%, 33% {
+        transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+    }
+    22%, 44% {
+        transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+    }
+}

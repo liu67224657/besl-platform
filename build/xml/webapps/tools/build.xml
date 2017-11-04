@@ -1,0 +1,174 @@
+<project name="tools" default="webapps.tools" basedir=".">
+    <!--###########################################################-->
+    <!--## Buildfile for the platform webapp.  The webapp target is  ##-->
+    <!--## called from the main buildfile, /java/build/build.xml.##-->
+    <!--###########################################################-->
+    <property name="webapps.tools.available" value="true"/>
+
+
+    <!--###########################################################-->
+    <!--## Core webapp target                                    ##-->
+    <!--###########################################################-->
+    <target name="webapps.tools.core"
+            depends="webapps.tools.bootstrap,webapps.tools.create.output,webapps.tools.compile,webapps.tools.config"
+            description="build just the www webapp"/>
+
+    <target name="webapps.tools"
+            depends="webapps.tools.core,webapps.tools.core.jar,webapps.tools.htdocs.tar"
+            description="build the tools webapp"/>
+
+    <!--###########################################################-->
+    <!--## initialization target                                 ##-->
+    <!--## This target expects the following parameters to be    ##-->
+    <!--## defined:                                              ##-->
+    <!--##	${view.webapps.root} - the root webapps directory    ##-->
+    <!--##	${output.stage.root} - the lib output directory      ##-->
+    <!--##	${output.classes.root} - the platform classes dir    ##-->
+    <!--###########################################################-->
+    <target name="webapps.tools.bootstrap" depends="bootstrap" unless="webapps.tools.bootstrap.complete">
+        <!-- set the webapp root -->
+        <path id="webapps.tools.path">
+            <pathelement path="${view.webapps.root}/tools"/>
+        </path>
+        <pathconvert dirsep="/" property="webapps.tools.root" refid="webapps.tools.path"/>
+
+        <!-- set the java root -->
+        <property name="webapps.tools.java.root" value="${webapps.tools.root}/java"/>
+
+        <!-- set the htdocs root -->
+        <property name="webapps.tools.htdocs.root" value="${webapps.tools.root}/htdocs"/>
+
+        <!-- set class output root -->
+        <property name="webapps.tools.classes.root" value="${output.classes.root}/webapps/tools"/>
+
+        <!-- display the directories: -->
+        <echo message="----------------------------------------------------         "/>
+        <echo message="  tools webapp view root     ${view.webapps.root}             "/>
+        <echo message="   - version                 ${build.platform.version}      "/>
+        <echo message="   - java                    ${webapps.tools.java.root}       "/>
+        <echo message="   - htdocs                  ${webapps.tools.htdocs.root}     "/>
+        <echo message="   - classes                 ${webapps.tools.classes.root}    "/>
+        <echo message="   - output                  ${output.stage.root}              "/>
+        <echo message="----------------------------------------------------         "/>
+
+        <!-- flag boostrap as complete -->
+        <property name="webapps.tools.bootstrap.complete" value="true"/>
+    </target>
+
+    <!--###########################################################-->
+    <!--## webapp preparing target                               ##-->
+    <!--###########################################################-->
+    <target name="webapps.tools.create.output" depends="webapps.tools.bootstrap">
+        <!-- create the classes directory: -->
+        <mkdir dir="${webapps.tools.classes.root}"/>
+
+        <!-- create the version stamp -->
+        <echo file="${webapps.tools.htdocs.root}/version.txt" message="${build.platform.version}"/>
+    </target>
+
+
+    <!--###########################################################-->
+    <!--## webapp compile target                                 ##-->
+    <!--###########################################################-->
+    <target name="webapps.tools.compile" depends="webapps.tools.bootstrap,webapps.tools.create.output"
+            description="compile the webapp classes">
+        <!-- compile the platform webapp classes -->
+        <javac
+                srcdir="${webapps.tools.java.root}"
+                destdir="${webapps.tools.classes.root}"
+                nowarn="${platform.javac.nowarn}"
+                debug="${platform.javac.debug}"
+                optimize="${platform.javac.optimize}"
+                deprecation="${platform.javac.deprecation}"
+                includeAntRuntime="no"
+                includeJavaRuntime="yes"
+                encoding="${java.source.encoding}">
+
+            <classpath>
+                <pathelement path="${compiletime.classpath}"/>
+                <pathelement path="${output.classes.framework.root}"/>
+                <pathelement path="${output.classes.webcommon.root}"/>
+            </classpath>
+
+            <sourcepath>
+                <pathelement location="${webapps.tools.java.root}"/>
+            </sourcepath>
+        </javac>
+    </target>
+
+    <target name="webapps.tools.config" depends="webapps.tools.bootstrap"
+            description="copy the web config and properties to web-inf classes">
+        <mkdir dir="${webapps.tools.htdocs.root}/WEB-INF/classes"/>
+
+        <copy todir="${webapps.tools.htdocs.root}/WEB-INF/">
+            <fileset dir="${output.classes.webcommon.root}/META-INF/">
+                <include name="*"/>
+            </fileset>
+        </copy>
+
+        <copy todir="${webapps.tools.htdocs.root}/WEB-INF/classes">
+            <fileset dir="${webapps.tools.java.root}">
+                <include name="**/*.xml"/>
+                <include name="**/*.properties"/>
+                <exclude name="build/**"/>
+                <exclude name="work/**"/>
+            </fileset>
+        </copy>
+
+        <native2ascii encoding="utf-8" dest="${webapps.tools.htdocs.root}/WEB-INF/classes/hotdeploy/i18n"
+                      src="${view.configfiles.root}/hotdeploy/i18n" ext=".properties">
+            <include name="**/*.properties"/>
+        </native2ascii>
+    </target>
+    <!--###########################################################-->
+    <!--## webapps jar or tar target                             ##-->
+    <!--###########################################################-->
+    <target name="webapps.tools.core.jar" depends="webapps.tools.compile" description="builds the tools-java.jar">
+        <mkdir dir="${output.stage.root}"/>
+        <jar destfile="${output.stage.root}/tools-java.jar">
+            <fileset dir="${webapps.tools.classes.root}">
+            </fileset>
+            <fileset dir="${webapps.tools.java.root}">
+                <include name="**/*.xml"/>
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="webapps.tools.htdocs.tar" description="creates the tools-htdocs.tar for deployment">
+        <tar destfile="${output.stage.root}/tools-htdocs.tar" longfile="warn">
+            <tarfileset dir="${webapps.tools.htdocs.root}">
+                <include name="**/*"/>
+            </tarfileset>
+        </tar>
+    </target>
+
+    <!--###########################################################-->
+    <!--## webapp.clean target                                   ##-->
+    <!--###########################################################-->
+    <target name="webapps.tools.clean" depends="webapps.tools.bootstrap"
+            description="deletes all class files, tools-htdocs.tar and www-java.jar">
+        <!-- Delete the files generated by the build -->
+        <delete quiet="true">
+            <fileset dir="${output.stage.root}" casesensitive="yes" followsymlinks="false">
+                <include name="tools-*.jar"/>
+                <include name="tools-*.tar"/>
+            </fileset>
+        </delete>
+
+        <delete quiet="true">
+            <fileset dir="${webapps.tools.classes.root}" casesensitive="yes" followsymlinks="false">
+                <include name="**/*"/>
+            </fileset>
+        </delete>
+
+        <delete quiet="true">
+            <fileset dir="${webapps.tools.classes.root}" casesensitive="yes" followsymlinks="false">
+            </fileset>
+        </delete>
+
+        <delete quiet="true">
+            <fileset dir="${webapps.tools.htdocs.root}/WEB-INF/classes" casesensitive="yes" followsymlinks="false">
+            </fileset>
+        </delete>
+    </target>
+</project>

@@ -1,0 +1,198 @@
+IndexAction
+/ 首页解析域名
+--------------------------------
+
+LoginAction
+/login		[-->login.jsp;-->home.jsp]		[GET,POST]				 登录页
+/logout		[-->login.jsp]					[GET,POST]				 退出页
+/pwd/forgot [-->pwdforgot.jsp]				[GET,POST]				 找回密码页
+/pwd/reset 	[-->pwdreset.jsp]				[GET,POST]				 重置密码页
+--------------------------------
+
+
+HomeAction
+/home		[-->home.jsp]		[GET,POST]				用户成功登录后首页，需要判断cookie,是否成功登录过。
+/			[-->home.jsp]		[GET,POST]				http://*.XXX.com需判断泛域名，判断用户信息
+--------------------------------
+
+
+RegisterAction
+/register				[-->register.jsp]	[GET,POST]		 注册页
+/register/{regCode}		[-->register.jsp]	[GET,POST]		 带注册码的预注册
+/register/userExists	[-->JSON]			[GET,POST]		ajax验证用户是否存在，发送json格式
+/register/blogExists	[-->JSON]			[GET,POST]		ajax验证博客是否存在，发送json格式
+--------------------------------
+
+
+SetAction
+/settings
+/settings/profile
+http://www.suishi.fm/settings 账号设置
+http://www.suishi.fm/settings/profile 保存设置
+--------------------------------
+
+
+UserAction
+/customize
+/customize/{domainid}
+http://www.suishi.fm/customize 个人资料，模板，互动
+http://www.suishi.fm/customize/ziwolf  自定义
+/customize/userdetail  用户详细信息
+
+/customize/ajaxsavebaseinfo   保存个人信息
+--------------------------------
+
+
+UserDetailAction
+/userdetail                     [-->register.jsp]	[GET,POST]		 注册页当前用户的个人详细信息
+/userdetail/{userid} 或 {uno}    [-->xxxxx.jsp]	    [GET,POST]		 查看其它用户的详细信息
+/site/saveuserface				[-->String]	  	  [GET,POST]		 ajax保存用户头像
+--------------------------------
+
+
+BlogAction
+/blog/new/text GET;POST
+/blog/new/photo GET;POST
+/blog/new/audio GET;POST
+/blog/new/link GET;POST
+/blog/new/video GET;POST
+/blog/{domainid}
+/edit GET;PUT
+/delete DELETE
+http://www.suishi.fm/blog/new/text 发布文字
+http://www.suishi.fm/blog/new/photo 发布照片
+http://www.suishi.fm/blog/new/audio 发布音乐
+http://www.suishi.fm/blog/new/link  发布链接
+http://www.suishi.fm/blog/new/video 发布视频
+http://www.suishi.fm/blog/ziwolf 我的博客
+http://www.suishi.fm/edit/72e391a0-6efe-11e0-b2b4-a6352758b33b 编辑 
+http://www.suishi.fm/delete/72e391a0-6efe-11e0-b2b4-a6352758b33b 删除
+--------------------------------
+
+ExploreAction
+/explore/hot/category
+/explore/wall
+http://www.suishi.fm/explore/hot/category/  推荐
+http://www.suishi.fm/explore/wall/ 发现
+--------------------------------
+
+
+TagAction
+/tag 						[-->xx.jsp]		[GET]			 //-------暂时未用     改到Search中实现查询------------  搜索标签主页，内容待定
+/tag/{stype}/{content}/ 		[-->xx.jsp]		[]			 //-------暂时未用     改到Search中实现查询------  搜索(博文<stext:stext>、博主<stype:sblog>、标签<stype:stag>) 
+/tag/watch/{content}◆	[]				[AJAX]				收藏标签
+◆/tag/likelist       收藏标签列表
+◆/tag/likedelete     收藏标签删除
+◆/tag/likeadd        添加收藏标签
+/tag/ajaxliketag   我的首页收藏标签动态加载
+--------------------------------
+
+
+SearchAction
+/s/{key}/?stype=&ct=&bt=                     [-->/search/listblogtexts.jsp   searcherror.sjp]   搜索博文
+/sBlog/{key}/                                [-->/search/listblogs.jsp   searcherror.sjp]   搜索博主
+/search/ajaxQueryActiveUsers      [-->JSON]			[GET,POST]		ajax 查询活跃用户BY tag
+/search/ajaxQuerySameUsers        [-->JSON]			[GET,POST]		ajax 查询同道中人BY tag
+--------------------------------
+
+
+InviteAction
+/invite
+http://www.suishi.fm/invite 邀请
+--------------------------------
+
+
+FavoriteAction
+/favorite   [-->/favorite/favoritelist.jsp]		[GET]				我的收藏列表页面
+
+
+
+DomainAction
+/post/{id}
+
+http://ziwolf.XXX.com/ 自已或他人的域
+http://ziwolf.XXX.com/post/d9a067f0-6b0d-11e0-b8f5-3eb5d252e147 查看单个
+http://ziwolf.XXX.com/post/e7e421d0-699b-11e0-86b0-9e1aca9c0121#comments 回应
+--------------------------------
+
+PvAction
+http://www.suishi.fm/pv pv访问统计
+
+
+--------------------------------
+
+MemoAction
+◆http://www.suishi.fm/memo  查询小纸条
+◆http://www.suishi.fm/memo/new  新文章的小纸条
+◆http://www.suishi.fm/memo/readmemo  读取小纸条
+--------------------------------
+
+FeedBackAction
+◆http://www.suishi.fm/feedback/publish  发表评论
+◆http://www.suishi.fm/feedback
+◆http://www.suishi.fm/feedback/publish 发表评论
+◆http://www.suishi.fm/feedback/delete 发表评论
+◆http://www.suishi.fm/feedback/querybyblog 该文章的评论
+◆http://www.suishi.fm/feedback/reveivelist 收到评论评论
+◆http://www.suishi.fm/feedback/publishlist 发表评论的列表
+--------------------------------
+
+FocusAction
+◆http://www.suishi.fm/focus  关注
+◆http://www.suishi.fm/unfocus 取消关注
+◆http://www.suishi.fm/updatedemo 修改备注
+◆http://www.suishi.fm/focus/set 关注后的设置（demo 和 分组）
+◆http://www.suishi.fm/focus/list 被关注人列表
+◆http://www.suishi.fm/fans/list 粉丝列表
+◆http://www.suishi.fm/focus/grouplist 按分组显示的关注人列表
+◆http://www.suishi.fm/focus/addtype 添加分组
+--------------------------------
+
+ApiAction
+◆http://www.suishi.fm/api/{apiCode} 申请key
+◆http://www.suishi.fm/api/{apiCode}/unbind 取消绑定
+◆http://www.suishi.fm/api/callback/{apiCode}/{uno} 申请后回调绑定
+--------------------------------
+
+NoticeAction
+◆http://www.suishi.fm/notice/ajaxgetnotice 得到未读的消息
+--------------------------------
+UserMessageAction
+◆/message/private/send  发件逻辑
+◆/message/private/feedback 回复
+◆/message/private/messlist 收件箱
+◆/message/private/notice 系统消息列表
+◆/message/delete/group 删除该用户所有的私信
+◆/message/delete 删除私信
+--------------------------------
+描述说明区：◆●★№☆■▲△※¤
+
+◆：需要登录验证
+
+
+
+-------------------------------------------------------------------
+标签用法：
+[userface.tlf--- UserFaceTag.java]
+页面上取大头像(500*500待定)的标签用法：${uf:parseBFace(userSession.blogwebsite.headIcon)}
+页面上取中头像(115*115)的标签用法：    ${uf:parseMFace(userSession.blogwebsite.headIcon)}
+页面上取中头像(58*58)的标签用法：      ${uf:parseSFace(userSession.blogwebsite.headIcon)}
+
+参数为空，或是出错，返回默认的头像地址     /static/defult/img/default.jpg
+-------------------------------------------------------------------
+注意事项：
+
+1.tomcat的 service.xml配置(session cookie domain , datasource)：
+<Context sessionCookieDomain=".joyme.test">
+<Resource name="jdbc/mysql_jmh" auth="Container"
+            type="javax.sql.DataSource" username="rd" password="rd"
+            driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://172.16.75.9:3306/jmh_kf?characterEncoding=utf-8"
+            maxActive="8" maxIdle="4"/>
+</Context>
+
+2. tomcat的service.xml的<host>中添加
+<host>
+<Context docBase="jmh" path=""/>
+</host>
+
+

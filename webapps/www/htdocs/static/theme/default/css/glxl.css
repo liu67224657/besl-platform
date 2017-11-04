@@ -1,0 +1,15 @@
+.tab-main.strategy_list>div{padding-top:0;}
+.tab-main.strategy_list dd{position:relative;}
+.tab-main.strategy_list dd p{width:65%;}
+.tab-main.strategy_list dd h1{padding-top:10px;}
+.tab-main.strategy_list dd>span{position:absolute;right:10px;top:50%;margin:0;margin-top:-15px;}
+.lb-main dd .mf{border:1px solid #ddd;color:#2f91f1;background-color: rgba(185,185,185,0);background-image: -webkit-linear-gradient(bottom, #f3f3f3, rgba(249,249,249,0) 54%, rgba(255,255,255,0));
+	background-image: -moz-linear-gradient(bottom, #f3f3f3, rgba(249,249,249,0) 54%, rgba(255,255,255,0));
+	background-image: -o-linear-gradient(bottom, #f3f3f3, rgba(249,249,249,0) 54%, rgba(255,255,255,0));
+	background-image: -ms-linear-gradient(bottom, #f3f3f3, rgba(249,249,249,0) 54%, rgba(255,255,255,0));
+	background-image: linear-gradient(to top, #f3f3f3, rgba(249,249,249,0) 54%, rgba(255,255,255,0));}
+.lb-main dd .mf:active{border:solid 1px #2f91f1;color:#fff;background-color: #2f91f1;background-image: -webkit-linear-gradient(bottom, #007af1, rgba(25,134,241,0) 54%, rgba(47,145,241,0));
+	background-image: -moz-linear-gradient(bottom, #007af1, rgba(25,134,241,0) 54%, rgba(47,145,241,0));
+	background-image: -o-linear-gradient(bottom, #007af1, rgba(25,134,241,0) 54%, rgba(47,145,241,0));
+	background-image: -ms-linear-gradient(bottom, #007af1, rgba(25,134,241,0) 54%, rgba(47,145,241,0));
+	background-image: linear-gradient(to top, #007af1, rgba(25,134,241,0) 54%, rgba(47,145,241,0));}

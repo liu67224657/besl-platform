@@ -1,0 +1,37 @@
+body{ margin:0; padding:0; background:url(../img/tysimulation/body_bg_mid.jpg) top center repeat-y; font-size:12px; font-family:"宋体"}
+li,ul,h2,h3,ol{ list-style:none; padding:0; margin:0;}
+#body_bg{ width:100%; background:url(../img/tysimulation/footbanner.jpg) center bottom no-repeat;}
+#body_bg_mid{ width:100%; background:url(../img/tysimulation/topbanner.jpg) top center no-repeat;}
+#content{ width:824px; margin:0 auto; padding:40px 0 30px 0; position:relative; left:-25px;}
+.cont_mid{ width:824px; height:auto; overflow:hidden;}
+.model_1{ padding:0 10px 0 15px;}
+.model_1 h2{ width:216px; height:30px; background:url(../img/tysimulation/text_1.gif) no-repeat; text-indent:-9999px;}
+.model_1 ul,.model_2 ul{ padding-top:28px; width:100%; float:left;}
+.model_1 li,.model_2 li{ width:112px; height:48px; float:left; cursor:pointer; position: relative}
+.model_1 li.m1{ background:url(../img/tysimulation/m1.jpg) no-repeat;}
+.model_1 li.m2{ background:url(../img/tysimulation/m2.jpg) no-repeat;}
+.model_1 li.m3{ background:url(../img/tysimulation/m3.jpg) no-repeat;}
+.model_1 li.m4{ background:url(../img/tysimulation/m4.jpg) no-repeat;}
+.model_1 li.m7,.model_2 li.m7{ width:15px; height:17px; background:url(../img/tysimulation/m8.gif) no-repeat; float:left; margin:16px 5px 0 2px; display:inline;}
+.model_1 input.but_1,.model_2 input.but_1{ width:157px; height:70px; background:url(../img/tysimulation/m7.jpg) no-repeat; border:0; cursor:pointer; margin:0; padding:0;}
+.model_1 h3{ width:233px; height:54px; background:url(../img/tysimulation/text_2.gif) no-repeat; text-indent:-9999px; margin:18px 0 10px 44px; clear:both; float:left;}
+.m_pic{ margin:0 auto; padding:10px 0 10px 0; width:700px; text-align:left; clear:both;}
+.model_2{ padding:30px 10px 0 15px; clear:both;}
+.model_2 h2{ width:299px; height:30px; background:url(../img/tysimulation/text_3.gif) no-repeat; text-indent:-9999px;}
+.model_2 li.m5{ background:url(../img/tysimulation/m5.jpg) no-repeat;}
+.model_2 li.m6{ background:url(../img/tysimulation/m6.jpg) no-repeat;}
+.model_2 h3{ width:650px; height:53px; background:url(../img/tysimulation/text_4.gif) no-repeat; text-indent:-9999px; float:left; margin:23px 0 0 44px; clear:both;}
+.model_1 li ol,.model_2 li ol{width:160px; float:left; margin-top:49px; z-index:999; position:relative; display:none;}
+.model_1 li ol li,.model_2 li ol li{ margin-bottom:1px;}
+.model_1 li span,.model_2 li span{
+background: url("../img/tysimulation/list_1.gif") no-repeat scroll 0 0 transparent; color: #FFFFFF; display: block; font-family: "黑体"; font-size: 20px; height: 48px; display: none; position: absolute; line-height: 48px; text-align: center; text-decoration: none; width: 112px; left:0;}
+.model_1 li ol li a,.model_2 li ol li a{ width:112px; height:48px; background:url(../img/tysimulation/list_1.gif) no-repeat; display:block; line-height:48px; font-size:20px; text-align:center; font-family:"黑体"; color:#fff; text-decoration:none;}
+.model_1 li ol li a:hover,.model_2 li ol li a:hover{ width:112px; height:48px; background:url(../img/tysimulation/list_2.gif) no-repeat;}
+.footbanner{ width:100%;  height:50px; clear:both; padding-top:130px;}
+.footbanner p{ width:824px; margin:0 auto; text-align:left; color:#fff; font-size:12px; }
+.footbanner p span{ padding:0 20px;}
+.footbanner p a{ color:#fff; text-decoration:none;}
+.footbanner p a:hover{ text-decoration:underline;}
+.headt{margin-bottom: 39px}
+.LinkHref{height: 20px; width: 500px; margin: 0 auto; padding-top: 110px; text-align: right; }
+.LinkHref a{color: #fff;}

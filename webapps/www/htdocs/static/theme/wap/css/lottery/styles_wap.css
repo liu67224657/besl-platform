@@ -1,0 +1,91 @@
+
+*{-webkit-tap-highlight-color:rgba(0,0,0,0); margin:0; padding:0;}
+a{text-decoration: none;}
+html{font-size:62.5%; width:100%; height:100%}
+body{background: #290a46; font-size:1.6rem; text-align:justify; font-family:'Helvetica Neue',Helvetica,Arial,Sans-serif}
+
+/*内容*/
+#wrapper{ width: 100%;}
+#content{ text-align: center;margin-top:48px;}
+#content .con_tips{color:#fff;background:none;position:absolute;text-align:center;top:7.7rem;font-size:1.4rem;padding:0 1rem;z-index:0;}
+#content .con_bg img{ display: block; width: 100%; font-size: 0;}
+
+/* .con_bg img:last-child{position: absolute;left: 0;bottom:0;} */
+#footer{ background: #222830; text-align: center; padding:1rem 0;}
+#footer div{ font-size: 1.2rem; line-height: 2.2rem;color:#8699b4}
+
+
+#topBar{ width: 100%; display: block;  box-sizing: border-box; margin:0; font-size: 0; top: 0; left: 0; overflow: hidden;z-index:9999;position:absolute;top:0;left:0; }
+#topBar.popup_show div.ad_box{display:none;}
+#topBar.popup_show div.popup_box{display:block;}
+#topBar>div.ad_box{ padding: 7px 7px; overflow:hidden;background:#292929;}
+.logo{ display:block; width: 40px; height: 40px; float: left;}
+.logo img{ width: 40px; height: 40px;}
+.tit{ display: inline-block; line-height:10px; padding: 0 0 0 10px; float: left; font-size:14px; }
+.tit em{ display: block; font-size: 16px; line-height:25px; font-style: normal; color: #fff;font-weight:bold;}
+.tit em img{ display: block; width: 63px; height: 20px;}
+.tit span{ display: block;padding:3px 0 0; font-size: 12px; color: #d2d2d2;}
+.dw-btn{float: left; font-size: 0;width:72px;height:40px;position:absolute; background:#0aaa0d;border-radius:8px;right:7px;top:7px;}
+.dw-btn a{ display: block; outline:none; color: #fff; font-size:18px; vertical-align: middle;padding:8px 0 0 28px;}
+.dw-btn a:before{content: ""; width:19px; height:16px;position: absolute;top:12px;left:8px; background:url(../../images/lottery/load-ued.png) no-repeat 0 0; background-size:19px 16px;}
+.dw-btn a:active{ box-shadow:0px 0px 5px #5ed995;border-radius:8px;}
+#topBar .con_tips{ font-size:12px; display:block; clear:both; color:#fff; padding:5px 15px; background:rgba(0,0,0,0.2);}
+#topBar .con_tips span{ position:absolute; right:5px; padding:0 10px} 
+.popup_box{width:100%;height:100%;font-size:0;padding:0;margin:0;display:none;}
+.popup_box img{width:100%;display:block;-webkit-border-bottom-left-radius:10px;-webkit-border-bottom-right-radius:10px;overflow:hidden;-moz-border-bottom-left-radius:10px;-moz-border-bottom-right-radius:10px;-ms-border-bottom-left-radius:10px;-ms-border-bottom-right-radius:10px;-o-border-bottom-left-radius:10px;-o-border-bottom-right-radius:10px;overflow:hidden;border-bottom-right-radius:10px;border-bottom-left-radius:10px;}
+.mark_box{position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:10;display:none;}
+
+#loadTips{display:none;}
+.loadTips{
+  display:inline-block;
+  width: 90px;
+  height: 20px;
+  background:rgba(0,0,0,0.6);
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  position: relative;
+  margin:0 5px;
+  text-align:center;
+  position:fixed;
+  z-index:999;
+  top:50%;
+  left:50%;
+  margin:-10px 0 0 -45px;
+}
+.loadTips > div {
+  width: 20px;
+  height: 20px;
+  background-color: #52c0b0;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: loadTips 1.4s infinite ease-in-out;
+  animation: loadTips 1.4s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.loadTips .load-bar1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loadTips .load-bar2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+@-webkit-keyframes loadTips {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+@keyframes loadTips {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+@media screen and (max-height: 480px){
+    .con_bg img:last-child{position: static;}
+}
+

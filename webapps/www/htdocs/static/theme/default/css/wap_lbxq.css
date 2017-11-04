@@ -1,0 +1,30 @@
+.details{width:100%;position:relative;}
+.reserveing-icon{position:absolute;top:0;right:25px;z-index:2;width:22px;height:39px;}/*头部 预定中*/
+.reserveing-icon.n{display:none;}
+.reserveing-icon img{width:22px;height:39px;}
+.details-mark{background:rgba(0,0,0,0.6);width:100%;height:100%;position:absolute;top:0;left:0;}
+.details p{font-size:0;}
+.details p img{width:100%;height:100%;}
+.details-box{position:absolute;left:24px;top:13px;}
+.details-tit{width:65px;height:66px;-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;-ms-border-radius:5px;overflow:hidden;background:#fff;}
+.details-tit img{width:100%;height:100%;}
+.details-text{padding-left:10px;text-align:left;}
+.details-text h1{font-size:16px;color:#fff;line-height:26px;}
+.details-text h2,.details-text h3{color:#fff;}
+.details-message{height:32px;padding:0 10px;background:#fafafa;line-height:32px;border-bottom:1px solid #ededed;font-size:12px;}
+.details-message p{color:#525252;}
+.details-main{background:#fff;padding:0 14px;}
+.exclusive{/* margin-top:10px; */}
+.exclusive img{width:100%;}
+.exclusive h1{width:100%;height:24px;border-bottom:1px solid #ddd;text-align:left;font-size:16px;padding-top:15px;}
+.exclusive h1 span{border-bottom:1px solid #ffc000;height:24px;line-height:24px;display:inline-block;color:#000;}
+.exclusive p{color:#7e7e7e;text-align:left;padding-top:8px;}
+.details-btn{height:55px;width:100%;background:rgba(250,250,250,0.9);position:fixed;bottom:0;left:0;}
+.details-btn .details-butten{display:block;width:220px;height:40px;text-align:center;line-height:40px;margin:0 auto;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;-o-border-radius:20px;-ms-border-radius:20px;color:#fff;font-size:16px;margin-top:7px;}
+.details-btn .a1{background:#2f91f1;}/*马上预定  马上兑换*/
+.details-btn .a2{background:#80d553}
+.details-btn .a2 span{background:url(../images/my/win.png) no-repeat left center; background-size:15px 17px;-webkit-background-size::15px 17px;-moz-background-size::15px 17px;-o-background-size::15px 17px;-ms-background-size::15px 17px;padding-left:19px;}/*已预订*/
+.details-btn div{width:50%;}
+.details-btn .butten{display:block;width:90%;margin:0 auto;height:40px;border-radius:25px;-webkit-border-radius:25px;-moz-border-radius:25px;-o-border-radius:25px;-ms-border-radius:25px;color:#fff;line-height:40px;font-size:16px;}
+.details-btn .a3{background:#097ced; }
+.details-btn .a4{background:#ff4500; }

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+    <description>sys tag</description>
+    <display-name>sys tag</display-name>
+    <tlib-version>1.0</tlib-version>
+    <short-name>sys-tag</short-name>
+    <uri>/sys-tag</uri>
+
+    <tag>
+        <!-- 在JSP中初始化SysConstant常量，以便JSTL中引用。 jsp中使用范例：<sys-tag:SysConstant var="常量名称"/>
+              必填参数var：指定初始化SysConstant中某个变量，如果为空，则报异常 可选参数scope：变量作用范围，默认为page -->
+        <description>SysConstant常量</description>
+        <name>SysConstant</name>
+        <tag-class>com.enjoyf.webapps.joyme.webpage.util.ConstantTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>必填参数var：指定初始化sysConstant中某个变量，为空则报异常</description>
+            <name>var</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>变量作用范围(默认为page)</description>
+            <name>scope</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+    </tag>
+
+    <!-- 系统缓存： 通过城市ID存城市名称 -->
+    <function>
+        <name>regionById</name>
+        <function-class>com.enjoyf.webapps.joyme.webpage.util.ConstantTag</function-class>
+        <function-signature>java.lang.String regionById(int)</function-signature>
+        <example>&lt;c:out value="${st:regionById(id)}"&gt;</example>
+    </function>
+
+    <!-- get the random upload domain-->
+    <function>
+        <name>randUploadDomain</name>
+        <function-class>com.enjoyf.webapps.joyme.webpage.util.ConstantTag</function-class>
+        <function-signature>java.lang.String getRandUploadDomain()</function-signature>
+        <example>&lt;c:out value="${st:getRandUploadDomain()}"&gt;</example>
+    </function>
+
+     <function>
+        <name>openSyncProvider</name>
+        <function-class>com.enjoyf.webapps.joyme.webpage.util.ConstantTag</function-class>
+        <function-signature>boolean openSyncProvider()</function-signature>
+        <example>&lt;c:out value="${st:openSyncProvider()}"&gt;</example>
+    </function>
+
+    <!-- get the random upload domain-->
+    <function>
+        <name>downResourceDomainsJson</name>
+        <function-class>com.enjoyf.webapps.joyme.webpage.util.ConstantTag</function-class>
+        <function-signature>java.lang.String getDownResourceDomainsJson()</function-signature>
+        <example>&lt;c:out value="${st:getDownResourceDomainsJson()}"&gt;</example>
+    </function>
+
+</taglib>

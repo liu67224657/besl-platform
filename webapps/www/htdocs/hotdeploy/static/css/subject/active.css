@@ -1,0 +1,67 @@
+@charset "utf-8";
+#content{ vertical-align:top}
+.tablecss img{display:block;border:0px;}			
+.tdcss{background:url(../images/sj_07.jpg) no-repeat;width:514px;height:376px;  vertical-align:top}
+.tdcon{padding-top:45px;padding-left:30px;font-family:'microsoft yahei'; padding-right:25px;float:left;}
+dl{width:100%; clear:right}
+dl,dt,dd{margin:0px;padding:0px;font-size:14px; line-height:1.8}
+dt{width:12px; float:left; clear:left;}
+dd{width:440px; float:left;clear:right; color:#242424;text-align:left}
+.btn{padding-top:10px;float:left;width:340px;float:right}
+dd a{color:#f43c00}
+.btn a{display:inline-block;width:142px;height:44px; line-height:44px;font-size:18px;color:#fff; text-align:center;text-decoration:none;}
+.btn a:hover,.fc_con a:hover{text-decoration:underline}
+.btn .btn01,.btn .btn02,.fc,.fc_con a{background:url(../images/btn.png) no-repeat}
+.btn .btn01{margin-right:20px;background-position:0px 0px; }
+.btn .btn02{margin-right:33px;background-position:0px -44px; }
+.fc{width:278px;height:115px;background-position:0px -88px;}
+.fc_con{padding:15px 40px 0px ; font-size:16px; color:#fd0505; font-family:"microsoft yahei"; text-align:center}
+.fc_con p{padding:0px 0px 5px 0px;margin:0px; line-height:1.8; }
+.fc_con a{margin:0px auto;width:74px;display:inline-block;background-position:-142px 0px;height:26px;  line-height:26px; text-align:center; color:#fff; text-decoration:none;}
+/*英雄联盟*/
+#topic{width:1000px; background:#13090a;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;  position:relative;font-size:14px; text-align:left; color:#4f6a94;padding-top:7px;padding-bottom:18px; overflow:hidden}
+.ycontent{width:100%;background:url(../../img/subject/yimages/banner.jpg) no-repeat;}
+.ybannner{height:369px; display:block; width:100%}
+.yarea{ padding:0px 3px 0px 9px;}
+.ywrapper{border:1px solid #232438;background:#01081a;margin:0 9px;}
+.yleft{margin-top:15px;width:201px;float:left;}
+.yl_hd{height:51px;background:url(../../img/subject/yimages/tit.png) no-repeat 0px -51px; color:#ffffff;font-family:"microsoft yahei";line-height:51px;padding-left:12px;}
+.yl_bd{font-family:"宋体";font-size:12px; line-height:20px; position:relative;background:url(../../img/subject/yimages/yl_bd.jpg) repeat-y}
+.yl_bdcon{padding:12px; padding-bottom:35px;background:url(../../img/subject/yimages/bottom02.jpg) no-repeat;background-position:left bottom}
+.yl_bd p{text-indent:2em}
+/*yright*/
+.yright{margin:3px 0 0 7px;float:left; display:inline;width:760px;}
+.ylist{width:252px;float:left;margin-top:5px;height:275px; overflow: hidden;}
+.ylist li{background:url(../../img/subject/yimages/tit.png) no-repeat -948px -58px;padding-left:18px; line-height:20px;font-size:12px;font-family:"宋体"}
+.ylist li.img{background:none;padding:0px;}
+.ylist li a{color:#84ace8}
+.ylist li a:hover{color:#ffffff; text-decoration:none;}
+.yx_hd{height:51px;background:url(../../img/subject/yimages/tit.png) no-repeat 0 0; line-height:51px;padding-left:10px;color:#fff;margin-top:10px}
+.list01 li{width:107px;float:left;margin:0px 26px; display:inline; text-align:center}
+.yx_bd{border:1px solid #232438;padding:24px 0 30px 0;border-top:none}
+.list01 li a{color:#00b678; text-decoration:none;font-size:14px; line-height:20px;font-weight:bold}
+.list01 li p{margin:5px 0;font-size:12px;}
+.list01 li a:hover{text-decoration:underline}
+.ycon{margin-right:7px;}
+
+.ybottom{height:190px;background:url(../../img/subject/yimages/bottom.jpg) no-repeat;padding-top:25px;font-size:12px; font-family:"宋体"}
+.ybottom img{margin-right:20px; float:left; margin-left:9px; display:inline}
+.ybottom p{text-indent:2em;padding-right:9px;}
+.ybottom p.sign{padding-top:36px; text-align:right; text-indent:0;}
+/*三国杀*/
+#sanguo_topic{width:998px;background:#13090a; text-align:left}
+.sbanner{width:998px;height:163px;background:url(../../img/subject/simages/sbanner01.jpg) no-repeat}
+.sbanner01{height:209px;background:url(../../img/subject/simages/sbanner02.jpg) no-repeat}
+.scon01{height:189px;background:url(../../img/subject/simages/scon01.jpg) no-repeat}
+.scon02{height:328px;background:url(../../img/subject/simages/scon02.jpg) no-repeat}
+.slist{width:261px;margin:17px 0; display:inline; float:left; overflow:hidden}
+.slist li{line-height:24px;}
+.li01{margin-left:30px;}
+.li02{margin-left:77px;}
+.slist li img{float:left;}
+.slist li a{text-decoration:none; color:#bf9c77}
+.slist li a:hover{text-decoration:underline;}
+.scon03{height:325px;background:url(../../img/subject/simages/scon03.jpg) no-repeat}
+.slist01{padding-top:75px}
+.slist01 li{width:427px; float:left;margin:0px 33px; display:inline}
+.scon04{height:172px;}

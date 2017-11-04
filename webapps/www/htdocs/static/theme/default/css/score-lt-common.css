@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+.wx_center{ margin:0 1rem; overflow:hidden; background:#090429; border:1px solid #00aeff; border-radius:0.8rem 0.8rem 3rem 0.8rem;-webkit-border-radius:0.8rem 0.8rem 3rem 0.8rem; -moz-border-radius:0.8rem 0.8rem 3rem 0.8rem; padding:2rem 0 4.2rem;}
+#wx_center{ position:fixed; right:0; bottom:3.5rem; z-index:97; width:0; height:0; margin:0 0.9rem; font-size:0; -webkit-transition:all 0.3s;-moz-transition:all 0.3s; transition:all 0.3s; opacity:0;}
+#wx_center.icon_open{ width:92%; height:32rem; 
+  -webkit-transform: scale(1) rotate(0);
+  -moz-transform: scale(1) rotate(0);
+  -transform: scale(1) rotate(0); opacity:1;
+}
+.wx_center h1,.wx_center h2{ padding:0; margin:1.5rem 1.4rem; overflow:initial; border-bottom:none; }
+.wx_center h2{ margin:0.5rem 1.4rem 1.5rem;}
+.wx_tagTitle{ width:8.25rem; height:2rem; line-height:1rem; text-indent:1.8rem; font-size:1.6rem; color:#00eaff; font-style:normal; background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/wx_tagTitle.png) no-repeat 0 bottom; background-size:cover;}
+.wx_game_icon{ width:100%; font-size:0;}
+.wx_game_icon a{ width:33.3%; display:inline-block; text-align:center; text-decoration:none;}
+.wx_game_icon a.a_1 i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_1.png) no-repeat 0 0;}
+.wx_game_icon a.a_1:active i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_1_hover.png) no-repeat 0 0; background-size:cover;}
+.wx_game_icon a.a_2 i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_2.png) no-repeat 0 0;}
+.wx_game_icon a.a_2:active i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_2_hover.png) no-repeat 0 0; background-size:cover;}
+.wx_game_icon a.a_3 i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_13.png) no-repeat 0 0;}
+.wx_game_icon a.a_3:active i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_13_hover.png) no-repeat 0 0; background-size:cover;}
+.wx_game_icon a.a_4 i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_12.png) no-repeat 0 0;}
+.wx_game_icon a.a_4:active i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_12_hover.png) no-repeat 0 0; background-size:cover;}
+.wx_game_icon a.a_5 i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_11.png) no-repeat 0 0;}
+.wx_game_icon a.a_5:active i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_11_hover.png) no-repeat 0 0; background-size:cover;}
+.wx_game_icon a.a_6 i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_10.png) no-repeat 0 0;}
+.wx_game_icon a.a_6:active i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_10_hover.png) no-repeat 0 0; background-size:cover;}
+.wx_game_icon a.a_7 i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_7.png) no-repeat 0 0;}
+.wx_game_icon a.a_7:active i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_7_hover.png) no-repeat 0 0; background-size:cover;}
+.wx_game_icon a.a_8 i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_8.png) no-repeat 0 0;}
+.wx_game_icon a.a_8:active i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_8_hover.png) no-repeat 0 0; background-size:cover;}
+.wx_game_icon a.a_9 i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_9.png) no-repeat 0 0;}
+.wx_game_icon a.a_9:active i{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/lt_icon_9_hover.png) no-repeat 0 0; background-size:cover;}
+.wx_game_icon a.a_1 i,.wx_game_icon a.a_2 i,.wx_game_icon a.a_3 i,.wx_game_icon a.a_4 i,.wx_game_icon a.a_5 i,.wx_game_icon a.a_6 i,.wx_game_icon a.a_7 i,.wx_game_icon a.a_8 i,.wx_game_icon a.a_9 i{ background-size:cover; }
+.wx_game_icon a i{ display:inline-block; width:5.95rem; height:5.95rem;}
+.wx_game_icon a b{ display:block; color:#81d6fe; font-size:1.4rem; padding:1.5rem 0;}
+#wap_bg{ width:100%; height:100%; background:#000; position:fixed; top:0; left:0; z-index:0;-webkit-transition:all 0.3s;-moz-transition:all 0.3s; transition:all 0.3s; opacity:0;}
+#wap_bg.opacity{ opacity:0.8;}
+#wap_floatBtn,.wap_floatBtn2{ display:block; width:4.2rem; height:4.2rem; background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/icon_floatbtn.png) no-repeat 0 0; background-size:4.2rem 4.2rem; position:fixed; right:1.1rem; bottom:3.5rem; -webkit-transition:all 0.5s;-moz-transition:all 0.5s; transition:all 0.5s; border-radius:50%; z-index:99; }
+#wap_floatBtn.deg{ transform:rotate(45deg); -ms-transform:rotate(45deg); -moz-transform:rotate(45deg); -webkit-transform:rotate(45deg);-o-transform:rotate(45deg);}
+.wap_floatBtn2{ z-index:98;}
+/*对比*/
+.alert_compare_wrap{ width:31.5rem; height:15.7rem; overflow:hidden; font-size:0; box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box; background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/alert_compare_wrap_bg.png) no-repeat center 0; background-size:100%; position:fixed; top:50%; left:50%; margin-top:-7.85rem; margin-left:-15.75rem;-webkit-transition:all 0.3s;-moz-transition:all 0.3s; transition:all 0.3s; opacity:0;}
+.alert_compare_wrap.acw{opacity:1; z-index:19;}
+.alert_compare_list{ position:relative; overflow:hidden; z-index:9;}
+.alert_compare_list h2{ border:0; margin:0; padding:2.1rem 0 1rem; text-indent:2.1rem; font-size:1.2rem; color:#00aeff}
+.alert_compare_list ul { overflow:hidden; text-align:center;}
+.alert_compare_list ul li{ display:inline-block; border:none; text-align:center; font-size:0;}
+.alert_compare_list ul li span{ width:4.5rem;height:4.5rem; display:inline-block; overflow:hidden; background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/alert_compare_icon_bg2.png) no-repeat center 0; background-size:4.5rem 4.5rem; margin:0 0.5rem; position:relative;}
+.alert_compare_list ul li span code{ display:inline-block; left:0; top:0; width:4.5rem;height:4.5rem; position:absolute; z-index:1; background:none;}
+.alert_compare_list ul li span b{ display:inline-block; width:3.8rem;height:3.8rem; border:1px solid #004886; border-radius:3px; margin-top:3px; overflow:hidden;}
+.alert_compare_list ul li span.compare_sel code{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/2/images/alert_compare_icon_bg.png) no-repeat center 0; background-size:4.5rem 4.5rem;}
+.alert_compare_list ul li span img{ width:3.8rem;height:3.8rem; }
+.alert_compare_btn{ text-align:center; padding:1.5rem 0 0.5rem; text-align:center}
+.alert_compare_btn input[type='button']{ display:inline-block; background:none; background-image:url(''); background-color:#031b44!important; padding:0.4rem 2rem; font-size:1.4rem; color:#00aeff; border:1px solid #06F; text-align:center; border-radius:0.5rem; margin:0 2.5rem;}
+.alert_compare_btn input[type='button']:active{ background-color:#00afff!important; border:1px solid #00afff; color:#012053;}
+/*{ background:#00aeff; color:#fff;}*/
+#op_bg{ width:100%; background:#000; position:fixed; top:0; left:0; -webkit-transition:all 0.3s;-moz-transition:all 0.3s; transition:all 0.3s; opacity:0.8; z-index:18; display:none;}
+.compare_btn{ display:block; width:100px; line-height:25px; background:#f00; text-align:center; cursor:pointer; position:relative; z-index:10;}
+#compare_close{ width:20px; height:20px; font-size:1.2rem; text-align:center; line-height:20px; border-radius:50%; background:#09f; position:absolute; right:-10px; top:-20px; color:#fff; cursor:pointer;}
+/*驾驶员图鉴*/
+.swipe_prev,.swipe_next{ display:block; width:1.2rem; height:3.4rem; position:absolute; top:50%; margin-top:-1.7rem; text-indent:-999em;}
+.swipe_prev{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/swipe_prev.png) no-repeat 0 0; background-size:cover; left:10px;}
+.swipe_next{ background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/swipe_next.png) no-repeat 0 0; background-size:cover; right:10px;}
+/*补充数据*/
+#wx_top{position: relative;}
+#wx_top h5{ display:inline-block; position: absolute;right: 10px;top:30px;}
+#wx_top h5 input[type='button']{height:1.2rem; background:none;border:none;line-height:1.2rem; color:#066bdf; text-decoration:underline;}
+/*拖动工具*/
+#tabbox .tabbox_wrap #drag_wrap{ overflow:visible; float:none; position:static; margin:0;}
+#tabbox .tabbox_wrap #drag_wrap .drag_menuList{ width:100%; text-align:center; font-size:0; padding-bottom:8px;}
+#tabbox .tabbox_wrap #drag_wrap .drag_menuList span{ width:10%; display:inline-block; padding:3px 0 0;}
+#tabbox .tabbox_wrap #drag_wrap .drag_menuList span b{ display:inline-block; padding:3px 0; font-weight:normal; font-size:1rem; width:90%; background:#c8cad7; border-radius:3px;}
+#tabbox .tabbox_wrap #wx_drag{width:100%;float:left; padding: 10px 0; position:relative; z-index:99; overflow:visible;}
+#tabbox .tabbox_wrap #slider{ background: #c1c0c7;border:1px solid #a7a6b0; height:2px;position:relative;text-align:left; overflow:visible; float:none; padding-bottom:0;}
+#tabbox .tabbox_wrap #dslider{ width: 100%; height:2px; background-color:#035abb; border:1px solid #035abb; overflow:visible; float:none;padding-bottom:0; margin-top:-1px; border-radius:1px;}
+#tabbox .tabbox_wrap #aslider{ display: block; cursor: pointer; left: 100%; top:-9px; margin-left: -0.6em; height: 18em; position: absolute; width: 21px; z-index: 2; background:url(http://reswiki1.joyme.com/css/lt/wxwiki/default/1/images/drag_icon.png) no-repeat 0 0; background-size:21px 18px;}

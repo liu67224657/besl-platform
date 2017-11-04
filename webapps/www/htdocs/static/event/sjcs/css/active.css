@@ -1,0 +1,21 @@
+@charset "utf-8";
+#content{ vertical-align:top}
+.tablecss img{display:block;border:0px;}			
+.tdcss{background:url(../img/sj_07.jpg) no-repeat;width:514px;height:376px;  vertical-align:top}
+.tdcon{padding-top:45px;padding-left:30px;font-family:'microsoft yahei'; padding-right:25px;float:left;}
+dl{width:100%; clear:right}
+dl,dt,dd{margin:0px;padding:0px;font-size:14px; line-height:1.8}
+dt{width:12px; float:left; clear:left;}
+dd{width:440px; float:left;clear:right; color:#242424;text-align:left}
+dd a{color:#f43c00}
+.btn{padding-top:10px;float:left;width:340px;float:right}
+.btn a{display:inline-block;width:142px;height:44px; line-height:44px;font-size:18px;color:#fff; text-align:center;text-decoration:none;}
+.btn a:hover,.fc_con a:hover{text-decoration:underline}
+.btn .btn01,.btn .btn02,.fc,.fc_con a{background:url(../img/btn.png) no-repeat}
+.btn .btn01{margin-right:8px;background-position:0px 0px; }
+.btn .btn02{margin-right:33px;background-position:0px -44px; }
+/*.btn .btn02{margin-right:33px; float:right; display:inline;background-position:0px -44px; }*/
+.fc{width:278px;height:115px;background-position:0px -88px;}
+.fc_con{padding:15px 15px 0px ; font-size:16px; color:#fd0505; font-family:"microsoft yahei"; text-align:center}
+.fc_con p{padding:0px 0px 5px 0px;margin:0px; line-height:1.8; }
+.fc_con a{margin:0px auto;width:74px;display:inline-block;background-position:-142px 0px;height:26px;  line-height:26px; text-align:center; color:#fff; text-decoration:none;}

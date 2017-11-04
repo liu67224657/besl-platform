@@ -1,0 +1,128 @@
+body{background:url(../img/newgames-bg.jpg) repeat;}
+.footercon{margin-top:0;}
+/* topbar */
+#newgames-topbar{height:50px; border-bottom:1px solid #d2d2d2; background:#fff; box-shadow:0px 1px 6px #e4e4e4; position:relative;}
+#newgames-topbar .clearfix{width:960px; height:50px; margin:0 auto;}
+#newgames-topbar h1{float:left; width:259px; height:50px; line-height:900px; overflow:hidden; background:url(../img/newgames-logo.jpg) no-repeat;}
+.newgames-topbar-link{float:right; font-size:14px; font-family:'microsoft yahei'; margin-top:14px; overflow:hidden}
+.newgames-topbar-link a{float:left; height:20px; line-height:20px; padding-left:24px; margin-right:30px; color:#3f3f3f; background-image:url(../img/newgames.png)}
+.newgames-topbar-link a:hover{color:#7fbe25}
+.newgames-topbar-link span a{float:none}
+.newgames-link-1{background-position:-458px -60px;}
+.newgames-link-1:hover{background-position:-458px -40px;}
+.newgames-link-2{background-position:-460px -100px;}
+.newgames-link-2:hover{background-position:-460px -80px;}
+.newgames-link-3{background-position:-460px -20px;}
+.newgames-link-3:hover{background-position:-460px 0px;}
+
+/* content */
+.newgames-content{width:940px; margin:0 auto; border-left:1px solid #e5e5e5; border-right:1px solid #e5e5e5; background:#fff; padding:0 10px; height:auto!important; min-height:680px; height:680px;}
+.newgames-title{font-size:18px; font-family:'microsoft yahei'; color:#494949; font-weight:normal; padding:22px 0 14px 20px; border-bottom:1px dashed #e1e1e1}
+.newgames-title span{font-size:12px; color:#767676; padding-left:68px; font-family:'宋体'}
+.newgames-title em{}
+.cvip {background: url(../img/icon.png?130117) no-repeat; display: inline-block;height: 15px; margin-left: 2px; margin-top:-2px; overflow: hidden;vertical-align: middle;width: 15px;}
+.cvip{background-position:0 -1019px;}
+
+/* 进度条 */
+.process{width:604px; height:60px; margin:0 auto; position:relative; background-image:url(../img/process.jpg);}
+.process span{font-size:14px; color:#6b6b6b; font-family:'microsoft yahei'; position:absolute; top:10px;}
+.step-1{left:38px;}
+.step-2{left:186px;}
+.step-3{left:334px;}
+.step-4{left:512px;}
+.process-1{background-position:0 0px;}
+.process-1 span.step-1{color:#7fbe25}
+.process-2{background-position:0 -60px;}
+.process-2 span.step-1, .process-2 span.step-2{color:#7fbe25}
+.process-3{background-position:0 -120px;}
+.process-3 span.step-1, .process-3 span.step-2, .process-3 span.step-3{color:#7fbe25}
+.process-4{background-position:0 -180px;}
+.process-4 span{color:#7fbe25}
+
+/* 提交游戏表单 */
+.post-newgame{margin-top:40px; color:#666; line-height:16px; border-bottom:1px dashed #ccc}
+.post-newgame td{padding-bottom:24px;}
+.post-newgame th{text-align:right; padding-bottom:24px;}
+.post-newgame input, .post-newgame select{vertical-align:text-top; *vertical-align:middle}
+.post-newgame div.multiinput{padding-bottom:4px;}
+.post-newgame .tips{color:#999}
+.post-newgame .tips b{color:#ff0000; padding-right:2px;}
+.post-newgame .tips label{vertical-align:text-top; color:#999; margin-left:10px;}
+.post-newgame .error{color:#ff0000}
+.post-newgame label{white-space:nowrap; margin-right:10px;}
+.post-newgame select{padding:6px; color:#999}
+.post-newgame textarea{width:520px; height:110px; color:#999; border:1px solid #ccc; padding:6px; border-radius:2px;}
+.inputs-1{width:300px; border:1px solid #ccc; color:#999; padding:6px; border-radius:2px;}
+.inputs-2{width:190px; border:1px solid #ccc; color:#999; padding:6px; border-radius:2px;}
+.inputs-3{width:140px; border:1px solid #ccc; color:#999; padding:6px; border-radius:2px;}
+
+.send-newgame-btn{padding:20px 0 40px; text-align:center; font-family:'microsoft yahei'}
+.send-newgame-btn a{font-size:14px;}
+
+/* 审核 */
+.checkstate{width:460px; font-family:'microsoft yahei'; color:#5a5a5a; margin-top:80px; float:left; margin-left:50px;}
+.ischecking{line-height:50px; font-size:18px;}
+.ischecking span{color:#609312}
+.youcando{line-height:36px; padding-top:50px; font-size:16px;}
+.youcando span{color:#55779E}
+.board{float:right; margin:70px 30px 0 0}
+.manuge-my-game{width:324px; margin:0 auto; padding-top:86px;}
+.manuge-my-game a{display:block; width:324px; height:64px; line-height:64px; background-image:url(../img/newgames-manuage.jpg); text-indent:110px; font-size:20px; font-family:'microsoft yahei'; color:#0a4785; text-decoration:none; margin-bottom:46px;}
+.manuge-my-game a.links-1{background-position: 0 -284px}
+.manuge-my-game a.links-1:hover{background-position: 0 -352px}
+.manuge-my-game a.links-2{background-position: 0 -147px}
+.manuge-my-game a.links-2:hover{background-position: 0 -216px}
+.manuge-my-game a.links-3{background-position: 0 -11px}
+.manuge-my-game a.links-3:hover{background-position: 0 -79px}
+.post-newgame-success{text-align:center; padding:120px 0; border-bottom:1px dashed #ccc; font-family:'microsoft yahei';}
+
+.set-download-link{border:1px solid #ccc; width:504px; padding:10px 14px; border-radius:2px; margin-bottom:10px;}
+.set-download-link td{padding-bottom:10px;}
+
+/* 注册 */
+.newgame-reg{width:500px; float:left; margin:30px 0 0 10px;}
+
+/* 显示已上传的游戏图片 */
+.showLoadedPic{margin-bottom:10px;}
+.showLoadedPic ul{overflow:hidden}
+.showLoadedPic li{float:left; padding:3px; border:1px solid #d9d9d9; border-radius:3px; margin-right:12px; position:relative}
+.showLoadedPic a.close{display:block; width:20px; height:20px; position:absolute; right:12px; top:10px; background:url(../img/newgames.png) no-repeat -459px -131px}
+.showLoadedPic a.close:hover{background-position:-459px -157px}
+.size-1 div{width:150px; height:222px; overflow:hidden}
+.size-1 img{width:150px; vertical-align:middle;}
+.size-1 span{vertical-align:middle; display:inline-block; height:100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

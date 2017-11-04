@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); margin:0; padding:0; word-break: break-all; word-wrap: break-word; }
+a { text-decoration:none;color:#000;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+html,body{ font-size:10px;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+audio, canvas, video {display: inline-block;*display: inline;*zoom: 1;}
+html,body,input, select, textarea,button { font-size:10px;font-family:arial, "Hiragino Sans GB",\5b8b\4f53;}
+table { border-collapse: collapse;border-spacing: 0;}
+th { text-align: inherit;}
+fieldset, img { border: 0;}
+iframe { display: block;}
+abbr, acronym { border: 0; font-variant: normal;}
+del { text-decoration: line-through; }
+address, caption, cite, code, dfn, em, th, var { font-style: normal; font-weight: 500;}
+ol, ul { list-style: none; }
+caption, th { text-align: left;}
+h1, h2, h3, h4, h5, h6 { font-size: 100%;font-weight:normal;}
+.fl{ float:left;}
+.fr{ float:right;}
+.ovf{ overflow:hidden;}
+.txt-l{ text-align:left;}
+.txt-r{ text-align:right;}
+.txt-c{ text-align:center;}
+.clearfix{zoom:1;}
+.clearfix:after{display:block; content:''; clear:both; line-height:0; visibility:hidden;}
+.bs{box-sizing:border-box;-webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+body,html,.wrapper{width:100%;height:auto;position:relative;box-sizing:border-box;-webkit-box-sizing:border-box; -moz-box-sizing:border-box;overflow-x:hidden;}
+.wrapper-cont{}
+@media screen and (min-width:339px) and (max-width:413px){
+	html,body{ font-size:11px;}	
+}
+@media screen and (min-width:414px) and (max-width:640px){
+	html,body{ font-size:12px;}	
+}
+/*搜索框*/
+.search-box{width:100%;background:#201f26;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:0.8rem 5rem 0.8rem 1rem;position:relative;}
+.search-input{height:3rem;width:100%;background:#fff;border-radius:0.5rem;position:relative;ox-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding-left:2.4rem;}
+.search-input:before{content:'';position:absolute;width:1.4rem;height:1.4rem;background:url(../../images/wikiapp/search-icon.png) no-repeat;background-size:100% 100%;top:50%;left:0.5rem;margin-top:-0.7rem;}
+.search-input input[type="text"]{background:none;outline:none;border:none;color:#bbbbba;width:100%;height:100%;display:block;font-size:1.3rem;}
+.search-none{position:absolute;top:50%;right:1rem;color:#fff;font-size:1.5rem;margin-top:-0.8rem;}
+/*通用列表*/
+.wikiList{}
+.wikiList li{background: -webkit-gradient(linear,left top,left bottom,color-stop(.5,transparent),color-stop(.5,#dedfe0),to(#dedfe0)) left bottom repeat-x;border-bottom: 0;background-size: 100% 0.1rem;width:100%;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;overflow:hidden;}
+.wikiList li a{display:block;width:100%;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:1rem;overflow:hidden;position:relative;}
+.wikiList li a:after{content:'';width:0.6rem;height:1.2rem;background:url(../../images/wikiapp/jt-icon.png) no-repeat;background-size:100% 100%;position:absolute;top:50%;right:1rem;margin-top:-0.6rem;}
+.wikiList li a b img{width:100%;}
+.wikiList li a cite{float:left;height:6rem;width:8rem;position:relative;overflow:hidden;border-radius:0.5rem;margin-right:1rem;z-index:8;}
+.wikiList li a cite img{width:100%;height:100%;}
+.wikiList li a cite:before{content:'';
+box-sizing:border-box;
+width: 200%;
+height: 200%;
+position: absolute;
+top: 50%;
+left: 50%;
+border: 0.1rem solid #c9d1db;
+border-radius: 1rem;
+-webkit-transform: scale(0.5);
+-webkit-transform-origin: -50% -50%;
+z-index:10;}
+.wikiList li a p{padding-right:2rem;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:100%;}
+.wikiList li a p b{display:block;font-size:1.5rem;font-weight:normal;color:#5c5c5c;padding-top:0.2rem; width: 60%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+.wikiList li a p span{color:#909090;font-size:1.2rem;display:block;padding-top:0.6rem;line-height:1.6rem;}
+/*首页搜索结果*/
+.search-homeR .wikiList li a:after{display:none;}
+.search-homeR strong{position:absolute;right:1rem;top:50%;height:2.5rem;width:5rem;border-radius:0.4rem;border:0.1rem solid #b2b2b2;font-size:1.3rem;font-weight:normal;color:#a6a6a6;text-align:center;line-height:2.5rem;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;margin-top:-1.2rem;}
+.search-homeR strong:active{background:#3bcb09;color:#fff;border:none;}
+.search-homeR em{color:#a6a6a6;font-size:1.2rem;}
+.search-homeR .wikiList li a cite{height:4.9rem;width:4.9rem;}
+.search-homeR .wikiList li a cite:before{display:none;}
+.search-homeR .wikiList li a p span{padding-top:0.2rem;}
+.search-homeR .wikiList li a p b{padding-top:0;margin-top:-0.1rem;}
+/*单独wiki搜索结果*/
+.search-wikiR .wikiList{background:#fff;}
+.search-wikiR .wikiList li:nth-last-of-type(1){background:none;}
+/*搜索无结果*/
+.search-nor{color:#a0a09f;font-size:1.4rem;text-align:center;padding-top:48%;}
+/*wiki-center-list*/
+.wiki-center-list{padding-top:2.5rem;zoom:1;box-sizing:border-box;-webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+.wiki-pt{padding-top:0;}
+.wiki-center-list:after{display:block; content:''; clear:both; line-height:0; visibility:hidden;}
+.wiki-center-list p{margin-left:1rem;width:100%;padding:0.8rem 0 0.8rem 1.4rem;font-size:1.4rem;background: -webkit-gradient(linear,left top,left bottom,color-stop(.5,transparent),color-stop(.5,#ededed),to(#ededed)) left bottom repeat-x;border-bottom: 0;background-size: 100% 0.1rem;position:relative;color:#5c5c5c;box-sizing:border-box;-webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
+.wiki-center-list p:before{content:'';background:url(../../images/wikiapp/title-icon.png) no-repeat left center;background-size:0.7rem 1.4rem;position:absolute;left:0;width:0.7rem;height:1.4rem;top:50%;margin-top:-0.7rem;}
+.wiki-center-list li{background: -webkit-gradient(linear,left top,left bottom,color-stop(.5,transparent),color-stop(.5,#ededed),to(#ededed)) left bottom repeat-x;border-bottom: 0;background-size: 100% 0.1rem;position:relative;}
+.wiki-center-list li a{font-size:1.4rem;color:#5c5c5c;padding:1.5rem 1rem;display:block;width:80%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.wiki-center-list li a span{position:absolute;right:1rem;color:#909090;font-size:1.2rem;}
+.wiki-ul-boult li a:after{content:'';background:url(../../images/wikiapp/jt-icon.png) no-repeat;background-size:100% 100%;width:0.6rem;height:1.1rem;top:50%;margin-top:-0.5rem;position:absolute;right:1rem;}

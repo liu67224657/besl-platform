@@ -1,0 +1,361 @@
+/*tab title*/
+.mi-tab-menu{position:absolute;width:100%;z-index:100;left:0;top:0;height:4.4rem;background:#292929;box-sizing:border-box;line-height:4.5rem;}
+.mi-tab-tit{width:100%;text-align:center;}
+.mi-tab-tit span{font-size:18px;color:#fff;}
+.mi-tab-tit a{width: 34px;
+  height: 34px;
+  background-image: url(../../images/wanba/peo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  text-indent: -9999rem;
+  position: absolute;
+  right: 15px;
+  top: 5px;}
+.mi-tab-tit a.reddot:before{content:'';position:absolute;width:8px;height:8px;border-radius:50%;background:#ff0009;top:1px;right:-3px;}
+.mi-tab-tit a:active{ background-image: url(../../images/wanba/peo-a.png);}
+#all-comment{ padding-bottom:4.5rem; }
+/*tab cont*/
+.mi-tab-cont{box-sizing:border-box;position:absolute;top:4.4rem;left:0;bottom:49px;background:#ececec;width:100%;}
+.tz-cont{box-sizing:border-box;background:#ececec;position:absolute;top:0;left:0; bottom:4.5rem; width:100%}
+/*分享*/
+.tz-cont.share{bottom:4.7rem;}
+.shaer-top{width:100%;box-sizing:border-box;padding:0.5rem 1rem 0.5rem;position:relative;background:#eee;}
+.shaer-top.small{padding:0.6rem 1rem 0.6rem 1.5rem;}
+.shaer-top.small cite{width:2rem;height:2rem;}
+.shaer-top.small h2{padding:0 0 0 0.3rem;}
+.shaer-top.small h2 b,.shaer-top.small h2 span{display:inline-block;padding:0;margin:0;line-height:1.8rem;padding-top:0.2rem}
+.shaer-top.small h2 b{font-size:1.2rem;}
+.shaer-top.small h2 span{font-size:1.1rem}
+.shaer-top.small>a{height:2rem;width:4.5rem;padding:0 0 0 0;line-height:2rem;font-size:1.3rem;text-align:center;border-radius:0.4rem;}
+.shaer-top.small>a:before{display:none;}
+.shaer-top.bt{position:absolute;bottom:0;background:#292929;}
+.shaer-top.bt:before{display:none;}
+.shaer-top.bt h2 b{color:#fff;}
+.shaer-top.bt h2 span{color:#d2d2d2;}
+.shaer-top:before{content:'';content: '';position: absolute;left: 0;background: #dedfe0;width: 100%;height: 1px;-webkit-transform: scaleY(0.5);bottom: 0;-webkit-transform-origin: 0 bottom;}
+.shaer-top cite{width:3.6rem;height:3.6rem;border-radius:0.6rem;overflow:hidden;float:left;}
+.shaer-top cite img{width:100%;}
+.shaer-top h2{float:left;height:100%;padding:0 0 0 0.8rem;}
+.shaer-top h2 b{font-size:1.6rem;color:#000;display:block;line-height:1.6rem;padding-top:0.2rem;font-weight:bolder;}
+.shaer-top h2 span{font-size:1rem;color:#929292;padding-left:0.1rem}
+.shaer-top>a{float:right;width:7.2rem;height:3.5rem;background:#0aaa0d;border-radius:0.6rem;color:#fff;line-height:3.5rem;font-size:1.4rem;position:relative;box-sizing:border-box;padding:0 0 0 3.5rem;}
+.shaer-top>a:before{content:'';position:absolute;width:1.9rem;height:1.6rem;background:url(../../images/wanba/load-icon1.png) no-repeat 0 0;background-size:100% 100%;top:1rem;left:1rem;}
+/*跳转提示*/
+.popup{width:100%;height:100%;background:rgba(0,0,0,0.8);position:relative;z-index:1000;display:none;}
+.popup.show{display:block;}
+.popup cite{display:block;width:100%;border-radius:0 0 1.5rem 1.5rem;overflow:hidden;font-size:0;}
+.popup cite img{width:100%;}
+.ui-scroller {width:100%;height:100%;box-sizing:border-box;position:relative;z-index:10;}
+.ui-scroller>div{background:#ececec;}
+.mi-tab-cont .ui-scroller>div{padding-bottom:0.5rem;}
+/* .ui-scroller>div.scroller-box-color{background:#fff;} */
+.inner li,.tz-oneself{background-color:#fff;width:100%;box-sizing:border-box;margin-bottom:0.8rem;position:relative;padding:0 1rem;}
+.tz-oneself{overflow:hidden;}
+.inner li:nth-last-of-type(1){margin-bottom:0;}
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+   .inner li:before,.tz-oneself:before{content:'';position: absolute;top:0px;left:0;right:0;background:#dedfe0;width: 100%;height: 1px;-webkit-transform: scaleY(0.5);
+    -webkit-transform-origin: 0 top;}
+   .inner li:after,.tz-oneself:after{content:'';position: absolute;bottom:0px;left:0;right:0;background:#dedfe0;width:100%;height: 1px;-webkit-transform: scaleY(0.5);
+    -webkit-transform-origin: 0 bottom;}
+    .inner li.tz-oneself:after{display:none;}
+}
+/*头像用户名*/
+.mi-tit-box{width:100%;height:auto;}
+.mi-tit-box>a{display:block;width:100%;height:auto;}
+.mi-tit-box h2{padding:1rem 0;height:3.5rem;position:relative;}
+.mi-tit-box.stick h2:before{content:'推荐';padding:0.1rem 0.2rem;color:#ff0006;border:1px solid #ff0006;border-radius:0.2rem;position:absolute;right:0;top:1.5rem;font-size:1.3rem;}
+.mi-tit-box h2.mi-tit-time{color:#798091;font-size:1.2rem;line-height:auto;height:auto;}
+.mi-tit-box h2 cite{display:inline-block;width:3.5rem;height:3.5rem;box-sizing:border-box;border-radius:50%;overflow:hidden;vertical-align:middle;margin-right:0.5rem;}
+.mi-tit-box h2 cite img{width:100%; display:block; height:100%; border-radius:50%; overflow:hidden;}
+.mi-tit-box h2 span{color:#798091;font-size:1.3rem;display:inline-block;}
+.mi-tit-box p{font-size: 1.6rem;color: #000;line-height: 1.3;margin-bottom: 1rem;box-sizing: border-box;}
+.mi-tit-box p.mi-tab-btn{overflow:visible;margin:0 0 2rem;padding-top:0.5rem;}
+.tz-oneself p.mi-tab-btn{overflow:visible;margin:0 0 1.5rem;padding-top:0.5rem;}
+.tz-oneself p.text-visible{overflow:visible;max-height:1000rem;-webkit-line-clamp:10000;}
+.mi-tit-box em{display:block;width:100%;margin-bottom:1rem;position:relative;line-height:10.5rem; font-size:0;max-width:100%;max-height:35.5rem;overflow:hidden; text-align:center;}.tz-oneself .mi-tit-box em{ overflow:visible;max-height:10000rem;}
+.mi-tit-box em b{position:absolute;top:0.5rem;right:0.5rem;background:rgba(0,0,0,0.7);padding:0.1rem 0.4rem 0 1.6rem;color:#fff;border-radius:1rem;font-size:1rem; line-height:1rem;}
+.mi-tit-box em b:before{content:'';width:1rem;height:0.6rem;background:url(../../images/wanba/yan-icon.png) no-repeat 0 0;background-size:100% 100%;position:absolute;top:50%;left:0.4rem;margin-top:-0.3rem;}
+.mi-tit-box em:after{ content: "."; color: #000; font-size: 0; vertical-align: middle;}
+.mi-tit-box em img{ vertical-align: middle; max-width:100%; }
+/*神评*/
+.mi-text-sp{height:auto;width:100%;background:#f7f7f7;box-sizing:border-box;padding:0.5rem 0.5rem 0.5rem 7.4rem;position:relative;margin-bottom:2rem;  min-height: 3.5rem;}
+.mi-text-sp:before{content:'神评';width:3.3rem;height:1.7rem;border-radius:0.3rem;background:#3bcb09;position:absolute;top:0.8rem;left:0.5rem;color:#fff;text-align:center;font-size:1.3rem;padding-top:0.1rem;box-sizing:border-box;}
+.mi-text-sp:after{content:'';width:1.5rem;height:1.5rem;background:#f7f7f7;position:absolute;bottom:-0.7rem;left:50%;margin-left:-0.7rem;-webkit-transform:rotate(45deg);transform:rotate(45deg);z-index:0;}
+.mi-text-sp cite{width:2.5rem;height:2.5rem;border-radius:50%;overflow:hidden;position:absolute;top:0.5rem;left:4.4rem;}
+.mi-text-sp cite img{width:100%;border-radius:50%; height:100%; overflow:hidden; display:block;}
+.mi-text-sp span{color: #000;font-size: 1.3rem;line-height: 1.3;display: block;width: 100%;box-sizing: border-box;padding-top: 0.4rem;position: relative;z-index: 1;max-height: 3.7rem;overflow: hidden;}
+.mi-text-sp span font{color:#798091;display:inline-block;font-size:1.3rem;}
+/*分享 评论 赞*/
+.mi-tab-btn{height:1.4rem;}
+.mi-tab-btn.two>a{width:50%;}
+.mi-tab-btn.two>a:nth-of-type(1) span:before{background-image:url(../../images/wanba/dh-icon.png);}
+.mi-tab-btn.two>a:nth-of-type(2) span:before{background-image:url(../../images/wanba/x-icon.png);}
+.mi-tab-btn.two>a:nth-of-type(1):active span,.mi-tab-btn.two>a.zan:active span{color:#454545;}
+.mi-tab-btn.two>a:nth-of-type(1):active span:before{background-image:url(../../images/wanba/dh-icon.png);}
+.mi-tab-btn.two>a:nth-of-type(2):active span:before{background-image:url(../../images/wanba/x-icon.png);}
+.mi-tab-btn:after{display:block; content:''; clear:both; line-height:0; visibility:hidden;}
+.mi-tab-btn>a{display:block;width:33%;box-sizing:border-box;float:left;text-align:center;}
+.mi-tab-btn>a span{color:#454545;font-size:1.3rem;padding-left:2rem;position:relative;}
+.mi-tab-btn>a:active span{color:#919191;}
+.mi-tab-btn>a span:before{content:'';width:1.6rem;height:1.4rem;background-size:100% 100%;position:absolute;left:0;top:1px;background-repeat:no-repeat;vertical-align:middle;}
+.mi-tab-btn>a:nth-of-type(1) span:before{background-image:url(../../images/wanba/fx-icon.png);}
+.mi-tab-btn>a:nth-of-type(2) span:before{background-image:url(../../images/wanba/dh-icon.png);}
+.mi-tab-btn>a.zan span:before{background-image:url(../../images/wanba/x-icon.png);}
+.mi-tab-btn>a:nth-of-type(1):active span:before{background-image:url(../../images/wanba/fx-icon-a.png);}
+.mi-tab-btn>a:nth-of-type(2):active span:before{background-image:url(../../images/wanba/dh-icon-a.png);}
+.mi-tab-btn>a.active span{color:#e20c0c;}
+.mi-tab-btn>a.active span:before{ background-image:url(../../images/wanba/x-icon-a.png);}
+.mi-tab-btn>a.active-end span:before{animation: 0.5s zan linear 1;-webkit-animation: 0.5s zan linear 1;}
+@keyframes zan{
+    0%,100%{transform:scale(1);-webkit-transform:scale(1);}
+   50%{transform:scale(2);-webkit-transform:scale(2);opacity:0.1;}
+}
+@-webkit-keyframes zan{
+   0%,100%{transform:scale(1);-webkit-transform:scale(1);}
+   50%{transform:scale(2);-webkit-transform:scale(2);opacity:0.1;}
+}
+.mi-tab-btn>a:nth-of-type(3).active span:before{background-image:url(../../images/wanba/x-icon-a.png);color:#e20c0c;}
+footer{position:absolute;width:100%;z-index:100;left:0;bottom:0;height:49px;background:#fff;}
+
+/*我的迷友圈*/
+.mi-tit{width:100%;box-sizing:border-box;padding:1rem 0 1.6rem;text-align:center;}
+.mi-tit>span{display:inline-block;padding:0.1rem 1.5rem;font-size:1.3rem;color:#fff;border-radius:3rem;position:relative;}
+.mi-tit>span b{position:relative;z-index:10;}
+.mi-tit>span:after{content:'';width:0.9rem;height:0.9rem;position:absolute;bottom:-0.3rem;left:50%;margin-left:-0.45rem;-webkit-transform:rotate(45deg);transform:rotate(45deg);z-index:0;}
+.mi-tit.t1>span{background:#ff7a65;}
+.mi-tit.t1>span:after{background:#ff7a65;}
+.mi-tit.t2>span{background:#ff9e40;}
+.mi-tit.t2>span:after{background:#ff9e40;}
+.mi-tit.t3>span{background:#f7b413;}
+.mi-tit.t3>span:after{background:#f7b413;}
+.mi-tit.t4>span{background:#bcbaba;}
+.mi-tit.t4>span:after{background:#bcbaba;}
+/*无数据*/
+.no-data{width:100%;height:100%;box-sizing:border-box;text-align:center;}
+.no-data cite{display:block;width:6.5rem;height:6.5rem;margin:40% auto 0;}
+.no-data cite img{width:100%;}
+.no-data span{display:block;color:#919191;font-size:1.4rem;padding-top:1.5rem;}
+/*未登录*/
+.no-login{width:100%;box-sizing:border-box;padding:1.5rem 1rem 0;text-align:center;}
+.no-login>a{display:block;width:100%;box-sizing:border-box;background:#fff;text-align:center;font-size:1.5rem;padding:1rem 0;color:#ffca4a;border-radius:0.3rem;line-height:1.5rem;}
+.no-login>span{display:block;padding:0.8rem 0;color:#798091;font-size:1rem;}
+/*数据未更新*/
+.ui-scroller>div.add-btn{position:absolute;bottom:65px;right:2.5rem;z-index:999;background:transparent;}
+.add-btn{position:absolute;bottom:65px;right:2.5rem;z-index:999;background:transparent;}
+.add-btn>a{width:4rem;display:block;height:4rem;border-radius:2rem;background: #3bcb09 url(../../images/wanba/add-icon.png) no-repeat center center;background-size:2rem 2rem;-webkit-box-shadow: 0 0.1rem 0.2rem #a3a3a3;-moz-box-shadow: 0 0.1rem 0.2rem #a3a3a3;box-shadow: 0 0.1rem 0.2rem #a3a3a3;position:relative;}
+.add-btn>a em{position:absolute;height:3.3rem;line-height:3.3rem;text-align:center;color:#fff;font-size:1.3rem;background:url(../../images/wanba/san-repeat.png) repeat-x;left:-15.6rem;top:50%;margin-top:-1.6rem;border-radius:0.5rem;z-index:1;background-size:100% 100%;padding: 0 1.5rem 0 0.8rem;}
+/* .add-btn>a:before{content:'';width:0.8rem;height:0.8rem;position:absolute;right: 4.8rem;top:50%;margin-top:-0.4rem;background:#3bcb09;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-box-shadow: 0 0.1rem 0.2rem #a3a3a3;-moz-box-shadow: 0 0.1rem 0.2rem #a3a3a3;box-shadow: 0 0.1rem 0.2rem #a3a3a3;z-index:0;} */
+/*帖子详情*/
+   /*comment-footer*/
+.wp-comment{width:100%;background:#ededed; box-sizing:border-box;padding:0.5rem 0.5rem; position:absolute; bottom:0;left:0; z-index:18;}
+.wp-comment:before{content: '';position: absolute;left: 0;top:0;background: #cfcfcf;width: 100%;height: 1px;-webkit-transform: scaleY(0.5);-webkit-transform-origin: 0 top;}
+.wp-comment>a{display:block;width:100%;height:3.5rem;box-sizing:border-box;background:#fff;position:relative;border:0;border-radius:0.3rem;line-height:3.5rem;padding-left:3.7rem;color:#a3a3a3;font-size:1.4rem;}
+.wp-comment>a:before{content: "";width: 200%;height: 200%;position: absolute;top: 0;left: 0;border: 1px solid #9b9b9b;-webkit-transform: scale(0.5);-webkit-transform-origin: 0 0;padding: 1px;-webkit-box-sizing: border-box;border-radius:0.6rem;pointer-events: none; }
+.wp-comment>a:after{content:'';position:absolute;width:1.7rem;height:1.7rem;background:url(../../images/wanba/pl-icon.png) no-repeat 0 0;background-size:100%;top:0.9rem;left:1.4rem;}
+
+
+/*评论内容*/
+.module-comment{width:100%;position:relative;height:auto;background:#fff;}
+.module-comment:before{position: absolute;content:'';
+  left: 0;
+  background: #dedfe0;
+  bottom:0;
+  -webkit-transform-origin: 0 bottom;
+  width: 100%;
+  height: 1px;
+  -webkit-transform: scaleY(0.5);}
+.comment-box{padding:0 1rem;}
+.info-bar{padding:1.5rem 1rem 0;position:relative;width:100%;box-sizing:border-box;}
+.info-bar:after{content:'';position:absolute;top:0;left:0;width:100%;background:#dedfe0;height: 1px;-webkit-transform: scaleY(0.5);top:0;-webkit-transform-origin: 0 top;}
+.info-bar span{font-size:1.6rem;color:#000;padding-left:2rem;}
+.info-bar span:before{content:'';position:absolute;width:1.5rem;height:1.3rem;background-repeat:no-repeat;background-size:1.5rem 1.3rem;left:1rem;top:1.8rem;}
+.info-bar.hot-tit span:before{background-image:url(../../images/wanba/pl-icon2.png);}
+.info-bar.all-tit span:before{background-image:url(../../images/wanba/pl-icon1.png);}
+.module-reply,.module-remove{display:none;}
+.module-list{padding:1.5rem 0 1rem;position:relative;}
+.module-list:after{content: '';position: absolute;left:4.1rem;background:#e5e5e5;width: 100%;height: 1px;-webkit-transform: scaleY(0.5);bottom:0;-webkit-transform-origin: 0 bottom;}
+.module-list:nth-last-of-type(1):after{display:none;}
+.module-infobox{width:100%;box-sizing:border-box;position:relative;height:3.5rem;margin-bottom:1rem;}
+.module-zan{position:absolute;right:0;top:0.5rem;color:#919191;font-size:1.2rem;padding-left:2rem;}
+.module-zan:before{content:'';width:1.6rem;height:1.4rem;background-size:100% 100%;position:absolute;left:0;top:0;background-repeat:no-repeat;vertical-align: middle;background-image:url(../../images/wanba/x-icon-h1.png);}
+.module-zan.active:before{animation: 0.5s zan linear 1;-webkit-animation: 0.5s zan linear 1;background-image:url(../../images/wanba/x-icon-a.png);}
+.module-zan.active{color:#e20c0c;}
+.user-headImg{width:3.5rem;height:3.5rem;overflow:hidden;border-radius:50%;position:absolute;top:0;left:0;}
+.user-headImg img{width:100%;height:100%;border-radius:50%; overflow:hidden; display:block;}
+.module-date span{display:inline-block;padding-right:0.3rem;}
+.module-shop{width:100%;box-sizing:border-box;padding-left:4.1rem;}
+.module-shop em{font-size:1.3rem;color:#798091;display: block;padding: 0.3rem 0 0.2rem;}
+.module-date{}
+.module-date span{color:#c7c7c7;font-size:1rem;}
+.module-txt{font-size:1.4rem;color:#000;width:100%;box-sizing:border-box;padding-left:4.1rem;}
+/*评论框*/
+.alert-comment{ display:none; position:fixed; top:10px; width:100%; max-width:640px; height:195px; z-index:9999; }
+.info-alert-box{ height:195px; margin:0 10px; background:#fff; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:10px; position:relative; }
+.info-alert-form{ height:136px; padding:8px 10px;}
+.info-alert-shop{ height:38px; border-top:1px solid #e2e2e6; }
+.info-textarea{ width:100%; height:130px; overflow-y:auto; border-radius:none;-webkit-border-radius:none; -moz-border-radius:none; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; border:none; background:none; outline:none; color:#323230; font-size:14px; }
+.info-alert-shop .fl{ font-size:14px; line-height:38px; padding-left:10px;}
+.info-alert-shop .fl b{ font-style:normal; color:#895f35;}
+.info-alert-shop .fr{ padding:6px 10px 0 0; overflow:hidden; font-size:0;}
+.info-alert-shop .fr span{ width:50px; margin-left:15px; display:inline-block; text-align:center; font-size:14px;}
+.info-alert-shop .fr span:nth-last-of-type(1){ padding:2px 0; border-radius:4px; -webkit-border-radius:4px; -moz-border-radius:4px; background:#3BCB09; color:#fff;}
+.info-beyond{ display:none; width:100%; text-align:center; font-size:0; color:#fff; background:rgba(0,0,0,0.8); padding:5px 0; position:absolute; top:-10px; border-radius:0 0 5px 5px; display:none;}
+.info-beyond span{ display:inline-block; padding-left:25px; font-size:12px; background:url(../../images/wanba/beyond-icon.png) no-repeat 0 center; background-size:16px 16px;}
+.wp-bg{  position: fixed;top: 0;left: 0;bottom: 0;right: 0;display: none;width: 100%;background: rgba(0,0,0,0.35);z-index: 19;}
+/*没有评论*/
+.none-comment{text-align:center;padding:5rem 0 5rem;}
+.none-comment cite{display:block;width:3.7rem;height:3.4rem;margin:0 auto;}
+.none-comment cite img{width:100%;}
+.none-comment span{display:block;padding-top:1rem;color:#919191;font-size:1.4rem;}
+/*大图浏览*/
+.large-box{position:fixed;z-index:999;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.98);/* -webkit-filter: blur(1rem);-moz-filter: blur(1rem);-ms-filter: blur(1rem);filter: blur(1rem) */display:none;}
+.large-pic{width:100%;height:100%;box-sizing:border-box;overflow:hidden;display:box;display:-webkit-box;-webkit-box-pack:center;-webkit-box-align:center;box-pack:center;box-algin:center;display: -webkit-box;}
+.large-pic img{max-height:100%;max-width:100%;width:auto;height:auto;display: -webkit-box;}
+.large-box-pic{width: 100%;
+  height: 100%;
+  padding: 0 0 7.6rem;
+  overflow: hidden;
+  box-sizing: border-box;}
+.large-icon{position:absolute;bottom:2rem;width:100%;text-align:center;}
+.large-icon a{display:inline-block;width:4rem;height:4rem;border-radius:2rem;position:relative;margin:0 1rem;background-repeat:no-repeat;background-position:center center;background-size:1.5rem 1.8rem;}
+.large-icon a:active{background-color:#000;}
+.large-icon a:active:before{display:none;}
+.large-icon a:before{content: "";width: 200%;height: 200%;position: absolute;top: 0;left: 0;border: 0.1rem solid #363636;-webkit-transform: scale(0.5);-webkit-transform-origin: 0 0;padding: 0.1rem;-webkit-box-sizing: border-box;border-radius:4rem;pointer-events: none;}
+.large-icon a.large-load{background-image:url(../../images/wanba/load-icon.png);}
+.large-icon a.large-collect{background-image:url(../../images/wanba/collect-icon.png);}
+/*删除按钮*/
+.remove-btn{padding:0.5rem 0 0 4.1rem;}
+.remove-btn a{color:#49659d;font-size:1.2rem;}
+/**/
+.loading_end{width:100%;height:50px;line-height:50px;text-align:center;font-size:1.2rem;color:#999;}
+/*后新加loading样式*/
+.outer{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction:column;
+        -webkit-box-orient:vertical;
+        box-orient:vertical;
+        -webkit-flex-direction:column;
+        flex-direction:column;
+    }
+.mi-tab-menu{
+    position: relative;
+    height:44px;
+    line-height:44px;
+}
+.inner{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ececec!important;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+    padding-bottom:50px;
+}
+.inner.none_data::-webkit-scrollbar{display:none;}
+.inner .item{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align:center;
+    -webkit-box-align:center;
+    box-align:center;
+    -webkit-align-items:center;
+    align-items:center;
+}
+.opacity{
+    -webkit-animation: opacity 0.5s linear;
+    animation: opacity 0.5s linear;
+}
+@-webkit-keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+/* dropload */
+.dropload-up,.dropload-down{
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
+}
+.dropload-refresh,.dropload-update,.dropload-load{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    -webkit-transform:translate(-50%,0);
+    transform:translate(-50%,0);
+}
+.dropload-load{ position: relative; }
+.dropload-load .load-icon{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    margin: 6px;
+    border: 2px solid #666;
+    border-bottom-color: transparent;
+    vertical-align: middle;
+    -webkit-animation: rotate 0.75s 0 linear infinite;
+    animation: rotate 0.75s 0 linear infinite;
+}
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.shadow-bg{position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:1000;display:none;}
+.dialog{width:80%;background:rgba(250,250,250,0.9);position:fixed;top:50%;left:10%;color:#fff;text-align:center;border-radius:0.4rem;overflow:hidden;font-size:0;box-sizing:border-box;display:box;display:-webkit-box;-webkit-box-orient: vertical;box-orient: vertical;transform:translateY(-50%);-webkit-transform:translateY(-50%);}
+.dialog>p{font-size:1.4rem;padding:3rem 0.6rem 2.8rem;line-height:1.4;color:#000;position:relative;width:100%;box-sizing:border-box;}
+.dialog>p:after{content:'';position: absolute;left: 0;background: #999;width: 100%;height: 1px;-webkit-transform: scaleY(0.5);bottom: 0;-webkit-transform-origin: 0 bottom;box-sizing:border-box;}
+.dialog>span{display:block;width:100%;height:4rem;display:box;display:-webkit-box;box-sizing:border-box;-webkit-box-flex:1;box-flex:1;}
+.dialog>span cite{-webkit-box-flex:1;box-flex:1;display:box;display:-webkit-box;box-align:center;-webkit-box-align:center;box-pack:center;-webkit-box-pack:center;color:#49659d;position:relative;box-sizing:border-box;font-size:1.4rem;}
+.dialog>span cite:nth-last-of-type(1):after{content:'';position: absolute;left: 0;background: #999;width:1px;height:100%;-webkit-transform: scaleX(0.5);-webkit-transform-origin:left 0;top:0;}
+.dialog>span cite:active{background:#e0dede;}
+.yizan{background:rgba(0,0,0,0.6);color:#fff;text-align:center;font-size:1.4rem;position:fixed;top:50%;left:25%;width:50%;height:2rem;line-height:2rem;z-index:1001;border-radius:0.4rem;}
+.pinch-zoom-container{width:100%;height:100%;}

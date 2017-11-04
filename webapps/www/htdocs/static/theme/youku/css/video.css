@@ -1,0 +1,60 @@
+body,div,ul,ol,li,dl,dt,dd,a,b,em,strong,i{padding: 0;margin:0;text-decoration: none;font-weight: normal;font-style: normal;font-family: font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;}
+a{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+/*攻略列表 开始*/
+.main{position: absolute;left: 0;right: 0;top:0;bottom: 0;overflow-y: scroll;-webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;}
+.list-box{padding:0 15px 15px;width:100%;box-sizing:border-box;-webkit-box-sizing:border-box;}
+.list-item{padding:10px 10px 10px 0;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;display: block;overflow: hidden;margin-bottom:5px;background: #fff;background: -webkit-gradient(linear,left top,left bottom,color-stop(.5,transparent),color-stop(.5,#dfdfdf),to(#dfdfdf)) left bottom repeat-x;border-bottom: 0;background-size: 100% 1px;}
+.list-item span{position: relative;min-height: 60px; color:#6e6e6e;font-size:12px;line-height: 18px;overflow: hidden;text-align: left;}
+.list-item span em{display: block;width:100%;}
+.list-item span em{color:#333;font-size:14px;margin-bottom:5px;font-style: normal;}
+.list-item .cite-square{display: inline-block;width:105px;height:60px;margin-left:-115px;}
+.list-item cite img{width:100%;height:100%;}
+.list-box.pl-95 a{padding-left:115px;}
+.list-box.pl-95 a span{float:right;width:100%;}
+.list-item span font{position: absolute;left: 0;bottom: 0; font-size: 14px;}
+/*攻略列表 结束*
+/* 视频单页begin */
+.con-textMain{ display:block; padding:10px 10px 0 10px;}
+.con-text-title{ font-weight:bold;overflow:hidden;}
+.con-text-title span{float: left;display:block;font-size:18px; color:#000;}
+.con-tm-Box p{padding-bottom:10px;line-height: 20px;font-size:14px;color: #6e6e6e;margin:5px 0;}
+.iframeVideo{}
+
+.page-box1{overflow: hidden;padding: 0 10px;}
+.page-box1>div{margin-bottom: 10px;}
+.page-box1>div a:first-child{margin-bottom: 5px}
+.page-box1 a{font-size: 14px;color: #333;line-height: 20px;}
+.page-box1 span{font-size: 12px;color: #999;line-height: 16px;display: block;}
+.box1left{width: 49%;float: left;margin-right: 3px;}
+.box1right{width: 49%;float: right;}
+.box1left a,.box1right a{display: block;}
+.box1left a img,.box1right a img{width: 100%;display: block;}
+/* 视频单页end */
+
+.title em{font-style: normal;color: #4b4b4b; font-size: 12px;float: right;padding-right: 15px;background: url(../image/more.jpg) no-repeat right center;background-size: 11px 11px;}
+.title strong{font-weight: normal; color: #4b4b4b; font-size: 12px;float: right;padding-right: 15px;background: url(../image/shuaxin.jpg) no-repeat right center;background-size: 11px 11px;}
+.left-tit{border-left: 5px solid #54b9fc;}
+.padd10{padding:0 10px;}
+.borbottom{border-bottom: 10px solid #efeff4;}
+.title-top:after{content:"";display: block;width: 100%;height:20px;background: #efeff4;position: absolute;top:-20px;left: -5px;width: 100%;border-right: 5px solid #efeff4;}
+
+.title{background: #fff;height:40px;margin:0;font-size: 16px;color: #333;}
+.title span{float: left;border-left: 3px solid #54b9fc;height: 16px;line-height: 18px;margin-top: 12px;padding-left: 10px;font-size: 16px;color: #333;}
+
+
+
+.page-box1 .box1left:nth-child(odd){margin-right: 0;float: right;}
+/* ipone6 */
+@media screen and (min-width: 375px) and (max-width: 413px){
+	.list-item span em{font-size: 16px;}
+	.list-item span font{font-size: 14px;}
+}
+/* ipone6p */
+@media screen and (min-width:414px){
+	.list-item span{position: relative;min-height: 75px;}
+	.list-item span em{font-size: 18px;padding-left: 10px;}
+	.list-item span font{position: absolute;left: 0;bottom: 0; font-size: 16px;line-height: 30px;display: block;padding-left: 10px;}
+	.list-item .cite-square{width: 120px;height: 70px;margin-left: -122px;}
+
+}
